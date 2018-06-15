@@ -10,7 +10,7 @@
 
 	<link rel="shortcut icon" href="/favicon.png" />
 
-	<link rel="stylesheet" type="text/css" href="{ASSET:dist/css/main.css}" />
+	<link rel="stylesheet" type="text/css" href="/dist/css/main.css" />
 
 	{LAYOUTMODE_STARTSCRIPT}
 	{IF (!{LAYOUTMODE})}
@@ -35,7 +35,7 @@
 	{INCLUDE:PATHTOWEBROOT.'templates/partials/footer.tpl'}
 
 	{IF(!{LAYOUTMODE})}
-		<script src="{ASSET:dist/js/main.js}"></script>
+		<script src="/dist/js/main.js"></script>
 	{ENDIF}
 	{LAYOUTMODE_ENDSCRIPT}
 </body>

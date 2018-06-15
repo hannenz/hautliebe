@@ -23,24 +23,6 @@ $inner-bound-width:42em;
 
 
 
-/***************
- * Breakpoints *
- ***************/
-
-$small-bp:481px;
-$medium-bp:1281px;
-$large-bp:1921px;
-
-// Corresponding media queries
-$small-context: new-breakpoint(max-width $small-bp 4);
-$medium-context: new-breakpoint(min-width $small-bp max-width $medium-bp 12);
-$medium-and-up-context: new-breakpoint(min-width $small-bp 12);
-$large-context: new-breakpoint(min-width $medium-bp max-width $large-bp 12);
-$large-and-up-context: new-breakpoint(min-width $medium-bp 12);
-$x-large-context: new-breakpoint(min-width $large-bp 12);
-$medium-and-down-context: new-breakpoint(max-width $medium-bp 12);
-
-
 /********************
  * Options/Switches *
  ********************/
