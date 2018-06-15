@@ -1,0 +1,55 @@
+.cmt-breadcrumbs {
+	margin: 0;
+	background-color: $cmt-background-light;
+	padding-left: 25px;
+	position: relative;
+
+	a,
+	span {
+		text-decoration: none;
+		color: $cmt-text-service;
+		display: block;
+		padding: 5px 5px;
+	}
+	
+	a.cmt-breadcrumbs-home {
+		display: inline-block;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	
+	a:hover {
+		color: #FFFFFF;
+	}
+
+	.cmt-breadcrumbs-icon:before {
+		font-family: "FontAwesome";
+		vertical-align: middle;
+		font-size: 16px;
+		margin-right: 10px;	
+	}
+	
+	.cmt-breadcrumbs-up {
+		border: 2px solid #FFFFFF;
+		border-width: 0 0 0 2px;
+	}
+	
+	.cmt-breadcrumbs-up:before {
+		content: "\f148";
+		font-family: "FontAwesome";
+		vertical-align: middle;
+		font-size: 16px;
+		margin-left: 5px;
+		transform: scaleX(-1);
+		-moz-transform: scaleX(-1);
+		-webkit-transform: scaleX(-1);
+		display: inline-block;
+	}
+
+	.cmt-breadcrumbs-home:before {
+		content: "\f015";
+		margin: 0;
+	}
+
+}

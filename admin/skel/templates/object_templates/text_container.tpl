@@ -1,0 +1,1 @@
+<div>{TEXT:1:all}</div>

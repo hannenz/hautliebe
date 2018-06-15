@@ -1,0 +1,6 @@
+# Dateien nicht anzeigen:
+
+<FilesMatch "\.(php|inc)$">
+order deny,allow
+deny from all
+</FilesMatch>

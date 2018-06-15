@@ -1,0 +1,63 @@
+// ---------------------------------------
+//	CMT layout mode: preview
+// ---------------------------------------
+
+.cmt-layout.cmt-preview {
+	.cmt-group,
+	.cmt-group::before,
+	.cmt-object,
+	.cmt-object::before,
+	.cmt-element,
+	.ui-wrapper,
+	.ui-wrapper.cmt-selected,
+	.cmt-object-options {
+		outline: none !important;
+	}
+	
+	.cmt-handle-bar,
+	.cmt-object-not-visible,
+	.cmt-is-placeholder,
+	.cmt-mce-menu,
+	.cmt-element-script,
+	.cmt-object-options,
+	.cmt-button-refresh {
+		display: none !important;	
+	}
+	
+	.cmt-element-image {
+		
+		.ui-resizable-handle,
+		.cmt-label,
+		.cmt-icon {
+			display: none !important;
+		}
+	}
+	
+	.cmt-object {
+		margin-bottom: 0;
+	}
+
+	 .cmt-script-container {
+		display: block;	
+	}
+
+	#cmt-preview-page {
+	
+		border-color: #c06030;
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffb663+0,ff6000+100 */
+		background: #ffb663; /* Old browsers */
+		background: -moz-linear-gradient(top,  #ffb663 0%, #ff6000 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top,  #ffb663 0%,#ff6000 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom,  #ffb663 0%,#ff6000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		background: linear-gradient(to bottom,  #c06030 0%,#BF360C 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	
+		.cmt-button-icon::before,
+		span {
+			color: #FFFFFF;
+		}
+
+ 		&:hover {
+			text-shadow: none;
+		}
+	}
+}

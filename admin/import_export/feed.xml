@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:wfw="http://wellformedweb.org/CommentAPI/">
+<channel>
+<title>Buero hahn RSS Feed</title>
+<link>http://www.buero-hahn.de</link>
+<description><![CDATA[This is test of creating a RSS 2.0 Feed Writer
+]]></description>
+<atom:link href="http://i-uni.net/rss/test.xml" rel="self" type="application/rss+xml" />
+<language>de-DE</language>
+<pubDate>Mon, 02 Jul 2012 11:35:58 +0200</pubDate>
+<image><title>Buero hahn RSS Feed</title>
+<link>http://www.buero-hahn.de/rss</link>
+<url>http://www.buero-hahn.de/img/logo_text.gif</url>
+</image>
+<item>
+<title>New Article</title>
+<description><![CDATA[***I ran exactly the same test in 10.2 just to confirm that nothing about the HASH GROUP BY changed this, and noticed that the distinct query used HASH UNIQUE, which made me initially believe that both operations were still internally the same.<br />However the tkprof'd trace file showed the DISTINCT operation using more CPU than the GROUP BY ...<br />select distinct owner, object_name, object_type from t<br /><br />call     count       cpu    elapsed       disk      query    current        rows------- ------  -------- ---------- ---------- ---------- ----------  ----------Parse        3      0.00       0.00          0          0          0           0Execute      3      0.00       0.00          0          0          0           0Fetch    10095      1.85       1.78         45       2106          0      151374------- ------  -------- ---------- ---------- ---------- ----------  ----------total    10101      1.85       1.79         45       2106          0      151374<br />Misses in library cache during parse: 1Optimizer mode: ALL_ROWSParsing user id: 62  <br />Rows     Row Source Operation-------  ---------------------------------------------------  50458  HASH UNIQUE (cr=702 pr=45 pw=45 time=2405972 us)  50750   TABLE ACCESS FULL T (cr=702 pr=0 pw=0 time=2334900 us)<br />********************************************************************************<br /><br />********************************************************************************<br />select owner, object_name, object_type from t group by owner, object_name,object_type<br />call     count       cpu    elapsed       disk      query    current        rows------- ------  -------- ---------- ---------- ---------- ----------  ----------Parse        3      0.00       0.00          0          0          0           0Execute      3      0.00       0.00          0          0          0           0Fetch    10095      1.18       1.08          0       2106          0      151374------- ------  -------- ---------- ---------- ---------- ----------  ----------total    10101      1.19       1.08          0       2106          0      151374<br />Misses in library cache during parse: 1Optimizer mode: ALL_ROWSParsing user id: 62  <br />Rows     Row Source Operation-------  ---------------------------------------------------  50458  HASH GROUP BY (cr=702 pr=0 pw=0 time=624258 us)  50750   TABLE ACCESS FULL T (cr=702 pr=0 pw=0 time=507831 us)<br />********************************************************************************]]></description>
+<link>http://www.buero-hahn.de/aid=</link>
+<guid isPermaLink="true">http://www.buero-hahn.de/</guid>
+<pubDate>Mon, 02 Jul 2012 11:35:58 +0200</pubDate>
+</item>
+</channel></rss>

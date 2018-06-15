@@ -1,0 +1,43 @@
+// ---------------------------------------
+//	CMT layout object element: script
+// ---------------------------------------
+
+.cmt-element-script-container {
+	position: relative;
+}
+
+.cmt-element-script {
+	padding: 2px 10px 2px 10px;
+	font-family: monospace;
+	outline: 1px dotted #a0a0a0;
+	cursor: pointer;
+	margin: 10px 40px 10px 0;
+	background-color: #FFF9C4;
+	position: relative;
+
+	&:before {
+		content: "\f1c9";
+		color: #6a6a6a;
+		font-size: 22px;
+		font-family: 'FontAwesome';
+		margin-right: 15px;
+		vertical-align: middle;
+	}
+
+	&:hover,
+	&:hover:before {
+		background-color: $cmt-hovered;
+		color: #FFFFFF;
+	}
+}
+
+.cmt-element-script + .cmt-button-refresh {
+	position: absolute;
+	z-index: 2;
+	right: 0;
+	top: 0;
+}
+
+.cmt-script-container {
+	
+}

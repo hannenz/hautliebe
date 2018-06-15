@@ -1,0 +1,21 @@
+/* --------------------------------------------------
+	Main-Navigation
+   -------------------------------------------------- */
+
+.st-menu-pinned #cmtMainContent,
+.st-menu-open #cmtMainContent {
+	padding-left: 31rem;
+}
+
+.st-menu-pinned .st-pusher, .st-menu-pinned.st-menu-open .st-pusher {
+	width: 100%;
+}
+
+.st-menu-open .st-menu,
+.st-menu-pinned .st-menu {
+	left: 0;
+}
+
+.st-menu {
+	left: -100rem;
+}

@@ -1,0 +1,63 @@
+html {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+
+	font-size: 62.5%;
+}
+
+*,
+*:after,
+*::before {
+	box-sizing:inherit;
+}
+
+html,
+body,
+.cmtContainer,
+.cmtWrapper {
+	height: 100%;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	color: #333333;
+	
+	/* for push menu effect */
+	overflow: hidden;
+}
+
+body,
+input, 
+select, 
+textarea, 
+optgroup, 
+option {
+	font-size: 1.3rem;
+}
+
+a {
+	color: #1062B4;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #EE0330;
+	text-decoration: none;
+}
+
+form {
+	margin: 0px;
+}
+
+img {
+	border: 0;
+}
+
+input, textarea {
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;	
+}

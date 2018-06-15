@@ -1,0 +1,1 @@
+<input type="checkbox" name="post_category[]" value="{VAR:id}"{IF({ISSET:checked:VAR})}checked="checked"{ENDIF}> {VAR:category_title}

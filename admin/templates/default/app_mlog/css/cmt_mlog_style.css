@@ -1,0 +1,357 @@
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../../administration/fonts/fontawesome-webfont.eot?v=4.4.0");
+  src: url("../../administration/fonts/fontawesome-webfont.eot?#iefix&v=4.4.0") format("embedded-opentype"), url("../../administration/fonts/fontawesome-webfont.woff?v=4.4.0") format("woff"), url("../../administration/fonts/fontawesome-webfont.woff2?v=4.4.0") format("woff2"), url("../../administration/fonts/fontawesome-webfont.ttf?v=4.4.0") format("truetype"), url("../../administration/fonts/fontawesome-webfont.svg?v=4.4.0#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* -------------------------------------
+	Übersicht
+   ------------------------------------- */
+.mlog-overview-post-headline {
+    background-color: #A0A0A0;
+    background-position: left top;
+    background-repeat: no-repeat;
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+    padding: 5px 40px 5px 10px;
+	position: relative;
+}
+
+.mlog-overview-post-headline-id {
+	float: right;
+	font-weight: bold;
+	margin-right: -30px;
+}
+
+.mlogOverviewRowContainer {
+	padding: 16px 12px 16px 256px;
+	margin: 0px 0px 12px 0px;
+	border-bottom: 1px dotted #B0B0B0;
+/*	border-top: 1px solid #A0A0A0; */
+	position: relative;
+	min-height: 140px;
+}
+
+.mlogOverviewRowContainer:last-child {
+	border-bottom: 1px dotted #B0B0B0;
+}
+
+.mlogOverviewInfoContainer {
+	/*float: left; */
+	position: absolute;
+	top: 16px;
+	bottom: 16px;
+	left: 12px;
+	width: 212px;
+	border-right: 1px dotted #B0B0B0;
+}
+
+.mlogOverviewMainContainer {
+	float: left;
+}
+
+.mlogOverviewServiceContainer {
+	clear: both;
+	padding: 12px 0px 0px 0px;
+}
+
+.cmtRow1 {
+	background-color: #FAFAFA;
+	background-color: #F6F6F6;
+}
+
+.cmtRow1.cmtHovered {
+	background-color: #C6E3FF;	
+}
+
+.cmtRow1.cmtSelected {
+	background-color: #FFCB8C;
+}
+
+.mlogOverviewRowContainer h4 {
+	font-size: 18px;
+	font-weight: bold;
+	margin: 0 0 10px 0;	
+}
+
+.mlogOverviewRowContainer h5 {
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0 0 2px 0;	
+	padding: 0;
+}
+
+.mlogOverviewRowContainer table td {
+	border: 0;
+	border-collapse: collapse;
+}
+
+.mlogOverviewRowContainer td {
+	vertical-align: top;
+	text-align: left;
+	padding: 0px 8px 2px 0px;	
+}
+
+.mlogDate {
+	font-weight: normal;
+	padding-bottom: 12px !important;	
+}
+
+.mlogStatus {
+	
+}
+
+.mlog-post-status {
+	font-size: 32px;
+	font-family: 'FontAwesome';
+	font-weight: normal;
+	line-height: 100%;
+	margin-bottom: 10px;
+	display: inline-block;
+}
+
+.mlog-post-status-1:before {
+	color: #d32f2f;
+	content: '\f070';
+}
+
+
+.mlog-post-status-2:before {
+	color: #FFD600;
+	color: #FB8C00;
+	content: '\f071';
+	content: '\f017';
+}
+
+.mlog-post-status-3:before {
+	color: #4CAF50;
+	content: '\f06e';
+}
+
+.mlogAuthor {
+	
+}
+
+.mlogViews {
+	
+}
+
+.mlogComments {
+	
+}
+/* -------------------------------------
+	Detailansicht
+   ------------------------------------- */
+figure {
+	padding: 0;
+	margin: 0;
+}
+
+#mlogAddMediaContainer {
+	margin: 0px 0px 16px 0px;
+	padding: 0px 12px;
+}
+
+.mlogMediaContainer,
+.mlogMediaHandle,
+.mlogMediaTitleContainer,
+.mlogMediaServiceContainer {
+	width: 160px;
+	padding-left: 8px;
+	padding-right: 8px;	
+}
+
+.mlogMediaContainer {
+	border: 1px solid #B0B0B0;
+	height: 170px;
+	padding-top: 24px;
+	position: relative;
+	float: left;
+	margin: 0px 12px 16px 0px;
+	border-radius: 4px;
+	background-color: #FFFFFF;
+}
+
+.mlogMediaContainer:hover {
+	border-color: #1E5995;
+	background-color: #C6E3FF;
+	box-shadow: 0px 0px 4px #3675B7;
+}
+
+.mlogMediaHandle {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 160px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	min-height: 20px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.mlogMediaHandle .mlog-media-id {
+	font-weight: normal;
+}
+
+.mlogMediaTitleContainer {
+	/* width: 150px; */
+	max-height: 36px;
+	overflow: hidden;
+	position: absolute;
+	bottom: 5px;
+	left: 0px; 
+	text-align: center;
+}
+
+.mlogMediaServiceContainer {
+	position: absolute;
+	bottom: 4px;
+	left: 0px;
+	height: 34px;
+/*	width: 156px; */
+	text-align: right;
+	background-color: #C6E3FF;
+}
+
+.mlogMediaContainer .mlogMediaServiceContainer {
+	visibility: hidden;
+}
+
+.mlogMediaContainer:hover .mlogMediaServiceContainer {
+	visibility: visible;
+}
+
+/* löschen Button */
+.mlogMediaServiceContainer .cmtButtonDelete {
+	float: left;
+}
+
+#mlogMediaSortableContainer {
+	padding: 0px 0px 0px 12px;
+}
+
+/* -------------------------------------
+	Medientypen
+   ------------------------------------- */
+.mlogMediaContainer {
+	background-position: center 24px;
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+
+.mlog-media-content {
+	overflow: hidden;
+	height: 120px;
+	text-align: center;
+	line-height: 110px;
+	margin-bottom: 5px;
+	color: #A0A0A0;
+	font-size: 72px;
+	font-family: 'FontAwesome';
+	font-weight: normal;
+	text-shadow: 0 0 1px #000000;
+}
+
+.mlog-media-content:after {
+	content: attr(data-file-type);
+	position: absolute;
+	right: 0;
+	bottom: 44px;
+	background-color: #478BCF;
+	border: 1px solid #FFFFFF;
+	color: #FFFFFF;
+	font-size: 13px;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 5px 10px;
+	font-family: Arial, helvetica, sans-serif;
+	line-height: 100%;
+	z-index: 1;
+	text-shadow: none;
+}
+
+
+
+.mlog-media-type-document .mlog-media-content:before {
+	content: "\f0f6";
+}
+
+.mlog-media-type-link .mlog-media-content:before {
+	content: "\f0c1";
+}
+
+
+
+.mlog-media-type-link .mlog-media-content:after,
+.mlog-media-type-date .mlog-media-content:after {
+	display: none;
+}
+
+.mlog-media-type-date .mlog-media-content:before {
+	content: "\f073";
+}
+
+.mlog-media-type-audio .mlog-media-content:before {
+	content: "\f001";
+}
+
+.mlog-media-type-video .mlog-media-content:before {
+	content: "\f03d";
+}
+
+.mlog-media-content figure img {
+	width: 100%;
+}
+
+/* -------------------------------------
+	overview
+   ------------------------------------- */
+   
+.mlog-overview-image-container {
+	width: 200px;
+	height: 150px;
+	overflow: hidden;
+	float: left;
+	margin: 0 20px 10px 0;
+	position: relative;
+	border: 1px solid #D0D0D0;
+	background-color: #FEFEFE;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.mlog-overview-image {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 100%;	
+}
+
+.mlog-overview-image-container img {
+	max-width: 100%;
+}
+
+
+
+.mlog-icon {
+	color: #D0D0D0;
+	font-size: 22px;
+	font-family: 'FontAwesome';
+	font-weight: normal;
+	line-height: 100%;
+}
+
+.mlog-icon-image:before {
+	content: "\f1c5";
+	font-size: 64px;
+}
+
+pre {
+	display: inline;
+}

@@ -1,0 +1,1 @@
+		<li {IF ({ISSET:cmtActiveTab:VAR})}class="cmtActiveTab"{ENDIF}><a href="#tabs-{VAR:guiElementCounter}">{VAR:tabTitle}</a></li>

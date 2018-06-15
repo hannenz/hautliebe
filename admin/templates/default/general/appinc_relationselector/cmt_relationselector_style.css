@@ -1,0 +1,53 @@
+
+#cmt_relation_searchBar{
+
+	padding:5px;
+}
+
+#cmt_relation_Container{
+	padding:5px;
+}
+
+#cmt_relation_Container div{
+	
+	border:1px solid #808080;
+}
+
+#cmt_relation_results{
+	width:46%;
+	height:300px;
+	overflow:auto;
+	float:left;
+	background-color:#fff;
+}
+#cmt_relation_actions{
+	width:7%;
+	float:left;
+	text-align:center;
+	border:none !important; 
+}
+
+#cmt_relation_selected{
+	width:46%;
+	height:300px;
+	overflow:auto;
+	float:right;
+	background-color:#fff;
+}
+
+#cmt_relation_confirm{
+	padding:5px;
+	text-align:right;
+}
+
+.unSelectedElement{
+	background-color:#FDD;
+	border:0 !important;
+	margin:1px 2px 1px 2px;
+}
+
+.selectedElement{
+	background-color:#DFD;
+	border:0 !important;
+	margin:1px 2px 1px 2px;
+}

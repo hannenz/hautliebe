@@ -1,0 +1,65 @@
+// ---------------------------------------
+//	CMT layout objects
+// ---------------------------------------
+
+
+.cmt-object {
+	position: relative;
+	outline: 1px dotted #E0E0E0;
+	transition: transform 0.3s;
+	margin-bottom: 15px;
+
+	a {
+		cursor: pointer;
+	}
+
+	.cmt-object-content-wrapper {
+		position: relative;
+		heigth: 100%;
+		width: 100%;
+	}
+
+	// handle bar
+	.cmt-handle-bar {
+		background-color: $cmt-background-light;
+		position: relative;
+		cursor: move;
+	}
+	
+	// element
+	.cmt-element {
+		outline: 1px dotted #A0A0A0;
+	}
+	
+	.cmt-element:focus {
+		outline: 1px solid $cmt-selected;
+		outline-offset: 1px;
+	}
+
+	// selected object
+	&.cmt-selected {
+		outline: 0;
+		
+		&:before {
+			content: ' ';
+			outline: 1px solid $cmt-selected;
+			outline-offset: 2px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: -1;		
+		}
+		
+		.cmt-handle-bar {
+			background-color: $cmt-selected;
+			outline: 0;
+		}
+	}
+	
+	// state: dragging
+	&.cmt-level-1 {
+		background-color: #FFFFFF;
+	}
+}

@@ -1,0 +1,61 @@
+// ---------------------------------------
+//	CMT menu panel: links
+// ---------------------------------------
+
+// ---------------------------------------
+//	download links
+// ---------------------------------------
+.cmt-file {
+	background-image: url("../../administration/img/filetypes/file_large.png");
+}
+
+.cmt-directory {
+	background-image: url("../../administration/img/filetypes/directory_large.png");
+}
+
+// ---------------------------------------
+//	internal links
+// ---------------------------------------
+
+#cmt-pages-content-container ul a.cmt-select-page {
+	margin-right: 30px;	
+}
+
+.cmt-page {
+	background-image: url("../../administration/img/filetypes/file_large.png");
+}
+
+.cmt-folder {
+	background-image: url("../../administration/img/filetypes/directory_large.png");
+}
+
+.cmt-select-file.cmt-selected,
+.cmt-select-page.cmt-selected {
+	outline: 0;
+	background-color: #ffcb8c !important;
+}
+
+#cmt-pages-content-container a.cmt-select-children {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 28px;
+	height: 28px;
+	line-height: 28px;
+	padding: 0;
+	display: block;
+	text-decoration: none;
+	color: #6A6A6A;
+}
+
+a.cmt-select-children:before {
+	content: "\f0da";
+}
+
+a.cmt-select-children:hover {
+	color: #FFFFFF;
+}
+
+#cmt-pages-content-container ul a span {
+	color: #B2B2B2;
+}

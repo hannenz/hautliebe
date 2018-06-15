@@ -1,0 +1,263 @@
+body {
+	padding: 5px 12px 12px 12px;
+}
+
+body, td, div, input, select, textarea, optgroup, option {font-family: Arial, Verdana, Helvetica, sans-serif; font-size: 12px; color: #333333}
+
+a {
+	color: #1062B4;
+	text-decoration: none;
+}
+
+a:hover {
+   color: #61C126;
+color: #EE0330;
+   text-decoration: none;
+}
+
+.appHeadlineContainer {
+	position: relative;
+	padding: 24px 0px 0px 0px;
+}
+
+#appIcon {
+	position: absolute;
+	top: 0px;
+	left: 4px;
+	width: 48px;
+	height: 48px;
+	background-repeat: no-repeat;
+	background-position: top left;
+	background-image: url('img/icon.png');
+
+	/* PNG-Grafik für IE 6 */
+	_background: expression("none");
+}
+
+/* PNG für den Rest der Browserwelt */
+/*
+html>body #appIcon {
+	position: absolute;
+	top: 0px;
+	left: 4px;
+	width: 48px;
+	height: 48px;
+	background-image: url("img/icon_app_paperboy_48px.png");
+	background-repeat: no-repeat;
+	background-position: top left;
+}
+*/
+
+.appHeadline {
+	padding: 4px 12px 4px 48px;
+	padding: 4px 12px 4px 60px;
+	background-image: url("img/bg_headline.gif");
+	background-repeat: no-repeat;
+	background-position: top left;
+	background-color: #333333;
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.appDropshadow {
+	background-image: url("img/bg_service_dropshadow.gif");
+	background-repeat: repeat-x;
+	background-position: top left;
+	background-color: #F2F2F2;
+	height: 6px;
+}
+
+.serviceContainer, .serviceContainerTop {
+	padding: 12px;
+	border-bottom: 1px dotted #D0D0D0;
+	background-color: #F0F0EE;
+	background-color: #F2F2F2;
+}
+
+.serviceText, .serviceTextHead {
+	color: #787878;
+}
+
+.serviceTextHead {
+	font-weight: bold;
+	margin-bottom: 12px;
+}
+
+/*
+* Absätze
+*/
+.paragraph {
+	margin-bottom: 16px;
+}
+
+/*
+* Container
+*/
+.clearFloats {
+
+}
+
+/*
+* Formular-Klassen
+*/
+.formElementContainer {
+	margin-bottom: 12px;
+}
+
+.formLabel {
+	color: #707070;
+	padding: 0px 0px 4px 0px;
+}
+
+.formField {
+
+}
+
+.formDescription {
+	margin-top: 8px;
+}
+
+/*
+* Image KLassen
+*/
+
+.imageLinked {
+	border: 0px;
+}
+
+/*
+* Reiter
+*/
+.sliderActive {
+	height: 17px;
+	float: left;
+	padding: 5px 28px 0px 12px;
+	background-image: url("img/slider_active.gif");
+	background-repeat: no-repeat;
+	background-position: top right;
+}
+
+.sliderActivePre {
+	height: 17px;
+	float: left;
+	padding: 5px 28px 0px 12px;
+	background-image: url("img/slider_preactive.gif");
+	background-repeat: no-repeat;
+	background-position: top right;
+	color: #707070;
+}
+
+.sliderInactive {
+	height: 17px;
+	float: left;
+	padding: 5px 28px 0px 12px;
+	background-image: url("img/slider_inactive.gif");
+	background-repeat: no-repeat;
+	background-position: top right;
+	color: #707070;
+}
+
+.sliderInactive a, .sliderActivePre a {
+	color: #707070;
+	text-decoration: none;
+}
+
+.sliderInactive a:hover, .sliderActivePre a:hover {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.sliderBackground {
+	height: 22px;
+	background-image: url("img/slider_background.gif");
+	background-repeat: repeat-x;
+	background-position: top;
+}
+
+/*
+* Knöpfe
+*/
+
+
+/*
+* Paperboy spezifische Klassen
+*/
+.htmlEditor, iframe {
+	border: 1px solid #ff0000;
+}
+
+.previewHtml {
+	border: 1px solid #A5ACB2;
+	background-color: #ffffff;
+}
+
+.previewText {
+	border: 1px solid #A5ACB2;
+	background-color: #ffffff;
+	padding: 4px 6px 4px 6px;
+	font-family: courier new, courier, monospace;
+	font-size: 12px;
+	color: #333333;
+}
+
+.barContainer {
+	border: 1px solid #D0D0D0;
+	text-align: center;
+	padding: 3px 3px 3px 3px;
+	position: relative;
+	width: 100%;
+}
+
+.barInit {
+	height: 16px;
+	width: 0px;
+	background-image: url("img/progressbar_inprogress.gif");
+	background-repeat: repeat-x;
+	background-position: top;
+}
+
+.barInProgress {
+	text-align: center;
+	color: #FFFFFF;
+	background-image: url("img/progressbar_inprogress.gif");
+	background-repeat: repeat-x;
+	background-position: top;
+	height: 16px;
+}
+
+.barSuccess {
+	background-image: url("img/progressbar_success.gif");
+	background-repeat: repeat-x;
+	background-position: top;
+	height: 16px;
+}
+
+.barError {
+	background-image: url("img/progressbar_error.gif");
+	background-repeat: repeat-x;
+	background-position: top;
+	height: 16px;
+}
+
+.barMessage {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	padding: 3px 3px 3px 3px;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+.errorSignBoard {
+	color: #ff0000;
+	text-align: center;
+	font-weight: bold;
+	background-color: #ffffff;
+}
+
+#newsletterText {
+	height: 400px;
+	font-family: courier, monospaced;
+}

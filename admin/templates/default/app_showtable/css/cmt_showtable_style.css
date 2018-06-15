@@ -1,0 +1,122 @@
+/*
+ * Such- und Sortierfeld-Klassen
+ */
+
+.sortField {
+	margin-bottom: 15px;
+}
+.sortField:last-child {
+	margin-bottom: 0px;
+}
+		
+
+.searchField .ui-selectmenu {
+	vertical-align: top;
+}
+
+.sortDirection {
+	margin-bottom: 18px;
+}
+
+.sortDirection:last-child {
+	margin-bottom: 0px;
+}
+
+.cmtSelectSortDirection {
+	width: 108px
+} 
+
+.cmtSelectSearchField,
+.cmtSelectSortField {
+	width: 100px;
+}
+
+.cmtSelectSearchCriteria {
+	width: 102px;	
+}
+
+.cmtSearchValue {
+	width: 126px;
+}
+
+.searchFieldLink {
+	margin: 6px 0px;
+}
+
+.searchFieldLink input {
+	vertical-align: middle;
+	margin: 0px 2px 0px 6px;	
+}
+
+.searchFieldLink label {
+	vertical-align: middle;
+	margin: 0;
+	cursor: pointer;
+	margin: 0px 10px 0px 0px;
+}
+
+.lastServiceElementContainer button {
+	margin: 0px;
+}
+
+.newEntryButtonImage {
+	display: inline;
+	border: 0px;
+}
+
+.showIpp {
+	margin-bottom: 0px;
+	display: inline;
+}
+
+.selectPageInformation {
+	margin-top: 8px;
+}
+
+
+/*
+ * Klassen f�r den Tabellenreihen Hover-Effekt
+ */
+
+table, tbody, thead, tr, td {
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	border-collapse: collapse;
+}
+
+td {
+	border: 2px solid #ffffff;
+}
+/*
+tbody tr.hovered td{
+	background-color: #C6E3FF;
+}
+
+tbody tr.hovered td.tableActionCell0, tbody tr.hovered td.tableSelectCell0 {
+	background-color: #2162A3;
+}
+
+tbody tr.hovered td.tableActionCell1, tbody tr.hovered td.tableSelectCell1 {
+	background-color: #2162A3;
+}
+*/
+
+/* --------------------------------------------
+    Tiny MCE Editor
+   -------------------------------------------- */
+table.mceEditor tbody tr td  {
+	border: 1px solid #A5ACB2;
+}
+
+/* --------------------------------------------
+    Layoutcontainer
+   -------------------------------------------- */
+
+
+
+/* --------------------------------------------
+    Knöpfe: Global verwendete Knöpfe mit Icons
+   -------------------------------------------- */
+
+

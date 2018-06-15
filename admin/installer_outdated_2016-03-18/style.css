@@ -1,0 +1,181 @@
+body {
+  margin:0px;
+	padding: 36px 0px 24px 0px;		
+  text-align: center;
+	font-family: Arial;
+	font-size: 12px;
+	background-image: url("img/bodybg.gif");
+	background-repeat: repeat-x;
+	background-position: top left;
+	background-color: #B2B2B2;
+}
+a, a:hover {
+	color: #54AF0A;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+#head {
+	width: 100%;
+	text-align: left;
+	font-size: 36px;
+	color: #ffffff;
+}
+
+#head .name {
+	font-weight: bold;
+}
+
+#head .version {
+
+}
+
+#headSubhead {
+	margin: -6px 0px 64px 0px;
+	font-size: 12px;
+	color: #ffffff;
+}
+
+#content { 	
+  text-align: left;
+  vertical-align: middle;	
+  margin: 0px auto;
+  padding: 0px;
+  width: 550px;
+}
+
+#contentContainer {
+	width: 100%;
+	background-color: #f0f0f0;
+	border: 1px solid #333333;
+	position: relative;
+}
+
+#headBar {
+	background-image: url("img/headbar.gif");
+	background-repeat: no-repeat;
+	background-position: top left;
+	background-color: #353535;
+	color: #fefefe;
+	font-weight: bold;
+	font-size: 15px;
+	letter-spacing: 0px;
+	padding: 0px 12px 0px 68px;
+	text-align: right;
+	
+}
+
+/* PNG-Grafik für IE */
+#headBarImage {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader (src='img/icon.png');
+	position: absolute;
+	top: -40px;
+	left: 0px;
+	width: 64px;
+	height: 64px;
+}
+
+/* PNG für den Rest der Browserwelt */
+html>body #headBarImage {
+	position: absolute;
+	top: -40px;
+	left: 0px;
+	width: 64px;
+	height: 64px;
+	background-image: url("img/icon.png");
+	background-repeat: no-repeat;
+	background-position: top left;	
+}
+
+#contentText {
+	padding: 16px 16px 16px 16px;
+}
+
+#buttons {
+	margin: 32px 0px 0px 0px;
+	text-align: right;
+}
+
+#buttons input {
+	width: auto;
+}
+
+h1 {
+	font-size: 15px;
+	color: #808080;
+	margin: 0px 0px 12px 0px;
+	padding: 0px;
+	font-weight: normal;
+}
+
+h2, .h2 {
+	font-size: 12px;
+	color: #787878;
+	margin: 12px 0px 4px 0px;
+	padding: 0px;
+	font-weight: bold;
+	color: #7BD913;
+	color: #c00a00;
+}
+
+h3 {
+
+}
+
+input {
+	font-size: 12px;
+	color: #333333;
+	width: 300px;
+	margin: 0px 0px 6px 0px;
+}
+
+label {
+	color: #707070;
+}
+
+.inputCheckbox {
+	width: auto;
+	vertical-align: top
+}
+
+.inputHelp {
+	margin-bottom: 16px;
+}
+
+.paragraph {
+	margin: 16px 0px 16px 0px;
+}
+
+.categorySpacer {
+	margin: 0px 12px 24px 12px;
+	border-top: 1px dotted #808080;
+}
+
+.error, .success {
+	margin: 16px 0px 0px 0px;
+	padding: 4px 12px 0px 56px;
+	min-height: 48px;
+	_height: 48px;
+}
+
+.error {
+	font-weight: bold;
+	color: #ff0000;
+	background-image: url("img/error.gif");
+	background-repeat: no-repeat;
+	background-position: top left;	
+}
+
+.success {
+	font-weight: bold;
+	color: #007700;
+	background-image: url("img/success.gif");
+	background-repeat: no-repeat;
+	background-position: top left;	
+}

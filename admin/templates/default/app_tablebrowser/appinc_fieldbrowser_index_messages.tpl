@@ -1,0 +1,1 @@
+{IF ("{VAR:message}" == "indexEdited")}Der Index wurde erfolgreich gespeichert.{ENDIF}

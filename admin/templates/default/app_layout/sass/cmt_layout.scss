@@ -1,0 +1,18 @@
+/**
+ * Haupt-CSS-Datei
+ * 
+ * Beinhaltet alle Standardformatierungen, die CMS übergreifend genutzt werden.
+ *
+ */
+
+/* Include Bourbon library */
+@import "../../sass_global/bourbon/bourbon";
+
+/* Global variables */
+@import "../../sass_global/variables";
+
+// @import "partials/reset";
+//@import "partials/layout";
+
+/* Old CSS file */
+@import "main"; 

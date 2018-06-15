@@ -1,0 +1,128 @@
+/* ----------------------------------------------
+	Panel: newsletter data
+   ----------------------------------------------*/
+
+#newsletterDataPanel .serviceContainerInner {
+	width: 100%;
+	max-width: 740px;
+}
+
+#newsletterDataPanel .serviceElementContainer {
+ 	width: 357px;
+}
+
+#newsletterDataPanel .serviceContainerInner .serviceElementContainer:nth-child(even) {
+	border-right: 0;
+}
+
+#newsletterDataPanel .serviceElementContainer input,
+#newsletterDataPanel .serviceElementContainer select,
+#newsletterSubject {
+	width: 100%;
+}
+
+#newsletterDataPanel .serviceElementContainer select#newsletterPageID {
+	width: calc(100% - 36px);
+}
+
+#refreshWebsitePage {
+	margin-left: 5px;
+}
+
+/* ----------------------------------------------
+	Panel: newsletter text
+   ----------------------------------------------*/
+#newsletterText {
+	font-family: monospace;
+/* 	width: 638px; */
+	width: auto;
+	height: 480px;
+	resize: vertical;
+}
+
+/* ----------------------------------------------
+	Panel: previews
+   ----------------------------------------------*/
+#previewTextContainer {
+	border: 1px solid #AAAAAA;
+	padding: 10px;
+	background-color: #FFFFFF;
+	font-family: monospace;
+	width: 648px;
+}
+
+#previewHTMLContainer {
+	border: 1px solid #AAAAAA;
+}
+
+/* ----------------------------------------------
+	Panel: test recipients
+   ----------------------------------------------*/
+ul#testRecipientsList {
+	list-style-type: none;
+	padding: 0 0 0 10px;
+}
+
+ul#testRecipientsList li {
+	margin: 0 0 10px 0;	
+}
+
+/* ----------------------------------------------
+	Panel: send newsletter
+   ----------------------------------------------*/
+#deliveryData {
+	margin: 0 0 30px 0;
+}
+#deliveryData td {
+	padding: 3px 10px 3px 0;
+}
+
+td.dataName {
+	color: #6a6a6a;
+}
+
+#progressBar {
+	margin: 0 0 20px 0;
+	position: relative;
+}
+
+/* ----------------------------------------------
+	Neu: Formatierungen
+   ---------------------------------------------- */
+#selectPage,
+#selectPage option {
+	font-family: monospace;
+}
+
+/* ----------------------------------------------
+	Buttons
+   ---------------------------------------------- */
+.cmtButton .cmtButtonSend {
+	background-image: url("../../administration/img/icons/email_large.png");
+}
+
+
+/* ----------------------------------------------
+	Tabs
+   ---------------------------------------------- */
+.cmtTabEdit span {
+	background-image: url("../../administration/img/icons/edit_large.png");
+}
+
+.cmtTabPreview span {
+	background-image: url("../../administration/img/icons/search_large.png");
+}
+
+.cmtTabTest span {
+	background-image: url("../../administration/img/icons/email_large.png");
+}
+
+.cmtTabSend span {
+	font-weight: bold;
+	color: #C90400;
+	background-image: url("../../administration/img/icons/email_large.png");
+}
+
+.cmtTabSend:hover span {
+	color: #FFFFFF;
+}

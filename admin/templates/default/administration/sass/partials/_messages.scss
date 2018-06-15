@@ -1,0 +1,114 @@
+/**
+ * _messages.scss
+ * Contains all system messages formating
+ *
+ */
+ 
+.cmtMessage {
+	
+	padding: 16px 16px 16px 80px;
+	position: relative;
+	// min-height: 70px;
+	font-weight: normal;
+	align-items: center;
+	margin: 1rem 0 1rem 0;
+	
+	p:first-child {
+		margin-top: 0;
+	}
+
+	p:last-child {
+		margin-bottom: 0;
+	}
+	
+	&:before,
+	&:after {
+		font-family: "FontAwesome";
+		font-size: 38px;
+		line-height: 100%;
+		text-align:center;
+		width: 38px;
+	}
+
+	&:before {
+		display: inline-block;
+		margin: 0 24px 0 -64px;
+		vertical-align: middle;
+	}
+
+	&:after {
+		position: absolute;
+		top: 16px;
+		left: 16px;
+	}
+	
+	// &.success,
+	&.cmtMessageSuccess {
+		background-color: $cmt-background-success;
+		color: #FFFFFF;
+		
+		&:before {
+			content: '\f00c';
+		}
+	}	
+	
+	//&.error,
+	&.cmtMessageError {
+		background-color: $cmt-background-error;
+		color: #FFFFFF;
+		
+		&:before {
+			content: '\f057';
+		}
+	}
+	
+	//&.warning,
+	&.cmtMessageWarning {
+		background-color: $cmt-background-warning;
+		color: #FFFFFF;
+// funky stripes
+//background: repeating-linear-gradient(
+//	-45deg,
+//	$cmt-background-warning,
+//	$cmt-background-warning 20px,
+//	lighten($cmt-background-warning,5%) 20px,
+//	lighten($cmt-background-warning,5%) 40px
+//);
+		&:before {
+			content: '\f071';
+		}
+	}
+	
+	//&.question,
+	//&.cmtMessageQuestion,
+	&.cmtMessageInfo {
+		background-color: $cmt-background-info;
+		color: #406FB1;
+		border: 2px solid #406FB1;
+		
+		&:before {
+			content: '\f05a';
+			//content: '\f111'; /* white disc */
+			//color: #FFFFFF;
+		}
+	
+		&:after {
+			//content: '\f05a';
+		}
+	}
+
+	&.cmtMessageHelp {
+		background-color: $cmt-background-help;
+		color: #8C7E00;
+		border: 2px solid #8C7E00;
+
+		&:before {
+			content: '\f0eb';
+		}
+	}
+	
+}
+
+.cmtHiddenContainer {
+	display: none;
+}

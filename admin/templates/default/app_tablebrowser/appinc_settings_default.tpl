@@ -1,0 +1,1 @@
+<div class="cmtMessage cmtMessageInfo">Bitte w&auml;hlen Sie eine Anwendung, Tabelle oder Gruppe aus, deren Einstellungen Sie bearbeiten m&ouml;chten.</div>

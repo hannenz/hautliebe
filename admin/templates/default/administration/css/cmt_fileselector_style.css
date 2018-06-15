@@ -1,0 +1,96 @@
+#cmtFileSelector {
+	position: relative;
+	background-color: #F2F2F2;
+	padding: 4px 4px 12px 4px;
+}
+
+
+#cmtFileSelectorBreadcrumbsContainer {
+	padding: 4px 8px;
+}
+
+#cmtFileSelectorFormContainer {
+	margin: 8px 4px;
+}
+
+#cmtFileSelectorContentContainer {
+	height: 300px;
+	overflow: auto;
+	border: 1px solid #B0B0B0;
+	margin: 0px 0px;
+	background-color: #FFFFFF;
+	position: relative;
+}
+.cmtBreadcrumbSeparator {
+	margin: 0px 3px;
+	color: #787878;
+}
+
+.cmtBreadcrumbSeparator:before {
+	content: '/';
+}
+
+
+.directoryIcon, .fileIcon {
+	margin: 0px 6px 0px 0px;
+	border: 0px;
+	vertical-align: middle;
+}
+
+.directoryName, .fileName {
+/*	float:left; */
+}
+
+#cmtFileSelectorCancel {
+	float: right;
+}
+
+/* -----------------------------------------
+	Tabellenformatierungen
+   ----------------------------------------- */
+#cmtFileSelector table {
+	width: 100%;
+	border-collapse: collapse;
+}
+#cmtFileSelector thead td {
+	background-color: #F8F8F8;
+	color: #888888;
+	font-weight: bold;
+}
+
+#cmtFileSelector td {
+	padding: 2px 8px;
+	white-space: nowrap;
+	border: 0;
+}
+
+#cmtFileSelector tbody .cmtfileSelectorColName {
+	width: 60%;	
+	overflow: hidden;
+	padding-left: 4px;
+	border-right: 1px dotted #D8D8D8;
+}
+
+#cmtFileSelector tbody .cmtfileSelectorColType {
+	width: 6%;
+	border-right: 1px dotted #D8D8D8;
+}
+
+#cmtFileSelector tbody  .cmtfileSelectorColSize {
+	width: 17%;
+	text-align: right;
+	border-right: 1px dotted #D8D8D8;
+}
+
+#cmtFileSelector tbody .cmtfileSelectorColDates {
+	width: 17%;
+	padding-right: 4px;
+}
+
+.cmtFileSelectorDirectory {
+	cursor: pointer;	
+}
+
+/* .cmtHovered { */
+/* 	background-color: #C6E3FF; */
+/* } */

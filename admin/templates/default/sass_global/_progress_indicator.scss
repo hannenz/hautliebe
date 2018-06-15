@@ -1,0 +1,39 @@
+/* ----------------------------------------
+	progress indicator
+   ---------------------------------------- */
+.cmt-in-progress:before {
+	content: ' ';
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(252,252,252,0.8);
+	z-index: 2;
+}
+
+.cmt-in-progress:after {
+	animation: rotate 0.8s infinite linear !important;
+	border: 4px solid #FF8000 !important;
+	border-right-color: transparent !important;
+	border-radius: 50% !important;
+	width: 24px !important;
+	height: 24px !important;
+	margin: 0 auto !important;
+	display: block !important;
+	content: ' ' !important;
+	background-image: none !important;
+	position: absolute !important;
+	z-index:3 !important;
+	top: calc(50% - 12px) !important;
+	left: calc(50% - 12px) !important;
+	right: auto !important;
+	bottom: auto !important;
+}
+
+@keyframes rotate {
+  0%    { transform: rotate(0deg); }
+  100%  { transform: rotate(360deg); }
+}

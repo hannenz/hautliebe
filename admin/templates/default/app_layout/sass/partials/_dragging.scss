@@ -1,0 +1,40 @@
+// ---------------------------------------
+//	items are dragged
+// ---------------------------------------
+
+.cmt-layout.cmt-dragging {
+	
+	.cmt-group {
+		
+		&:before {
+			outline-color: #E0E0E0;
+		}
+		
+		&.cmt-selected {
+			outline: 0;
+		}
+		
+		&.cmt-hover:before,
+		&.cmt-hover.cmt-selected:before {
+			outline-color: $cmt-hovered;
+		}
+	}
+	
+	#cmt-menu {
+		
+		.cmt-new-object {
+		
+			background: transparent;
+			border: 2px dashed #A0A0A0;
+			
+			&::after {
+				border: 0;
+				color: #A0A0A0;
+				right: 3px;
+				bottom: 5px;
+				background-color: #333333;
+			}	
+		}
+	
+	}
+}

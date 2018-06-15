@@ -1,0 +1,49 @@
+// ---------------------------------------
+//	Menu messages
+// ---------------------------------------
+
+#cmt-messages {
+	max-height: 100%;
+	transition: all 0.5s;
+}
+
+#cmt-message-contents {
+	display: none;
+}
+
+.cmt-message {
+	padding: 5px 5px 5px 34px;
+	position: relative;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;
+
+	&::before {
+		height: 24px;
+		width: 24px;
+		position: absolute;
+		top: 5px;
+		left: 5px;
+		overflow: hidden;
+		font-family: 'FontAwesome';
+		font-size: 22px;
+		line-height: 24px;	
+	}
+}
+
+.cmt-message-success {
+	background-color: $cmt-background-success;
+
+	&::before {
+		content: '\f058';
+	}
+}
+
+.cmt-message-error {
+	background-color: $cmt-background-error;
+
+	&::before {
+		content: '\f06a';
+	}
+}

@@ -1,0 +1,151 @@
+
+.cmt-teaser {
+	margin: 3rem 0 5rem 0;
+}
+.cmt-dashboard {
+	margin: 0 0 3rem 0;
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+
+.cmt-dashboard-item {
+	width: 25%;
+	min-width: 30rem;
+	max-width: 30rem;
+	margin: 1rem;
+	border: 2px solid #C8C8C8;;
+	padding: 3rem 2rem 3rem 2rem;
+	
+/* 	box-shadow: 0 1px 3px 0 #d4d4d5,0 0 0 1px #d4d4d5; */
+	border-radius: .28571429rem;
+	background: #f8f8f8;
+}
+
+.cmt-dashboard-item__head {
+	position: relative;
+	text-align: center;
+	padding: 6rem 0 0 0;
+	margin: 0 0 3rem 0;
+	color: #555555;
+	font-weight: 700;
+	font-size: 1.28571429em;
+}
+
+.cmt-dashboard-item__head:before {
+	content: '';
+	font-family: "FontAwesome";
+	font-size: 5.5rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 5.5rem;
+	line-height: 100%;
+	text-align: center;
+	color: #C8C8C8;
+}
+
+.head--user:before {
+	content: '\f007';
+}
+
+.head--cmt:before {
+	content: '\f015';
+}
+
+.head--db:before {
+	content: '\f1c0';
+	font-size: 5rem;
+}
+
+.head--system:before {
+	content: '\f26c';
+}
+
+.head--database:before {
+	content: '\f233';
+}
+
+.head--php:before {
+/* 	content: '\f121'; */
+	content: ' ';
+	background-image: url('../img/php-logo.svg');
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.head--password:before {
+/* 	content: '\f084'; */
+	content: '\f13e';
+}
+ 
+.cmt-dashboard-item__content {
+	
+}
+
+dl {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+dt {
+	width: 40%;
+	padding: 0.25rem 0.5rem 0.25rem 0;
+	color: #808080;
+}
+
+dd {
+	width: 60%;
+	padding: 0.25rem 0;
+	margin: 0;
+	font-weight: bold
+}
+
+
+tr:nth-child(even) {
+	background-color: #EFF9DF;
+}
+
+.cmtTable tbody td {
+	padding: 8px 12px;
+}
+
+.extensionName {
+	font-weight: bold;
+}
+
+.phpInfoWrapper {
+	font-size: 13px;
+}
+
+.phpInfoWrapper td, 
+.phpInfoWrapper th {
+	font-size: inherit;
+}
+
+.error {
+	background-color: #C62828;
+	color: #FFFFFF;
+	font-weight: bold;
+	padding: 4px 8px;
+	text-align: center;
+}
+
+.warning {
+	background-color: #F57C00;
+	color: #FFFFFF;
+	font-weight: normal;
+	padding: 4px 8px;
+	text-align: center;
+}
+
+.warning em {
+	font-weight: bold;
+}
+
+.cmtMessage {
+	margin: 0;
+}
+

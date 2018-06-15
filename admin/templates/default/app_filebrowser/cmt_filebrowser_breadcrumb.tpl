@@ -1,0 +1,1 @@
+{IF (!{ISSET:isLastBreadcrumb:VAR})}<a class="cmtBreadcrumb" href="{SELFURL}&amp;cmtDirectory={VAR:directoryPath}">{VAR:directoryName}</a><span class="cmtBreadcrumbSeparator"></span>{ELSE}<span class="cmtLastBreadcrumb">{VAR:directoryName}</span>{ENDIF} 

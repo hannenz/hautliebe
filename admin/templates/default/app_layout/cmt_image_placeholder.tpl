@@ -1,0 +1,1 @@
+<img src="{CMT_TEMPLATE}app_layout/img/cmt_image_placeholder.png" class="cmt-image-is-placeholder" alt="" />

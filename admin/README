@@ -1,0 +1,52 @@
+# Content-O-Mat
+
+Web Application Framework
+
+Content-O-Mat ist ein Content Management System und Web Application Framework.
+
+[HALMA Agentur für Werbung](http://www.agentur-halma.de)
+
+--
+
+## Workflow neues Projekt mit Content-O-Mat als Submodul 
+
+### Bash (Terminal, Linux/Mac OSX)
+
+1. Projekt anlegen (foobar)
+
+Projektordenr anlegen
+
+$ mkdir foobar
+$ cd foobar
+
+Projekt-Git initialisieren
+
+$ git init
+
+Submodul anlegen, holen und initialisieren
+__Achtung: Das Submodul wird aus dem Repo "contentomat" geklont, lokal aber im Ordner "admin" unterhalb des Projektordners gespeichert,__
+deshalb das "admin" als vierten Parameter zum git Kommando
+
+$ git submodule add ssh://git@halma.dyndns.org:25675/halma/contentomat.git admin
+
+Projektstruktur aus Skelett übernehmen
+
+$ cp -ra admin/skel/* .
+
+Initiale Datenbankstruktur anlegen.
+__ACHTUNG: Vorher muss die Datenbank selbst erstellt werden, z.Bsp. in PHPMyAdmin.__
+
+$ zcat admin/dumps/cmt.initial.{NEUSTES_DATUM}.sql.gz | mysql -u root -p{DASMYSQLPASSWORT} {DATENBANKNAME}
+
+Datenbankkonfiguration aus Vorlage kopieren und anpassen
+
+$ cp admin/settings_db.default.inc admin/settings_db.inc
+
+Die Konfigurationsdatei admin/settings_db.inc mit einem Editor öffnen, entsprechend bearbeiten und speichern.
+
+Nun noch die Serverumgebung einrichten (Apache Virtual Host, o.ä.) und fertig.
+
+
+### Eclipse (Windows, Linux, Mac OSX)
+
+Irgendwie auf so ähnliche lautende Schaltflächen und Menüs klicken, googlen und beten.

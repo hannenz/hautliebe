@@ -1,0 +1,40 @@
+// ---------------------------------------
+//	CMT menu panel: images
+// ---------------------------------------
+
+#cmt-images-content-container {
+	
+	figure {
+		padding: 5px;
+		margin: 0 0 20px 0;
+		width: 100%;
+		text-align: center;
+		position: relative;
+		overflow: hidden;
+
+		div {
+			background-color: rgb(240, 240, 240);
+			background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.2) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.2) 75%, rgba(0, 0, 0, 0.2) 0px), linear-gradient(45deg, rgba(0, 0, 0, 0.2) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.2) 75%, rgba(0, 0, 0, 0.2) 0px), none;
+			background-position: 0 0px, 10px 10px;
+			background-repeat: repeat, repeat;
+			background-size: 20px 20px, 20px 20px;
+		}
+		
+		&:hover,
+		&:hover figcaption {
+			color: #FFFFFF;
+			background-color: $cmt-hovered;
+		}
+
+		img {
+			max-width: 100%;
+			display: block;
+			margin: 0 auto;
+		}
+
+		figure figcaption {
+			color: $cmt-text;
+			padding: 5px;
+		}
+	}
+}

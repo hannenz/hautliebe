@@ -1,0 +1,39 @@
+/* -------------------------------------
+	Table structure editor
+   ------------------------------------- */
+
+#cmtEditOverviewFieldsContainer {
+	width: 432px;
+	float: left;
+}
+
+#cmtEditOverviewFieldsContainer textarea {
+	width: 420px;
+	height: 220px;	
+}
+
+#cmtEditDetailFieldsContainer {
+	width: 66%;
+	float: left;
+}
+
+.cmtEditFieldsContainerInner {
+	margin: 0px 0px 0px 0px;	
+}
+
+.cmtAvailableFieldsContainer {
+	width: 240px;
+	float: left;
+	margin: 0px 0px 0px 16px;
+}
+
+
+.cmtAvailableFieldsList {
+	height: 260px;
+	max-height: 260px;
+	overflow: auto;
+}
+
+/* -------------------------------------
+	Fieldbrowser
+   ------------------------------------- */

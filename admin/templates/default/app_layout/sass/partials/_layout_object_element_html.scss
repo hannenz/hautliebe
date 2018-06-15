@@ -1,0 +1,94 @@
+// ---------------------------------------
+//	Tiny MCE editor overrides
+// ---------------------------------------
+
+.mce-btn {
+	
+	border-width: 0 !important;
+	
+	&:hover {
+		border-width: 0 !important;
+		background-color: #406FC8 !important;
+		color: #FFFFFF !important;
+
+		.mce-ico,
+		span {
+			color: #FFFFFF !important;
+		}
+
+		.mce-caret {
+			border-top-color: #FFFFFF !important;
+		}
+	}
+}
+	
+
+.mce-tooltip {
+	background: trabsparent !important;
+ 	padding: 0 !important;
+ 	opacity: 1 !important;
+	
+	.mce-tooltip-arrow {
+		display: none;
+	}
+	
+	.mce-tooltip-inner {
+		padding: 4px 5px !important;
+		white-space: nowrap !important;
+		background: rgba(51,51,51,1) !important;
+		color: #FFFFFF !important;
+		border: 1px solid #F0F0F0 !important;
+		font-family: Arial, Helvetica, sans-serif !important;
+		font-size: 12px !important;
+		line-height: 100% !important;
+		margin-top: 5px;
+	}
+}
+
+.cmt-mce-menu  {
+	
+	.mce-tinymce-inline {
+		width: 100% !important;
+		overflow: auto !important;;
+		height: auto !important;
+		border-width: 0 !important;
+	}
+
+	.mce-toolbar,
+	.mce-container-body,
+	.mce-panel  {
+		display: block !important;
+		width: 100% !important;
+		height: auto !important;
+		top: auto  !important;
+		left: auto  !important;
+	}
+
+	.mce-toolbar,
+	.mce-panel {
+		position: relative !important;
+	}
+
+	.mce-menubar::after {
+		content: ".";
+		display: block;
+		height: 0;
+		line-height: 0;
+		clear: both;
+		visibility: hidden;
+	}
+
+	.mce-widget {
+	 	float: left	!important;
+	 	display: inline-block !important;
+	}
+
+	.mce-abs-end {
+		position: relative !important;
+	}
+
+	.mce-btn-group {
+		float: left !important;
+		display: inline-block !important;
+	}
+}

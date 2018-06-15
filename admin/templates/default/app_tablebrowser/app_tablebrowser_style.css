@@ -1,0 +1,92 @@
+/*
+* Tablebrowser CSS
+*/
+
+.serviceButton {
+	margin-right: 32px;
+	float: left;
+}
+
+/* Groups */
+.groupRow {
+    background-color: #E1EBF4;
+    padding: 4px 12px 4px 4px; 
+    border-bottom: 1px solid #396B9D;
+}
+
+.groupIcon, .groupName, .groupOpenClose {
+	float: left;
+}
+
+.groupIcon {
+	margin: 0px 6px 0px 8px;
+}
+
+.groupName {
+	color: #396B9D;
+	padding: 4px 0px 4px 0px;
+}
+
+.groupEditButtons {
+	float: right;
+}
+
+.groupButton, .spacerContainer {
+	float: left;
+}
+
+.groupEditButtons {
+}
+
+.groupButton {
+	width: 30px;
+	text-align: right;
+}
+
+/* Items */
+.itemRow0, .itemRow1, .itemRowLastEdited {
+    padding: 2px 12px 2px 62px; 
+}
+
+.itemRow0 {
+    background-color: #F4F9F0;
+}
+
+.itemRow1 {
+    background-color: #FFFFFF;
+}
+
+.itemRowLastEdited {
+	background-color: #FFFBCA;
+}
+
+.itemRow0:hover, .itemRow1:hover, .itemRowLastEdited:hover {
+	background-color: #FFDFBF;
+}
+
+.itemIcon, .itemName {
+	float: left;
+}
+
+.itemIcon {
+	margin: 0px 16px 0px 0px;
+}
+
+.itemName {
+	color: #33333;
+	padding: 4px 0px 4px 0px;
+}
+
+.itemEditButtons {
+	float: right;
+}
+
+.itemButton {
+	float: left;
+}
+
+
+.itemButton {
+	width: 30px;
+	text-align: right;
+}

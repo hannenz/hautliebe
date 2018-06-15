@@ -1,0 +1,53 @@
+.mce-tinymce {
+	box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+}
+
+.mce-container {
+	box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+}
+
+.mce-panel {
+	background-color: #F6F6F6 !important;
+	border-color: #C0C0C0 !important;
+}
+
+.mce-btn:not(.mce-primary) {
+	background:transparent !important;
+}
+
+.mce-btn.mce-active {
+	background: #A0A0A0 !important;
+}
+
+.mce-btn:hover,
+.mce-menu-item:not(.mce-disabled):hover {
+	background: #548BCE !important;
+}
+
+.mce-menu-item:hover,
+.mce-menubtn:hover span,
+.mce-btn:hover button {
+	color: #FFFFFF !important;
+}
+
+.mce-btn:hover .mce-ico,
+.mce-menu-item:not(.mce-disabled):hover .mce-ico,
+.mce-menu-item:not(.mce-disabled):hover .mce-text,
+.mce-menu-item:not(.mce-disabled):hover .mce-menu-shortcut {
+	color: #FFFFFF !important;
+}
+
+.mce-disabled {
+	background: transparent !important;
+	cursor: default;
+}
+
+.mce-menu-item.mce-menu-item-sep:hover {
+	background: inherit !important;
+}
+
+#mce-modal-block.mce-in {
+	opacity: .7 !important;
+}

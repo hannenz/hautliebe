@@ -1,0 +1,59 @@
+// ---------------------------------------
+//	CMT layout mode: page
+// ---------------------------------------
+
+html {
+	overflow: hidden;
+}
+
+html,
+body,
+#cmt-pusher,
+#cmt-container,
+#cmt-menu {
+	height: 100%;
+}
+
+
+#cmt-container,
+#cmt-pusher,
+#cmt-content {
+	height: 100%;
+}
+
+#cmt-content {
+	overflow-y: scroll;
+/* 	padding: 1rem; */
+}
+
+#cmt-content,
+#cmt-content-inner {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	display: block;
+	opacity: 1;
+	visibility: visible;
+	box-sizing: border-box;
+	
+}
+
+#cmt-content-inner {
+	height: auto;
+}
+
+#cmt-container {
+	position: relative;
+	overflow: hidden;
+}
+
+#cmt-pusher {
+	position: relative;
+	left: 0;
+	z-index: 99;
+	height: 100%;
+	width: 100%;
+	-webkit-transition: -webkit-transform 0.5s;
+	transition: all 0.5s;
+
+}

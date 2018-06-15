@@ -1,0 +1,39 @@
+.cmt-layer {
+	
+	.cmt-layer-handle {
+		cursor: pointer;
+		position: relative;
+		
+		&:after {
+			position: absolute;
+			right: 0;
+			top: 0;
+			content: '\f0d7';
+			width: 32px;
+			height: 32px;
+			overflow: hidden;
+			color: #6A6A6A;
+			font-size: 22px;
+			line-height: 32px;
+			font-family: 'FontAwesome';
+			text-align: center;
+			vertical-align: middle;
+		}
+	}
+	
+	.cmt-layer-content {
+		display: none;
+	}
+	
+	&.cmt-open {
+		
+		.cmt-layer-content {
+			display: block;
+		}
+		
+		.cmt-layer-handle:after {
+			content: '\f0d8';
+		}
+	
+	}
+}

@@ -1,0 +1,9 @@
+# Dateien nicht anzeigen:
+
+<FilesMatch "\.(inc)$">
+order deny,allow
+deny from all
+</FilesMatch>
+
+# Fehler-Dokument:
+ErrorDocument 404 /404.php

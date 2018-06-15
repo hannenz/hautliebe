@@ -1,0 +1,85 @@
+#cmt-datalayout {
+	display: flex;
+	padding: 2rem;
+}
+
+#cmt-datalayout h4 {
+	margin: 0 0 1rem 0;
+	font-size: 1.3rem;
+	padding: 0;
+	font-weight: bold;
+	color: #333333;
+}
+
+#cmt-templates {
+	width: 20rem;
+	padding: 2rem 0;
+}
+
+#cmt-templates .cmt-delete-layout-object {
+	display: none;
+}
+
+#cmt-layout-wrapper {
+	margin: 0 0 0 2rem;
+}
+
+#cmt-layout {
+/* 	flex-grow: 1; */
+	border: 1px dotted #A0A0A0;
+	padding: 2rem;
+	
+	width: 54rem;
+}
+
+#cmt-layout .cmt-object-template {
+	width: 100%;
+/* 	max-width: 50rem; */
+}
+
+
+
+.cmt-object-template {
+	border: 1px solid #A0A0A0;
+	padding: 1rem 2rem;
+	margin: 0 0 1rem 0;
+	text-align: center;
+	width: 20rem;
+	position: relative;
+}
+
+.cmt-object-template:hover {
+	color: #FFFFFF;
+	background-color: #478BCF;
+	cursor: move;
+}
+
+.cmt-object-template .cmt-delete-layout-object {
+	position: absolute;
+	display: block;
+	top: 0.5rem;
+	right: 1rem;
+	padding: 0.2rem 0.5rem;
+	color: #FFFFFF;
+	background: #A0A0A0;
+	border: 0.1rem solid transparent;
+	border-radius: 0.2rem;
+	text-align: center;
+	line-height: center;
+	cursor: pointer;
+}
+
+.cmt-object-template .cmt-delete-layout-object:after {
+	font-family: 'FontAwesome';
+	content: '\f00d'
+}
+
+.cmt-object-template:hover .cmt-delete-layout-object {
+	color: #FFFFFF;
+	border-color: #FFFFFF;
+	background: transparent;	
+}
+
+#cmt-templates .cmt-delete-layout-object {
+	display: none;
+}

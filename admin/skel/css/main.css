@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+/* ----------------------------------------
+	Allgemeine Formatierungen
+   ---------------------------------------- */
+*, *::before, *::after {
+	box-sizing:border-box;
+}
+
+a img {
+	border: 0;
+}
+
+/* ----------------------------------------
+	Basic typography (Respect user settings)
+   ---------------------------------------- */
+body {
+	font:100%/1.5 sans-serif;
+	color:#333333;
+}
+
+/* ----------------------------------------
+	Layout-Helfer
+   ---------------------------------------- */
+.clearfix::after {
+	content: 	".";
+	display:	 block;
+	height: 	0;
+	line-height:0;
+	clear: 		both;
+	visibility: hidden;
+}
+.clearfix {
+	display: inline-block;
+}
+
+/* Hides from IE-mac \*/
+* html .clearfix {
+	height: 1%;
+}
+
+.clearfix {
+	display: block;
+}
+
+/* Verwendung class="clearfix" :
+
+<div class="outerContainer clearfix">
+	<p class="floatingContainer1"> </p>
+	<p class="floatingContainer2"> </p>
+	...
+</div>
+
+*/
+
+.col1 {
+	width: 50%;
+}
+
+.col2 {
+	width: 50%;
+}
+
+.col1, .col2 {
+	float:left;
+	pdding: 2em 2em 4em;
+}

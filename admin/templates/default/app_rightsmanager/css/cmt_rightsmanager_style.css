@@ -1,0 +1,107 @@
+/* User: neuer Eintrag */
+.cmtButton.ui-button .cmtButtonNewUser,
+.cmtButtonNewUser {
+	background: url('../../administration/img/icons/add_small.png') no-repeat right bottom,
+	url('../../app_rightsmanager/img/icon_user_large.png') no-repeat left top;
+}
+
+.cmtButton.ui-button .cmtButtonNewUserGroup,
+.cmtButtonNewUserGroup {
+	background: url('../../administration/img/icons/add_small.png') no-repeat right bottom,
+	url('../../app_rightsmanager/img/icon_user_group_large.png') no-repeat left top;
+}
+
+td.cmtUserGroupName,
+td.cmtUserName {
+	width: 100%;
+}
+
+.cmtUserGroupRow td {
+	
+}
+
+.cmtUserGroupRow td,
+.cmtApplicationGroupRow td  {
+	background-color: #E0E0E0;
+	color: #444444;
+	font-weight: bold;
+	vertical-align: middle;
+	height: 27px;
+}
+
+.cmtUserGroupRow td.cmtUserGroupName {
+	background-image: url('../../app_rightsmanager/img/icon_user_group_large.png');
+	background-repeat: no-repeat;
+	background-position: 8px 4px;
+	padding-left: 44px;
+}
+
+.cmtUserRow td {
+	vertical-align: middle;
+}
+
+.cmtUserRow td.cmtUserName {
+	background-image: url('../../app_rightsmanager/img/icon_user_large.png');
+	background-repeat: no-repeat;
+	background-position: 44px 4px;
+	padding-left: 76px;
+}
+
+/* ----------------------------------------------
+	Reiter Zugriffsrechte
+   ---------------------------------------------- */
+.cmtSelectUserGroupContainer {
+	background-image: url('../../app_rightsmanager/img/icon_user_group_large.png');
+	background-repeat: no-repeat;
+	background-position: 8px 4px;
+	padding-left: 44px;
+}
+
+.cmtSelectUserContainer {
+	background-image: url('../../app_rightsmanager/img/icon_user_large.png');
+	background-repeat: no-repeat;
+	background-position: 8px 4px;
+	padding-left: 44px;
+}
+
+.cmtTable tbody tr.cmtApplicationGroupRow td {
+	background: transparent;
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: 20px;
+	vertical-align: bottom;
+}
+
+.cmtApplicationGroupHead {
+	padding: 2px 12px 2px 32px;
+	position: relative;
+	background-color: #333333;
+	border-bottom: 2px solid #A0A0A0;
+	color: #FFFFFF;
+	background-image: url("../../general/img/bg_headline.gif");
+	background-position: left top;
+	background-repeat: repeat-y;
+}
+
+.cmtApplicationGroupHeadIcon {
+	position: absolute;
+	top: -8px;
+	left: 0;
+}
+
+.cmtApplicationGroupName {
+	background-repeat: no-repeat;
+	background-position: 8px 0px;
+/*	padding-left: 44px;*/
+}
+
+.cmtTable tbody td.cmtApplicationName {
+	background-repeat: no-repeat;
+	background-position: 32px 0px;
+	padding-left: 68px;
+	width: 200px;
+}
+
+.cmtApplicationRightCell {
+	width: 60px;
+}

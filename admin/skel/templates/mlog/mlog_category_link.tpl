@@ -1,0 +1,1 @@
+<a href="/{PAGELANG}/10/Rubrik-{VAR:categoryName},1,{VAR:id}.html">{VAR:categoryName}</a>

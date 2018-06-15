@@ -1,0 +1,1 @@
+<a href="Javascript: void(0);" class="cmtButton cmtButtonShowCalendar cmtShowCalendar" data-dateformat="yyyy-mm-dd" title="Datum ausw&auml;hlen"></a>

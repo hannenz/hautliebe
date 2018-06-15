@@ -1,0 +1,19 @@
+// ---------------------------------------
+//	CMT layout mode: tooltips
+// ---------------------------------------
+.cmt-object *[data-cmt-tooltip]:hover:after,
+.mce-tooltip {
+	content: attr(data-cmt-tooltip);
+	position: absolute;
+	display: block;
+	white-space: nowrap;
+	background: #333333; 
+	padding: 4px 5px;
+	color: #FFFFFF;
+	border: 1px solid #F0F0F0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 100%;
+  	margin-top: 5px;
+  	z-index: 1001;
+}

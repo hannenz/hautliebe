@@ -1,0 +1,87 @@
+// ---------------------------------------
+//	JQuery UI overrides
+// ---------------------------------------
+
+.ui-wrapper {
+	outline: 1px dotted #A0A0A0;
+
+	.cmt-element {
+		outline: none;
+	}
+
+	.ui-resizable-handle {
+		font-family: 'FontAwesome';
+		font-size: 20px;
+		line-height: 32px;
+		color: #666666;
+		text-align: center;
+		height: 32px;
+		width: 32px;
+	
+		display: none !important;
+	}
+	
+	&:hover {
+	
+		.ui-resizable-handle {
+		 	border: 1px solid #666666;
+			background-color: rgba(252,252,252,0.9);
+			display: block !important;
+			
+			&:hover {
+				border-color:#FFFFFF;
+				background-color: #406FC8;
+				color: #FFFFFF;
+			}			
+			
+		}
+	}	
+}
+
+.cmt-preview .ui-wrapper .ui-resizable-handle,
+.cmt-preview .ui-wrapper:hover .ui-resizable-handle {
+	opacity: 0;	
+}
+
+.ui-state-disabled:hover .ui-resizable-handle {
+	display: none !important;
+	border: 10px;
+}
+
+.ui-resizable-se {
+	right: 0;
+	bottom: 0;	
+}
+
+.ui-resizable-e {
+	right: 0;
+	top: calc(50% - 16px);
+}
+
+.ui-resizable-s {
+	bottom: 0;
+	left: calc(50% - 16px);
+}
+
+.ui-resizable-se {
+	background-image: none;
+	text-indent: 0;
+}
+
+.ui-resizable-e:before {
+	content: "\f07e";
+}
+
+.ui-resizable-s:before {
+	content: "\f07d";
+}
+
+.ui-resizable-se:before {
+	content: "\f07d";
+	transform: rotate(135deg);
+	display: inline-block;
+}
+
+.ui-draggable-dragging {
+	z-index: 100010;
+}

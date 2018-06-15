@@ -1,0 +1,1 @@
+<div class="selectTableFieldsElement" id="{VAR:cmt_fieldname}">{VAR:cmt_fieldalias}&nbsp;&nbsp;<span>(Feldtyp: {VAR:cmt_fieldtype})</span>{IF ("{VAR:cmtIndexType}" != "fulltext")}<input type="text" size="3" value="{VAR:indexLength}" name="cmtIndexFieldLength[{VAR:cmt_fieldname}]" />{ENDIF}</div>

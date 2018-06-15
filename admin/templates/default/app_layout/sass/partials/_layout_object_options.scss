@@ -1,0 +1,38 @@
+// ---------------------------------------
+//	CMT layout object: options
+// ---------------------------------------
+
+.cmt-object-options {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	background-color: #FFFFFF;
+	margin: 20px 0 0 0;
+
+	.cmt-object-options-head {
+		font-size: 14px;
+		font-weight: bold;
+		color: $cmt-text-service;
+		margin: 0 0 10px 0;
+		margin: 0;
+		background-color: $cmt-background-light;
+		padding: 5px 10px;
+	}
+
+	.cmt-object-options-container {
+	
+		padding: 10px;
+
+		.cmt-object-option-label {
+			margin: 0 0 5px 0;
+			font-weight: normal;
+			color: $cmt-text-service;
+		}
+		
+		.cmt-object-option {
+			background-color: $cmt-background-help;
+			font-family: monospace;
+			display: block;
+			margin: 0 0 10px 0;	
+		}
+	}
+}

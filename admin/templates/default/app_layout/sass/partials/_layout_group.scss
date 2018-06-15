@@ -1,0 +1,31 @@
+// ---------------------------------------
+//	CMT layout groups (columns)
+// ---------------------------------------
+
+.cmt-group {
+	min-height: 5rem;
+	background-color: transparent;
+	outline-offset: 4px;
+	position: relative;
+
+	&:before {
+		content: ' ';
+		outline: 2px dotted transparent;
+		outline-offset: 4px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+//		z-index: -1;
+	} 
+
+	&.cmt-selected:before {
+		outline-color: $cmt-selected;
+	}
+	
+	&.cmt-selected {
+		outline: 0;
+	}
+
+}

@@ -1,0 +1,19 @@
+/* ----------------------------------------
+	Box (with header and footer)
+   ---------------------------------------- */
+.cmt-box {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+ 
+.cmt-box-content {
+	flex: 1 1 auto;
+	overflow-y: auto;
+}
+
+.cmt-box-header,
+.cmt-box-footer {
+	flex: 0 0 auto;
+	background-color: #F2F2F2;
+}

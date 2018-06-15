@@ -1,0 +1,152 @@
+
+/* -------------------------------------
+	Detailansicht
+   ------------------------------------- */
+#cmtAddMediaContainer {
+	margin: 0px 0px 16px 0px;
+	padding: 0px 12px;
+}
+
+.cmtMediaContainer figure {
+	margin: 0;
+	padding: 0;
+}
+
+.cmtMediaContainer,
+.cmtMediaHandle,
+.cmtMediaTitleContainer,
+.cmtMediaServiceContainer {
+	width: 160px;
+	padding-left: 8px;
+	padding-right: 8px;	
+}
+
+.cmtMediaContainer {
+	border: 1px solid #B0B0B0;
+	height: 170px;
+	padding-top: 24px;
+	position: relative;
+	float: left;
+	margin: 0px 12px 16px 0px;
+	border-radius: 4px;
+	background-color: #FFFFFF;
+	overflow: hidden;
+}
+
+#cmtMediaSortableContainer .ui-sortable-placeholder {
+	width: 160px;
+	padding-left: 8px;
+	padding-right: 8px;
+	height: 170px;
+	padding-top: 24px;
+	position: relative;
+	float: left;
+	margin: 0px 12px 16px 0px;
+	border-radius: 4px;
+}
+
+.cmtMediaContainer:hover {
+	border-color: #FFFFFF;
+	background-color: #C6E3FF;
+	box-shadow: 0 0 0 2px #3675B7;
+}
+
+.cmtMediaHandle {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 160px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	height: 20px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.cmtMediaTitleContainer {
+	/* width: 150px; */
+	max-height: 36px;
+	overflow: hidden;
+	position: absolute;
+	bottom: 8px;
+	left: 0px; 
+	text-align: center;
+}
+
+.cmtMediaServiceContainer {
+	position: absolute;
+	bottom: 4px;
+	left: 0px;
+	height: 34px;
+/*	width: 156px; */
+	text-align: right;
+	background-color: #C6E3FF;
+}
+
+.cmtMediaContainer .cmtMediaServiceContainer {
+	visibility: hidden;
+}
+
+.cmtMediaContainer:hover .cmtMediaServiceContainer {
+	visibility: visible;
+	display:flex; /* Fixes buttons hidden by float breaking down. J.Braun 2017-06-08 */
+}
+
+/* löschen Button */
+.cmtMediaServiceContainer .cmtButtonDelete {
+	float: left;
+}
+
+#cmtMediaSortableContainer {
+	padding: 0px 0px 0px 12px;
+}
+
+/* -------------------------------------
+	Medientypen
+   ------------------------------------- */
+.cmtMediaContainer {
+	background-position: center 24px;
+	background-repeat: no-repeat;
+	position: relative;
+}
+
+.cmtMediaContentContainer img {
+	width: 100%;
+	height: auto;
+}
+
+.cmtMediaTypeDocument {
+	background-image: url('../img/mediatype_document.png');
+}
+
+.cmtMediaTypeLink {
+	background-image: url('../img/mediatype_link.png');
+}
+
+.cmtMediaTypeDate {
+	background-image: url('../img/mediatype_date.png');
+}
+
+.cmtMediaContentContainer:after {
+	content: attr(data-file-type);
+	position: absolute;
+	right: 0;
+	bottom: 44px;
+	background-color: #478BCF;
+	border: 1px solid #FFFFFF;
+	color: #FFFFFF;
+	font-size: 13px;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 5px 10px;
+	font-family: Arial, helvetica, sans-serif;
+	line-height: 100%;
+	z-index: 1;
+	text-shadow: none;
+}
+
+
+.cmtMediaContentContainer{
+	overflow: hidden;
+	height:120px;
+}

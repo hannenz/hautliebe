@@ -1,0 +1,242 @@
+// ---------------------------------------
+//	flat buttons
+// ----------------------------------------
+.cmt-flat-button {
+	display: inline-block;
+	width: 36px;
+	height: 36px;
+	overflow: hidden;
+	color: #6A6A6A;
+	font-size: 22px;
+	line-height: 36px;
+	font-family: 'FontAwesome';
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+.cmt-flat-button:hover {
+	color: #FFFFFF !important;
+	background-color: #393939;
+	background-color: #406FC8;
+}
+
+.cmt-button-visibility:before {
+	content: "\f070";
+	color: #c62828;
+}
+
+.cmt-object-visible .cmt-button-visibility:before {
+	content: "\f06e";
+	color: #4CAF50
+}
+
+.cmt-button-visibility:hover:before,
+.cmt-object-visible .cmt-button-visibility:hover:before {
+	color: #FFFFFF;	
+}
+
+.cmt-button-duplicate:before {
+	content: "\f0c5";
+}
+
+.cmt-button-delete:before,
+.cmt-button-image-remove:before {
+	content: "\f00d";
+}
+
+.cmt-button-a:before,
+.cmt-button-image-a:before {
+	content: "\f0c1";
+}
+
+.cmt-button-unlink:before,
+.cmt-button-image-unlink:before {
+	content: "\f127";
+}
+
+.cmt-button-remove-format:before,
+.cmt-button-image-remove-format:before {
+	content: "\f12d";
+}
+
+.cmt-button-u:before {
+	content: "\f0cd";
+}
+
+.cmt-button-i:before {
+	content: "\f033";
+}
+
+.cmt-button-b:before {
+	content: "\f032";
+}
+
+.cmt-button-strike:before {
+	content: "\f0cc";
+}
+
+.cmt-button-p:before {
+	content: "\f1dd";
+}
+
+.cmt-button-ul:before {
+	content: "\f03a";
+}
+
+.cmt-button-ol:before {
+	content: "\f0cb";
+}
+
+.cmt-button-image:before {
+	content: "\f083";
+}
+
+.cmt-button-settings:before {
+	content: "\f013";
+}
+
+.cmt-button-refresh:before {
+	content: "\f021";
+}
+
+
+// ---------------------------------------
+//	Buttons
+// ---------------------------------------
+.cmt-button,
+.cmt-button[disabled=disabled]:hover {
+	
+	vertical-align: middle;
+	border-radius: 4px;
+	border-style: solid;
+	border-width: 1px;
+	position: relative;
+	display: inline-block;
+	padding: 1px 6px;
+	border-color: #B0B0B0;
+	color: #333333;
+	cursor: pointer;
+	text-shadow: none;
+	
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,e9e9e9+100 */
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top, #ffffff 0%, #e9e9e9 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e9e9e9)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #ffffff 0%,#e9e9e9 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #ffffff 0%,#e9e9e9 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #ffffff 0%,#e9e9e9 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #ffffff 0%,#e9e9e9 100%); /* W3C */
+}
+
+.cmt-button[disabled=disabled]:hover {
+	cursor: auto;
+}
+
+
+
+.cmt-button:hover {
+	
+	border-color: #1B4163;
+	box-shadow: 0px 0px 3px #0B3153;
+	color: #FFFFFF;
+	text-shadow: 0px -1px 1px #1B4163;
+	
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#4c92dd+0,2b669e+100 */
+	background: #4c92dd; /* Old browsers */
+	background: -moz-linear-gradient(top, #4c92dd 0%, #2b669e 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4c92dd), color-stop(100%,#2b669e)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #4c92dd 0%,#2b669e 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #4c92dd 0%,#2b669e 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #4c92dd 0%,#2b669e 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #4c92dd 0%,#2b669e 100%); /* W3C */
+}
+
+
+.cmt-button span {
+	vertical-align: middle;
+	height: 24px;
+	line-height: 24px;
+	display: inline-block;
+}
+
+.cmt-button.cmt-button-no-text {
+	width: 30px;
+	height: 30px;
+	padding: 0 1px;	
+}
+
+.cmt-button-icon {
+	height: 24px;
+	width: 24px;
+	display: inline-block;
+	background-position: center center;
+	background-repeat: no-repeat;
+	margin-left: -6px;
+	margin-right: 4px;
+	position: relative;
+	overflow: hidden;
+	font-family: 'FontAwesome';
+	font-size: 22px;
+	line-height: 24px;
+}
+
+.cmt-button.cmt-button-no-text .cmt-button-icon {
+	margin: 0;	
+}
+
+.cmt-button-back .cmt-button-icon:before,
+.cmt-button-abort .cmt-button-icon:before {
+	color: #406FC8;
+	content: '\f0a8';
+}
+
+.cmt-button-back .cmt-button-icon:after1,
+.cmt-button-abort .cmt-button-icon:after1 {
+	position: absolute;
+	left: 5px;
+	color: #FFFFFF;
+	content: '\f060';
+	font-size: 14px;
+	font-weight: normal;
+	text-shadow: none;
+}
+
+.cmt-button-back:hover .cmt-button-icon:before,
+.cmt-button-abort:hover .cmt-button-icon:before {
+	color: #FFFFFF;	
+}
+
+.cmt-button-save .cmt-button-icon:before {
+/* 	color: #82B926; */
+	color: #8BC34A;
+	content: "\f00c";
+}
+
+.cmt-button-preview .cmt-button-icon:before {
+	color: #A0A0A0;
+	content: "\f002";
+}
+
+
+#cmt-navigation-main {
+	text-align: right;
+}
+
+// ---------------------------------------
+//	Icons
+// ---------------------------------------
+.cmt-icon {
+	height: 24px;
+	width: 24px;
+	display: inline-block;
+	overflow: hidden;
+	font-family: 'FontAwesome';
+	font-size: 22px;
+	line-height: 24px;
+}
+
+.cmt-icon-warning:before {
+	content: '\f071';
+	color: #FFEB3B;
+}

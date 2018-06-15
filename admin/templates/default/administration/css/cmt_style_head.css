@@ -1,0 +1,89 @@
+body {
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FFFFFF;
+	background-color: #393939;
+	padding: 0px;
+	margin: 0px;
+}
+
+#background {
+	display: block;
+	height: 53px;
+	/*background-image: url('../img/nav_head_background.gif'); */
+	background-repeat: repeat-x;
+	background-position: bottom;
+	border-bottom: 3px solid #A0A0A0;
+}
+	
+a {
+   color: #BFBFBF;
+   text-decoration: none;
+}
+
+a:hover {
+   color: #BFBFBF;
+   text-decoration: underline;
+}
+
+#cmtLogoContainer {
+	position: absolute;
+	left: 16px;
+	top: 8px;
+	width: 220px;
+}
+
+#cmtLogo {
+	color: #FFFFFF
+	letter-spacing: -1px;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 22px;
+}
+
+#cmtTeaser {
+	font-weight: normal,
+	font-size: 10px;
+	color: #BFBFBF;
+}
+
+.cmtVersion {
+	font-weight: normal;
+	color: #BFBFBF;
+}
+
+#webTitleContainer, #logoutContainer {
+	top: 13px;
+}
+
+#webTitleContainer {
+	position: absolute;
+	left: 300px;
+	background: transparent;
+}
+
+#webTitle {
+	font-weight: bold;
+	font-size: 16px;
+	color: #96D430;
+	background: transparent;
+}
+
+#logoutContainer {
+	position: absolute;
+	right: 16px;
+	margin-top: 5px;
+}
+
+#logoutContainer img {
+	border: 0px;
+}
+
+#logoutText {
+	float: right;
+}
+
+#logoutImage {
+	float: right;
+	margin-left: 8px;
+}

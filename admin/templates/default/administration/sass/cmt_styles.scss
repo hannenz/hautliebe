@@ -1,0 +1,3164 @@
+/**
+ * Copy from old CSS file.
+ * Should be splitted in partials step by step until empty ;)
+ */
+
+
+/* 	http://fortawesome.github.io/Font-Awesome/icons/ */
+@include font-face('FontAwesome', '../fonts/fontawesome-webfont');
+
+
+
+/* --------------------------------------------------
+	Header
+   -------------------------------------------------- */
+#cmtMainHeader {
+ 	position: fixed; 
+	height: 5.6rem;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #393939;
+	color: #FDFDFD;
+	border-bottom: 0.3rem solid #A0A0A0;
+	padding: 1rem 2rem;
+}
+
+#cmtMainHeader h1,
+#cmtMainHeader h2,
+#cmtMainHeader h5 {
+	padding-top: 0;
+	padding-bottom: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+#cmtMainHeader h1 {
+	font-weight: bold;
+	font-size: 1.6rem;
+	color: $cmt-green;
+}
+
+#cmtMainHeader h2 {
+	font-weight: bold;
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 2.4rem;
+	line-height: 72%;
+}
+
+#cmtMainHeader h2 span {
+	font-weight: normal;
+	color: #BFBFBF;
+}
+
+#cmtMainHeader h5 {
+	font-weight: normal;
+	font-size: 1.2rem;
+	color: #BFBFBF;
+}
+
+/* --------------------------------------------------
+	Header-Service-Navigation
+   -------------------------------------------------- */
+#cmtServiceNavigationContainer {
+	float: right;
+	min-width: 10rem;
+	text-align: right;
+}
+
+#cmtServiceNavigationContainer a {
+	color: #FFFFFF;
+	padding-right: 2.4rem;
+	position: relative;
+	display: inline-block;
+}
+
+a.cmtClose:after {
+	content: 'X';
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 1.2rem;
+	background: #EF432C;
+	padding: 0.2rem 0.4rem;
+	border-radius: 0.2rem;
+	position: absolute;
+	right: 0;
+	top: 0;
+	line-height: 110%;
+	display: inline-block;
+	vertical-align: bottom; 
+}
+
+/* --------------------------------------------------
+	Main-Navigation
+   -------------------------------------------------- */
+#cmtMainNavigation {
+	padding: 0 0.5rem;
+	border-right: 0.1rem solid #B0B0B0;
+}
+
+#cmtMainNavigationToggler {
+	position: relative;
+	cursor: pointer;
+}
+
+#cmtMainNavigationToggler:before {
+	border-bottom: 0.5rem solid #f0f0f0;
+	border-top: 1.5rem double #f0f0f0;
+	content: "";
+	height: 2.5rem;
+	left: -4.4rem;
+	position: absolute;
+	top: 0.4rem;
+	width: 3rem;
+}
+
+
+
+.st-container,
+.st-pusher,
+.st-content {
+	height: 100%;
+}
+
+.st-content {
+	overflow-y: scroll;
+	padding: 1rem;
+/* 	border: 1px solid #0000FF; */
+}
+
+.st-content,
+.st-content-inner {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	display: block;
+	opacity: 1;
+	visibility: visible;
+	
+}
+
+.st-content-inner {
+	height: auto;
+	padding-bottom: 2rem;	
+}
+
+.st-container {
+	position: relative;
+	overflow: hidden;
+}
+
+.st-pusher {
+	position: relative;
+	left: 0;
+	z-index: 99;
+	height: 100%;
+	-webkit-transition: -webkit-transform 0.5s;
+	transition: transform 0.5s;
+/* 	border: 1px solid #00FF00; */
+}
+
+.st-pusher::after {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 0;
+	height: 0;
+	background: rgba(242,242,242,0.7);
+	content: '';
+	opacity: 0;
+	-webkit-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
+	transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
+}
+
+.st-menu-open .st-pusher::after {
+	width: 100%;
+	height: 100%;
+	opacity: 1;
+	-webkit-transition: opacity 0.5s;
+	transition: opacity 0.5s;
+}
+
+.st-menu {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
+/* 	visibility: hidden; */
+	width: 30rem;
+	height: 100%;
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
+/* 	overflow-y: scroll; */
+/* 	overflow-y: hidden; */
+/* 	overflow-x: hidden; */
+	overflow: auto;
+	padding: 1rem 1rem 1rem 1rem;
+	padding: 0;
+	background-color: #F2F2F2;
+}
+
+.st-menu::after {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+/* 	background: rgba(0,0,0,0.2); */
+	content: '';
+	opacity: 1;
+	-webkit-transition: opacity 0.5s;
+	transition: opacity 0.5s;
+}
+
+.st-menu-open .st-menu::after {
+	width: 0;
+	height: 0;
+	opacity: 0;
+	-webkit-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
+	transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
+}
+
+/* Effect 3: Push*/
+.st-menu-open .st-pusher {
+	-webkit-transform: translate3d(30rem, 0, 0);
+	transform: translate3d(30rem, 0, 0);
+}
+
+.st-menu {
+	-webkit-transform: translate3d(100%, 0, 0);
+	transform: translate3d(-100%, 0, 0);
+}
+
+.st-menu-open .st-menu {
+	visibility: visible;
+	-webkit-transition: -webkit-transform 0.5s;
+	transition: transform 0.5s;
+/* 	overflow-y: scroll; */
+}
+
+.st-menu::after {
+	display: none;
+}
+
+/* --------------------------------------------------
+	Main-Navigation: elements
+   -------------------------------------------------- */
+.cmtExtendedAccordionElement {
+	position: relative;
+	margin: 0 0 2rem 0;
+	display: block;
+	width: 100%;
+}
+
+.cmtExtendedAccordionElement h4 {
+	position: relative;
+	min-height: 3.6rem;
+	background-repeat: no-repeat;
+	background-position: left top;
+	margin: 0;
+}
+
+.cmtExtendedAccordionElement .cmtExtendedAccordionIcon {
+	position: absolute;
+	left: 1rem;
+	bottom: 0.5rem;
+	z-index: 1;
+	width: 3.2rem;
+	height: 3.2rem;
+	background-rerepat: no-repeat;
+	background-position: center center;
+	background-size: 100% 100%;
+	cursor: pointer;
+}
+
+.cmtExtendedAccordionTitle {
+	position: absolute;
+	bottom: 0;
+	background-color: #393939;
+	padding: 0.5rem 5rem;
+	color: #FFFFFF;
+	font-weight: bold;
+	cursor: pointer;
+	display: block;
+	width: 100%;
+}
+
+.cmtExtendedAccordionStatus {
+	position: absolute;
+	top: 1.2rem;
+	right: 0.5rem;
+	width: 1.6rem;
+	height: 1.6rem;
+    background-position: left top;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.cmt-icon-open-close:before {
+	content: "\f0d7";
+}
+
+.cmtExtendedAccordionElementIsOpen .cmt-icon-open-close:before {
+	content: "\f0d8";
+}
+
+.cmtExtendedAccordionElement .cmtExtendedAccordionPin {
+	position: absolute;
+	top: 1.3rem;
+	right: 2.5rem;
+	width: 2.1rem;
+	height: 2.1rem;
+	z-index: 2;
+    background-position: left top;
+    background-repeat: no-repeat;
+    cursor: pointer;	
+/* 	background-image: url("../../general/img/menu/menu_unpinned.png"); */
+}
+
+.cmtExtendedAccordionElement .cmtExtendedAccordionPin:hover {
+/* 	background-image: url("../../general/img/menu/menu_unpinned_hover.png"); */
+}
+
+.cmtExtendedAccordionElement.cmtExtendedAccordionElementIsPinned .cmtExtendedAccordionPin {
+/* 	background-image: url("../../general/img/menu/menu_pinned.png"); */
+}
+
+
+#cmtExtendedAccordionButtonsContainer {
+	margin: 1rem 0 2rem 0;
+}
+
+.cmt-extended-accordion-icon {
+	width: 9rem;
+	margin: 0 0 0 0;
+	padding: 1rem 1rem;
+	min-height: 2.6rem;
+	overflow: hidden;
+	display: inline-block;
+	float: left;
+	cursor: pointer;
+	color: #808080;
+}
+
+.cmt-extended-accordion-icon:nth-child(2) {
+	border: 0.1rem dotted #B0B0B0;
+	border-width: 0 0.1rem;
+}
+
+.cmt-extended-accordion-icon:hover {
+	color: #FFFFFF;
+	background-color: #478BCF;
+}
+
+.cmt-icon-open-all:before {
+	content: "\f0d7";
+}
+
+.cmt-icon-close-all:before {
+	content: "\f0d8";
+}
+
+.cmt-icon-pin:before  {
+	content: "\2022";
+ 	font-size: 2.4rem;
+	line-height: 2.1rem
+}
+
+.cmt-icon-pin:hover:before {
+	content: "\f10c";
+	font-size: 2.1rem;
+}
+
+.st-menu-pinned #cmtExtendedAccordionButtonsContainer .cmt-icon-pin:before,
+.cmtExtendedAccordionElementIsPinned .cmt-icon-pin:before {
+	content: "\f192";
+	margin-left: 0;
+	padding: 0;
+}
+
+.cmtExtendedAccordionHandle .cmt-font-icon {
+	color: #FFFFFF;
+}
+
+.cmtNavigationControl {
+	border: 1px solid #999999;
+	position: relative;
+	padding: 4px 4px;
+	background-color: #F2F2F2;
+	height: 24px;
+	overflow: hidden;
+	margin: 0px 0px 24px 0px;
+}
+
+.cmtExtendedAccordionContent {
+	padding: 0;
+	margin: 0;
+	display: block;
+}
+
+.cmtExtendedAccordionItem {
+	position: relative;
+	display: block;
+	border-bottom: 0.1rem dotted #D0D0D0;
+}
+
+.cmtExtendedAccordionItem:last-child {
+/* 	border-bottom: 0;	 */
+}
+
+.cmtExtendedAccordionItem a {
+	padding: 1rem 1rem 1rem 4rem;
+	text-decoration: none;
+	color: #333333;
+	display: block;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-position: 1.2rem 1rem;
+}
+
+
+.cmtExtendedAccordionItem a:hover {
+	background-color: #478BCF;
+	color: #FFFFFF;
+}
+
+.cmtExtendedAccordionContent {
+/* 	max-height: 0; */
+	height: auto;
+	overflow: hidden;
+
+/* 	transition: max-height 0.3s ease-out; */
+}
+
+.cmtExtendedAccordionElementIsOpen .cmtExtendedAccordionContent {
+/* 	max-height: 50rem; */
+}
+/* --------------------------------------------------
+	Main-Content
+   -------------------------------------------------- */
+#cmtMainContent {
+	padding: 1rem 1rem;
+}
+
+
+/* --------------------------------------------------
+	Positionierungen
+   -------------------------------------------------- */
+.alignRight {
+	text-align: right;
+}
+
+/*
+*	Neue Klassen ---------------------->
+*/
+
+/*
+ * Allgemein
+ */
+.cmtServiceContainer,
+.serviceContainer, 
+.serviceContainerTop, 
+.serviceContainerFooter, 
+.serviceContainerButtonRow {
+	clear: both;
+	background-color: #F2F2F2;
+	background-color: #F6F6F6;
+	padding: 8px 12px;
+}
+
+.cmtServiceContainerInner, 
+.serviceContainerInner {
+	overflow: hidden;
+	padding: 0px 0px;
+}
+
+.serviceContainerButtonRow {
+/* 	padding: 10px 12px 10px 12px; */
+}
+
+.serviceContainerButtonRow img, .serviceContainerButtonRow input {
+	margin: 0px 2px;
+}
+
+.cmtServiceFooter,
+.serviceFooter {
+	border-bottom: 1px solid #C8C8C8;
+/* 	padding: 10px 12px; */
+	background-color: #F6F6F6;
+}
+
+.serviceElementContainer {
+	float: left;
+	margin-right: 12px;
+	padding: 0px 0px 0px 0px;
+	border-right: 1px dotted #B0B0B0;
+	padding-right: 12px;
+	background-color: #F2F2F2; /* wichtig, damit bei floatenden Elementen, die untereinander geschoben werden, die Linien nicht nagezeigt werden. */
+	background-color: #F6F6F6;
+/* Workaround von: <http://www.ejeliot.com/blog/61> */
+	margin-bottom: -100px;
+	padding-bottom: 102px;
+}
+
+.serviceElementRowContainer {
+	margin: 0px 0px 16px 0px;
+	padding: 2px 0px;
+}
+
+.serviceElementFollowingText {
+	padding-top: 9px;	
+}
+/*
+.lastServiceElementContainer {
+	float: left;
+}
+
+.serviceElementLabelFloat {
+	float: left;
+	width: 140px;
+}
+*/
+
+.serviceFooterPagingContainer {
+	border: 0;
+	float: right;
+	padding: 2px 0px 0px 0px;
+	margin-right: 0px;
+}
+
+.serviceElementLabelCheckboxFloat {
+	float: left;
+	width: 280px;
+}
+
+.serviceElementFieldFloat {
+	float: left;
+	width: 180px;
+	margin: 0px 0px 0px 16px;
+}
+
+.serviceElementFieldFloat input[type='text'] {
+	width: 180px;
+}
+
+.serviceElementCheckboxFloat {
+	float: left;
+	width: 32px;
+}
+
+.serviceElementCheckboxFloat input[type='checkbox'] {
+	width: 32px;
+	margin: 0;
+	padding: 0;
+	vertical-align: top;
+}
+
+.serviceText, .serviceTextHead {
+	color: #787878;
+	color: #6A6A6A;
+}
+
+.monospaceText {
+	font-family: monospace;
+}
+
+.serviceSeparator {
+	border-left: 1px solid #BABABA;
+	border-right: 1px solid #F8F8F8;
+	width: 0px;
+	height: 28px;
+	display: inline-block;
+	line-height: 16px;
+	overflow: hidden;
+	margin: 0px 8px;
+	vertical-align: middle;
+}
+
+.serviceSeparatorButtonFollows {
+	margin-right: 6px;
+}
+
+.serviceButton {
+	float: left;
+	margin: 2px 12px;
+}
+
+.newEntryButton {
+	float:left;
+	margin-top: 0px;
+/*	border-right: 1px solid #A0A0A0;
+	padding-right: 12px; */
+}
+
+
+/* --------------------------------------------------
+	Paging
+   -------------------------------------------------- */
+.selectPageContainer {
+	line-height: 24px;
+	padding-top: 3px;
+}
+
+.selectPageTextContainer {
+	line-height: 24px;	
+}
+
+.selectPage,
+.selectCurrentPage  {
+	line-height: 2rem;
+	display: inline-block;
+/* 	height: 20px;  */
+	padding: 0.5rem 1rem;
+	background-color: #E0E0E0;
+	color: #606060;
+/* 	font-size: 13px; */
+	vertical-align: middle;
+/*	margin: 0px 1px 0px 0px;*/
+}
+
+.selectPage:hover {
+	background-color: #478BCF;
+	color: #FFFFFF;
+}
+.selectCurrentPage {
+	font-weight: bold;
+	color: #478BCF;
+	background-color: #FFFFFF;
+/* 	height: 2.8rem; */
+	outline: 0.1rem solid #478BCF;
+	line-height: 1.8rem;
+}
+
+.selectPageList {
+	min-width: 56px;
+	margin: 0px 8px;	
+}
+
+.selectPageIcon {
+	width: 30px;
+	height: 30px;
+	padding: 0;
+	display: inline-block;
+/*	vertical-align: bottom; */
+}
+
+.selectPageIcon,
+.selectPageIcon.selectPageDisabled {
+	background-position: center 2px;
+	background-repeat: no-repeat;
+}
+
+.selectPageIcon:hover {
+	background-position: center -30px;
+}
+
+.selectPageIcon.selectPageDisabled:hover {
+
+}
+
+.selectPageDisabled,
+.selectPageIcon.selectPageDisabled,
+.selectPageIcon.selectPageDisabled:hover  {
+	background-color: #F2F2F2;
+	width: 28px;
+	height: 28px;
+	border: 1px solid #B0B0B0;
+	background-position: center 1px;
+	opacity: 0.6;
+}
+
+.selectNextPage {
+	background-image: url(../img/paging_next_page.png);
+}
+
+.selectPrevPage {
+	background-image: url(../img/paging_prev_page.png);
+}
+
+
+.selectLastPage {
+	background-image: url(../img/paging_last_page.png);
+}
+
+.selectFirstPage {
+	background-image: url(../img/paging_first_page.png);
+}
+
+/* --------------------------------------------------
+	TinyMCE-HTML-Editor
+   -------------------------------------------------- */
+.mceEditor input,
+.mceEditor select,
+.mceEditor textarea {
+	width: auto !important;
+	height: auto !important;
+}
+
+/* --------------------------------------------------
+	Tabellen TODO: überarbeiten!
+   -------------------------------------------------- */
+.cmtTable {
+	width: 100%;	
+}
+
+/* Datenzelle */
+/* .cmtTableData */
+.cmtTable tbody td {
+	vertical-align: top;
+	padding: 2px 6px;
+}
+
+/* Funktionsspalte */
+.cmtTableFunctions {
+	white-space: nowrap;
+	padding: 2px 6px;
+	width: 1%;
+}
+
+.cmtTableFunctions .cmtIcon {
+	margin: 0px 2px;
+}
+
+.cmtTableFunctions.cmtAlternate0 {
+	background-color: #F2F2F2;
+}
+
+.cmtTableFunctions.cmtAlternate1 {
+	background-color: #A0A0A0;
+	background-color: #D0D0D0
+}
+
+.cmtAlternate0 {
+	background-color: #FFFFFF;
+}
+
+.cmtAlternate1 {
+	background-color: #EFF9DF;
+}
+
+
+
+
+
+.tableHeadlineDropshadow, .appHeadlineDropshadow {
+	display: none;
+}
+
+/* -------------------------------------------------
+	Tabellen-/ Anwendungskopf neu
+   ------------------------------------------------- */
+.appHeadlineContainer,
+.tableHeadlineContainer {
+	position: relative;
+/* 	padding: 4px 12px 6px 60px; */
+/* 	margin: 30px 0 0 0; */
+/* 	background-image: url("../../general/img/bg_headline.gif"); */
+/* 	background-repeat: repeat-y; */
+/* 	background-position: top left; */
+/* 	background-color: #333333; */
+/* 	border-bottom: 3px solid #A0A0A0; */
+	background: transparent;
+	padding: 30px 0 0 0;
+	margin: 0;
+	border: none;
+}
+
+.appHeadlineContainer .appIcon, 
+.tableHeadlineContainer .tableIcon {
+	position: absolute;
+/* 	top: -24px; */
+	top: 6px;
+	left: 4px;
+	width: 48px;
+	height: 48px;
+}
+
+.appHeadlineContainer h1,
+.tableHeadlineContainer h1 {
+/* 	color: #ffffff; */
+/* 	font-weight: bold; */
+/* 	font-size: 14px; */
+/* 	margin: 0; */
+/* 	padding: 0; */
+	background-color: #333333;
+    background-image: url("../../general/img/bg_headline.gif");
+    background-position: left top;
+    background-repeat: repeat-y;
+    border-bottom: 3px solid #A0A0A0;
+    margin: 0;
+    padding: 4px 12px 6px 60px;
+	color: #FFFFFF;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+.appHeadlineAddText, .tableHeadlineAddText {
+	font-weight: normal;
+}
+
+
+/*
+ * Klassen f�r Tabellenheadlines
+ */
+.cmtTable thead td,
+.cmtTableFloatingHeader td,
+.tableActionHeadCell, 
+.tableSelectHeadCell, 
+.tableDataHeadCell, 
+.tablePrimaryKeyHeadCell {
+	font-weight: bold;
+	color: #FFFFFF;
+	padding: 2px 6px;
+	white-space: nowrap;
+}
+
+.tableHeadText {
+	color: #FFFFFF;
+	position: relative;
+	padding-right: 24px;
+}
+
+.tableHeadSortDirSelect {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 18px;
+	text-align: right;
+	white-space: nowrap;
+}
+	
+.tableActionHeadCell, .tableSelectHeadCell {
+	background-color: #333333 !important;
+	background-image: url('../img/nav_group_head_background.gif');
+	background-position: top left;
+	background-repeat: no-repeat;
+}
+
+
+.cmtTable thead td.tablePrimaryKeyHeadCell,
+.cmtTableFloatingHeader .tablePrimaryKeyHeadCell,
+.tablePrimaryKeyHeadCell {
+	background-color: #C40400;
+}
+
+.cmtTable thead td,
+.cmtTableFloatingHeader td,
+.tableDataHeadCell {
+	background-color: #82B926;
+}
+
+/*
+ * Klassen f�r Tabellenzellen und Reihen
+ */
+
+/* Tabellenzelle */
+.tableDataCell0, .tableDataCell1, .tablePrimaryKeyCell0, .tablePrimaryKeyCell1, .tableActionCell0, .tableActionCell1, .tableSelectCell0, .tableSelectCell1 {
+	vertical-align: top;
+}
+
+.tableDataCell0, .tableDataCell1, .tablePrimaryKeyCell0, .tablePrimaryKeyCell1 {
+	padding: 2px 6px;
+}
+
+.tableDataCell0 {
+	background-color: #FFFFFF;
+}
+
+.tableDataCell1 {
+	background-color: #EFF9DF;
+}
+
+.tablePrimaryKeyCell0 {
+	background-color: #FFF4F4;
+}
+
+.tablePrimaryKeyCell1 {
+	background-color: #FFD3D2;
+}
+
+/* Tabelle: Zelle mit Buttons am Ende einer Datenreihe */
+.tableActionCell0, .tableActionCell1 {
+	padding: 2px 6px;
+	white-space: nowrap;
+}
+
+.tableActionCell0, .tableSelectCell0  {
+	background-color: #F2F2F2;
+}
+
+.tableActionCell1, .tableSelectCell1 {
+	background-color: #A0A0A0;
+}
+.tableActionCellButton {
+	margin: 0px 4px;
+	border: 0px;
+}
+
+.dataRow0, .dataRow1 {
+	padding: 4px 24px 12px 24px;
+}
+
+.dataRow0 {
+	background-color: #F4F9F0;
+}
+
+.dataRow1 {
+	background-color: #FFFFFF;
+}
+
+/*
+ * Tabellen f�r Anwendungen / keine Datentabellen
+ */
+.serviceTable {
+	border-collapse: collapse;
+}
+
+.serviceTableHeadRow {
+	background-color: #333333;
+	background-image: url('../img/nav_group_head_background.gif');
+	background-position: top left;
+	background-repeat: no-repeat;
+	_background-image: none;			/* IE6 kann keine grafischen Reihenhintergr�nde darstellen! */
+}
+
+.serviceTableHead {
+	padding: 2px 8px;
+	text-align: left;
+	vertical-align: top;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+.serviceTableCell0, .serviceTableCell1 {
+	padding: 2px 8px;
+	text-align: left;
+	vertical-align: top;
+}
+
+.serviceTableCell0 {
+
+}
+
+.serviceTableCell1 {
+	background-color: #E0E0E0;
+}
+
+.serviceTableFootRow {
+	border: 1px solid #444444;
+	border-width: 1px 0px 0px 0px;
+}
+
+.serviceTableFoot {
+	padding: 2px 8px;
+	background-color: #D0D0D0;
+}
+
+.tableSubheadline, 
+.editEntrySubheadline,
+.cmtSubheadline {
+	padding: 2px 12px 2px 12px;
+	background-repeat: no-repeat;
+	background-position: top left;
+	background-color: #3878C6;
+	color: #FFFFFF;
+	font-weight: bold;
+	margin: 0;
+	font-size: 13px;
+}
+
+/* Tabellenkopf: Service */
+.tableServiceContainer {
+    background-color: #E1EBF4;
+    text-align: left;
+    padding: 8px 12px 6px 12px;
+    border: 0px solid #FFFFFF;
+    border-bottom: 1px solid #396B9D;
+}
+
+/*
+ * Tabelleneintragsansicht: wechselnde Felderreihen, Schriftformatierungen
+ */
+
+.cmtEditEntryRow,
+.cmtEditRow {
+	padding: 8px 12px 16px 12px;
+}
+
+.cmtEditEntryRow0,
+.cmtEditRow0,
+.cmtRow0 {
+	background-color: #FFFFFF;
+}
+
+.cmtEditEntryRow1,
+.cmtEditRow1,
+.cmtRow1 {
+	background-color: #EFF9DF;
+}
+
+.cmtEditEntryRow input[type='text'],
+.cmtEditEntryRow select,
+.cmtEditRow input[type='text'],
+.cmtEditRow select {
+	width: 460px;
+	border: 1px solid #B0B0B0;
+	padding: 5px 5px 6px 5px;
+	margin-bottom: 3px;
+	vertical-align: center;
+}
+
+/*
+.editEntryRow0 input[type='text']:focus,
+.editEntryRow1 input[type='text']:focus,
+.editEntryRow0 textarea:focus,
+.editEntryRow1 textarea:focus {
+	border-color: #3878C6;
+}
+*/
+.cmtEditEntryRow textarea,
+.cmtEditRow textarea,
+.serviceContainer textarea {
+	width: 460px;
+	height: 120px;
+	border: 1px solid #B0B0B0;
+	padding: 4px 5px;
+}
+
+.cmtEditEntryRow input[type='text'].medium,
+.cmtEditEntryRow select.medium,
+.cmtEditRow input[type='text'].medium,
+.cmtEditRow select.medium,
+.cmtEditRow input.cmtFormFieldMedium {
+	width: 306px;
+}
+
+.cmtEditEntryRow input[type='text'].small,
+.cmtEditEntryRow select.small,
+.cmtEditRow input[type='text'].small,
+.cmtEditRow select.small  {
+	width: 60px;
+}
+
+.editEntryRowCol,
+.cmtEditRowCol {
+	float: left;
+	width: 340px;
+	margin: 0px 16px 0px 0px;
+}
+
+.editEntryRowCol input[type='text'],
+.editEntryRowCol textarea {
+	width: 100% !important;
+}
+
+/* Darstellung eines Feldes */
+.editEntryRowHead,
+.cmtEditRowHead,
+.cmtEditEntryRowHead {
+	color: #333333;
+	font-weight: bold;
+	margin-bottom: 4px;
+}
+
+.editEntryRowField,
+.cmtFormFieldContainer,
+.cmtEditRowField {
+	margin-bottom: 8px;
+	position: relative;
+}
+
+/*
+.editEntryRowField input[type="text"] {
+	width: 100%;
+	max-width: 600px;
+}
+*/
+
+.editEntryRowDescription,
+.cmtDescription,
+.cmtEditRowDescription {
+	color: #606060;
+}
+
+/* zus�tzliche grafische Kn�pfe neben den Feldern (z.B. Kalender, Fileselector */
+/*.showAddAppButton {
+	cursor: pointer;
+	margin: 0px 0px 0px 6px;
+	vertical-align: bottom;
+}
+*/
+/*
+* Image Klassen
+*/
+
+.imageLinked {
+	border: 0px;
+}
+
+/*
+ * "Bitte warten..."-Container
+ */
+#cmtInProgress {
+	text-align: center;
+	padding: 8px 0px;
+	display: none;
+}
+
+.iconInProgress {
+	vertical-align: bottom;
+}
+
+/*
+ * Progressbar (Fortschrittsbalken)
+ */
+#cmtProgressBarContainer {
+	border: 1px solid #A0A0A0;
+	padding: 2px;
+	margin: 12px 0px;
+/*	background-color: #5D7F24; */
+	background-image: url("../../general/img/progressbar_bg.gif");
+	background-repeat: repeat-x;
+}
+
+#cmtProgressBar {
+	width: 0%;
+	height: 12px;
+	background-color: #00a000;
+}
+
+#cmtProgressBarCounter {
+
+}
+
+.cmtProgressBarSuccess	{
+	background-image: url("../../general/img/progressbar_success.gif");
+	background-repeat: repeat-x;
+	background-color: #5D7F24;
+}
+
+.cmtProgressBarError {
+	background-image: url("../../general/img/progressbar_error.gif");
+	background-repeat: repeat-x;
+	background-color: #BB1C29;
+}
+
+.cmtProgressBarInProgress {
+	background-image: url("../../general/img/progressbar_in_progress.gif");
+	background-repeat: repeat-x;
+	background-color: #175188;
+}
+
+.cmtProgressBarSuccess {
+
+}
+
+/* --------------------------------------------------
+	Formulare
+   -------------------------------------------------- */
+
+.formSelectFiles, .formSelectFiles option {
+	font-family: monospace;
+	font-size: 12px;
+}
+
+.formOptionDir {
+	background-image: url("../../general/img/bg_folder_16px.png") !important;	/* f�r normale Browser */
+	padding: 0px 0px 2px 20px !important; /* f�r normale Browser */
+	background-repeat: no-repeat;
+	background-position: top left;
+	background-image: none;	/* f�r IE 6 */
+	padding: 0px; /* f�r IE 6 */
+}
+
+.formOptionFile {
+	background-image: url("../../general/img/bg_file_16px.png") !important;	/* f�r normale Browser */
+	padding: 0px 0px 2px 20px !important; /* f�r normale Browser */
+	background-repeat: no-repeat;
+	background-position: top left;
+	background-image: none;	/* f�r IE 6 */
+	padding: 0px; /* f�r IE 6 */
+}
+
+.radioButton {
+	margin-left: 0px;
+}
+
+/* label f�r grafsichen Absende-Kn�pfe <input type="image"> */
+.formSubmitLabel {
+	margin: 0px 0px 0px 8px;
+	color: #1062B4;
+}
+
+.formSubmitLabel:hover {
+	color: #EE0330;
+	cursor: pointer;
+}
+
+.formSubmitWithLabel {
+	vertical-align: bottom;
+}
+
+input.formFieldTextShort {
+	width: 32px !important;
+}
+
+
+input.formFieldYear,
+input.cmtDateYear {
+	width: 48px !important;
+	text-align: center;
+}
+
+input.formFieldDay,
+input.formFieldMonth,
+input.cmtDateDay,
+input.cmtDateMonth {
+	width: 32px !important;
+	text-align: center;
+}
+
+input.formFieldHour,
+input.formFieldMinute,
+input.formFieldSecond,
+input.cmtDateHour,
+input.cmtDateMinute,
+input.cmtDateSecond {
+	width: 32px !important;
+	text-align: center;
+}
+
+/* ----------------------------------------------
+	Hinweise, Fehler, Meldungen
+   ----------------------------------------------*/
+/*
+.hint, 
+.success, 
+.error, 
+.warning, 
+.question,
+.cmtMessage {
+	padding: 12px 12px 16px 48px;
+	background-repeat: no-repeat;
+	background-position: top left;
+	font-weight: bold;	
+}
+
+.cmtHiddenContainer {
+	display: none;
+}
+
+.success,
+.cmtMessageSuccess {
+	background-image: url("../../general/img/bg_success.png");
+	background-color: #3D9722;
+	color: #FFFFFF;
+}	
+
+.error,
+.cmtMessageError {
+	background-image: url("../../general/img/bg_error.png");
+	background-color: #A53D3F;
+	color: #FFFFFF;
+}
+
+.warning,
+.cmtMessageWarning {
+	background-image: url("../../general/img/bg_warning.png");
+	background-color: #F08400;
+	color: #FFFFFF;
+}
+
+.question,
+.cmtMessageQuestion {
+	background-image: url("../../general/img/bg_question.png");
+	font-weight: bold;
+	background-color: #DDE8F7;
+	color: #406FB1;
+}
+
+.cmtMessageInfo {
+	background-image: url("../../general/img/bg_info.png");
+	background-color: #DDE8F7;
+	color: #406FB1;
+}
+*/
+/* ----------------------------------------------
+	Standard-Layer
+   ----------------------------------------------*/
+.layerHandle {
+	position: relative;
+	padding: 2px 12px 2px 12px !important;	/* f�r normale Browser */
+	padding: 2px 12px 2px 2px;	/* f�r IE 6 */
+	background-image: url("../img/nav_group_head_background.gif");
+	background-repeat: no-repeat;
+	background-position: top left;
+	background-color: #333333;
+	margin-bottom: 1px;
+}
+
+.layerButton {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.layerTitle {
+	margin: 0px 0px 0px 10px !important;	/* f�r normale Browser */
+	margin: 0px 0px 0px 22px;	 /* f�r IE 6 */
+	color: #FFFFFF;
+	font-weight: bold;	
+
+}
+
+.layerTitle a, .layerTitle a:hover {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.layerContent {
+	border-bottom: 1px solid #333333;
+	margin-bottom: 1px;
+}
+
+/* Anzeige Pfeile: Layer geschlossen/ ge�ffnet */
+.cmtLayerOpen {
+	background-image: url("../../general/img/nav_menu_open.gif");
+	background-repeat: no-repeat;
+	background-position: top left;
+}
+
+.cmtLayerClose {
+	background-image: url("../../general/img/nav_menu_close.gif");
+	background-repeat: no-repeat;
+	background-position: top left;	
+}
+
+.layerInitClose {
+	display: none;
+}
+
+/* ----------------------------------------------
+	Servicezeilen Layer
+   ----------------------------------------------*/
+.serviceLayerHandle .cmtLayerOpen {
+	background-image: url("../../general/img/icon_service_layer_open.gif");
+	background-repeat: no-repeat;
+	background-position: top left;
+}
+
+.serviceLayerHandle .cmtLayerClose {
+	background-image: url("../../general/img/icon_service_layer_close.gif");
+	background-repeat: no-repeat;
+	background-position: top left;	
+}
+
+.serviceLayerHandle {
+	position: relative;
+	padding: 2px 12px 2px 12px !important;	/* f�r normale Browser */
+	padding: 2px 12px 2px 2px;	/* f�r IE 6 */
+	background-image: url("../../general/img/bg_serviceheadline.gif");
+	background-repeat: no-repeat;
+	background-position: top left;
+	background-color: #CFCFCF;
+	margin-bottom: 1px;
+	cursor: pointer;
+}
+
+.serviceLayerHandle span {
+	color: #787878;
+	color: #6A6A6A;
+	font-weight: bold;
+	padding: 0 0 0 12px;
+	margin: 0;
+}
+
+/* Alte Variante */
+.serviceLayerButton,
+.serviceLayerStatusButton {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 16px;
+	height: 16px;
+}
+
+/* Neue Variante in Verbindung mit Javascript: cmtLayerHandler */
+/*
+.serviceLayerIcon {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.serviceLayerTitle {
+	margin: 0px 0px 0px 10px !important;
+	margin: 0px 0px 0px 22px;
+	color: #787878;
+	color: #6A6A6A;
+	font-weight: bold;	
+
+}
+
+.serviceLayerTitle a, .serviceLayerTitle a:hover {
+	color: #787878;	
+	color: #6A6A6A;
+	text-decoration: none;
+}
+
+.serviceLayerContent {
+	clear: both;
+	padding: 8px 12px;
+	background-color: #F2F2F2;
+	border-bottom: 1px solid #787878;
+	margin-bottom: 1px;
+} 
+
+.serviceLayerLink {
+
+}
+
+.serviceLayerTitleLink {
+	display: block;
+}
+*/
+
+/* ----------------------------------------------
+	Reiter
+   ----------------------------------------------*/
+/*
+.sliderActive {
+	height: 17px;
+	float: left;
+	padding: 5px 28px 0px 12px;
+	background-image: url("../../general/img/slider_active.gif");
+	background-repeat: no-repeat;
+	background-position: top right;
+}
+
+
+.sliderPreActive {
+	height: 17px;
+	float: left;
+	padding: 5px 28px 0px 12px;
+	background-image: url("../../general/img/slider_preactive.gif");
+	background-repeat: no-repeat;
+	background-position: top right;
+	color: #707070;
+}
+
+.sliderNotActive {
+	height: 17px;
+	float: left;
+	padding: 5px 28px 0px 12px;
+	background-image: url("../../general/img/slider_inactive.gif");
+	background-repeat: no-repeat;
+	background-position: top right;
+	color: #707070;
+}
+
+.sliderNotActiveLink, .sliderPreActivePreLink a {
+	color: #707070;
+	text-decoration: none;
+}
+
+.sliderNotActiveLink:hover, .sliderPreActiveLink:hover {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.sliderBackground {
+	height: 22px;
+	background-image: url("../../general/img/slider_background.gif");
+	background-repeat: repeat-x;
+	background-position: top;
+}
+*/
+/* ----------------------------------------------
+	Felderauswahlliste
+   ----------------------------------------------*/
+.selectTableFieldsContainer, .selectTableFieldsTargetContainer {
+	width: 360px;
+	border: 1px solid #A0A0A0;
+/*	background: #F2F2F2; */
+	background: #FFFFFF;
+	padding: 2px;
+	margin: 0px 32px 0px 0px;
+	float: left;
+	min-height: 200px;
+	font-size: 13px;
+}
+
+
+.selectTableFieldsTargetContainer {
+	margin-right: 0px;
+}
+
+.selectTableFieldsContainer h1,
+.selectTableFieldsTargetContainer h1 {
+	font-weight: bold;
+	background: #CFCFCF;
+	color: #787878;
+	color: #6A6A6A;
+	padding: 2px 4px;
+	margin: 0px 0px 8px 0px;
+	font-size: 13px;
+}
+
+.selectTableFieldsElement {
+	padding: 2px 4px;
+	display: block;
+	color: #FFFFFF;
+	font-weight: bold;
+	background: #82B926;
+	margin: 2px;
+	cursor: move;
+	overflow: hidden;
+}
+
+.selectTableFieldsElement span {
+	font-weight: normal;
+}
+
+.selectTableFieldsContainer .selectTableFieldsElement input {
+	display: none;
+}
+
+.selectTableFieldsTargetContainer div {
+	background: #FF6200;
+}
+
+.selectTableFieldsTargetContainer .selectTableFieldsElement input {
+	padding: 0px 0px;
+	font-size: 13px;
+	margin: 0px 0px 0px 18px;
+	vertical-align: top;
+}
+
+/* ----------------------------------------------
+	Abschaffen: cmtScrollBar
+   ----------------------------------------------*/
+
+.cmtScrollBarToggle {
+	height: 16px;
+	width: 16px;
+	margin: 0px 0px 8px 0px;
+	background-color: #444444;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+
+.cmtScrollBarHandleUp {
+	height: 16px;
+	width: 16px;
+	margin: 0px 0px 6px 0px;
+	background-image: url('../../general/img/cmt_scrollbar/bg_scrollbar_up.gif');
+	background-position: top left;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 24px;
+	right: 0px;
+}
+
+.cmtScrollBarHandleDown {
+	height: 16px;
+	width: 16px;
+	margin: 6px 0px 0px 0px;
+	background-image: url('../../general/img/cmt_scrollbar/bg_scrollbar_down.gif');
+	background-position: top left;
+	background-repeat: no-repeat;
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+}
+
+.cmtScrollBarHandleMove {
+	height: 12px;
+	width: 16px;
+	margin: 0px 0px 0px 0px;
+	background-image: url('../../general/img/cmt_scrollbar/bg_scrollbar_handle.gif');
+	background-position: top left;
+	background-repeat: no-repeat;
+}
+
+.cmtScrollBarHandleMove:hover {
+	cursor: move;
+}
+
+.cmtScrollBarTrack {
+	width: 16px;
+	background-color: #D8D8D8;
+	position: absolute;
+	top: 40px;
+	right: 0px;
+}
+/*
+*	---------------------> Neue Klassen Ende
+*/
+/*
+a {
+   color: #F97C00;
+   text-decoration: none;
+}
+
+a:hover {
+   color: #396B9D;
+   text-decoration: none;
+}
+*/
+
+
+/*
+ Tabelleneintrag bearbeiten
+*/
+.editentry_head {
+    background-color: #396B9D;
+    padding: 8px 12px 12px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
+}
+
+.editentryHead, .editentryHeadWithIcon {
+    background-color: #396B9D;
+    padding: 8px 12px 12px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
+}
+
+.editentryHeadWithIcon {
+	position: relative;
+	padding-left: 44px;
+}
+
+.editentryHeadIcon {
+	position: absolute;
+	top: 2px;
+	left: 4px;
+	_left: -40px;
+}
+
+.editentry_service, .serviceBottom {
+    background-color: #E1EBF4;
+    text-align: left;
+    vertical-align: top;
+    padding-top: 8px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border: 0px solid #FFFFFF;
+    border-bottom: 1px solid #396B9D;
+}
+
+.editentry_alternate0, .editentry_alternate1, .editEntryAlt0, .editEntryAlt1 {
+	padding-top: 4px;
+    padding-left: 24px;
+    padding-right: 24px;
+	padding-bottom: 12px;
+}
+
+.editentry_hidden {
+	visibility: hidden;
+}
+
+.editentry_alternate0, .editEntryAlt0 {
+	background-color: #F4F9F0;
+}
+
+.editentry_alternate1, .editEntryAlt1 {
+	background-color: #FFFFFF;
+}
+
+.editentry_subhead, .editEntrySubHead {
+    background-color: #83BB55;
+    padding: 4px;
+    padding-left: 12px;
+    padding-right: 12px;
+    font-weight: bold;
+    color: #ffffff;
+    border: 1px solid #FFFFFF
+}
+
+.editentry_entryhead {
+	font-weight: bold;
+	line-height: 24px;
+}
+
+.editentry_entrydesc {
+	line-height: 24px;
+}
+
+.editentry_error, .editentry_warning, .editentry_ok, .messageError, .messageSuccess, .messageWarning   {
+    text-align: left;
+    vertical-align: top;
+    padding-top: 12px;
+    padding-bottom: 8px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-bottom: 1px solid #396B9D;
+    font-weight: bold;
+    color: #FFFFFF
+}
+
+.editentry_error, .messageError {
+    background-color: #A53D3F;
+}
+
+.editentry_ok, .messageSuccess {
+    background-color: #3D9722;
+}
+.editentry_warning, .messageWarning {
+    background-color: #FF8204;
+}
+
+
+/*
+ Tabellen�bersicht
+*/
+.tableoverview_head {
+    background-color: #396B9D;
+    padding-top: 8px;
+    padding-bottom: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
+}
+
+.tableoverview_service, .serviceContainerSliders {
+    background-color: #E1EBF4;
+    text-align: left;
+    vertical-align: top;
+    padding-top: 8px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border: 0px solid #FFFFFF;
+    border-bottom: 1px solid #396B9D;
+	clear: both;
+}
+
+.tableoverview_error, .tableoverview_warning, .tableoverview_ok   {
+    text-align: left;
+    vertical-align: top;
+    padding-top: 12px;
+    padding-bottom: 8px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-bottom: 2px solid #ffffff;
+    font-weight: bold;
+    color: #FFFFFF
+}
+
+.tableoverview_error {
+    background-color: #A53D3F;
+}
+
+.tableoverview_ok {
+    background-color: #3D9722;
+}
+.tableoverview_warning {
+    background-color: #FF8204;
+}
+
+/*
+ Layer
+*/
+.table_layer_headrow {
+    border-bottom: 2px solid #ffffff;
+	background-color: #83BB55;
+	padding-left: 8px;
+	padding-right: 8px;
+}
+
+.table_layer_title {
+	color: #FFFFFF;
+	font-weight: bold;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.table_layer_button {
+
+}
+
+div.table_layer_headrow a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.table_layer_content {
+	border-bottom: 1px solid #83BB55;
+}
+
+
+.table_data_alt0,
+.table_data_alt1,
+.table_data_alt_pkey0,
+.table_data_alt_pkey1,
+.table_data_alt_func0,
+.table_data_alt_func1 {
+    text-align: left;
+    vertical-align: top;
+    padding: 4px;
+    /*padding-left: 8px;
+    padding-right: 8px;*/
+    border: 1px solid #ffffff
+    
+}
+
+.table_data_alt0 {background-color: #FFFFFF}
+.table_data_alt1 {background-color: #F4F9F0}
+
+.table_data_alt_pkey0 {background-color: #FFF2E6}
+.table_data_alt_pkey1 {background-color: #FFDFBF}
+
+.table_data_alt_func0 {background-color: #E1EBF4;}
+.table_data_alt_func1 {background-color: #B3CCE3;}
+
+.table_head {
+    background-color: #396B9D;
+    padding-top: 8px;
+    padding-bottom: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff
+}
+
+.table_subhead, .table_subhead_pkey, .table_subhead_func {
+    background-color: #83BB55;
+    padding: 4px;
+/*	
+	padding-top: 4px;
+    padding-bottom: 6px;
+*/
+    padding-left: 6px;
+    padding-right: 6px;
+    font-weight: bold;
+    color: #ffffff;
+    border: 1px solid #FFFFFF
+}
+
+.table_subhead_pkey {
+    background-color: #FF8E20
+}
+
+.table_subhead_func {
+    background-color: #396B9D;
+}
+.table_service, .table_ok {
+    background-color: #E1EBF4;
+    text-align: left;
+    vertical-align: top;
+    padding-top: 8px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border: 0px solid #FFFFFF;
+    border-bottom: 1px solid #396B9D
+}
+
+.table_error, .table_ok, .table_warning {
+    text-align: left;
+    vertical-align: top;
+    padding-top: 12px;
+    padding-bottom: 8px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border: 0px solid #FFFFFF;
+    border-bottom: 1px solid #396B9D;
+    font-weight: bold;
+    color: #FFFFFF
+}
+
+.table_error {
+    background-color: #A53D3F;
+}
+
+.table_ok {
+    background-color: #3D9722;
+}
+
+.table_warning {
+    background-color: #FF8204;
+}
+
+.table_func_cell {
+	padding-right: 16px;
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
+
+.table_func_cell_head {
+    background-color: #396B9D;
+    color: #FFFFFF;
+	font-weight: bold;
+	padding: 2px;	
+	padding-left: 8px;
+	padding-right: 8px;
+	
+}
+
+/*
+ Diese KLassen baldm�glichst ersetzen durch die nachfolgenden
+ */
+.table_sliders {
+    background-color: #396B9D;
+    padding: 0px;
+	margin: 0px;
+}
+
+.table_slider_service {
+	padding-left:16px;
+	padding-right: 12px;
+	color: #ffffff;
+    background-color: #396B9D;
+}
+
+.table_slider_service_active {
+    background-color: #E1EBF4;
+}
+
+.table_slider_service_active {
+	padding-left:24px;
+	padding-right: 12px;
+
+}
+
+.table_slider_service_active a {
+	color: #396B9D;
+	font-weight: bold;
+}
+
+.table_slider_service_active a:hover {
+	color: #F97C00;
+	font-weight: bold;
+}
+
+.table_slider_service a {
+	color: #FFFFFF;
+}
+
+.table_slider_service a:hover {
+	color: #F97C00;
+}
+
+
+.table_slider_seperator_service {
+    background-color: #396B9D;
+}
+
+.table_slider_seperator_service, .table_slider_service, .table_slider_seperator_left_service {
+	border-bottom: 1px solid #FFFFFF;
+	border-top: 1px solid #FFFFFF;
+}
+
+.table_slider_seperator_service_active {
+    background-color: #E1EBF4;
+}
+
+.table_slider_seperator_service_active {
+	border-top: 1px solid #FFFFFF;
+}
+
+/* Reiter Ende */
+.form_dir {
+	background-color: #FBE879;
+	color: #5F5103;
+}
+
+.form_file {
+	color: #333333;
+}
+
+.form_head {
+	font-weight: bold;
+}
+
+.data_noedit {
+	background-color: #e8e8e8;
+	color: #606060;
+	padding: 2px;
+	/*padding-top: 2px;*/
+	padding-bottom: 4px;
+	/*margin-top: 4px;*/
+	border: 1px solid #a0a0a0;
+}
+
+.stress {
+    font-weight: bold;
+   	color: #C61D01;
+}
+
+.service_text {
+	color: #396B9D
+}
+
+.select_link,
+.select_link option {
+	font-family: monospace !important;
+	max-width: 300px;
+}
+
+/* Import Export */
+.progress_box {
+	border: 1px solid #396B9D;
+	padding: 4px;
+	text-align: left;
+	vertical-align: middle;
+	margin: 0px;
+
+}
+
+.progress_bar {
+	background-color: #ffffff;
+	color: #396B9D;
+	text-align: right;
+	padding-right: 8px;
+	width: 0px;
+}    
+
+/* Filebrowser */
+.fb_entry_alt0 {background-color: #FFFFFF}
+.fb_entry_alt1 {background-color: #F4F9F0}
+
+.fb_entry_form_alt0 {background-color: #FFFFFF; border: 1px #FFFFFF solid}
+.fb_entry_form_alt1 {background-color: #F4F9F0; border: 1px #F4F9F0 solid}
+
+.fb_folder_row0, .fb_folder_row1 {
+    text-align: left;
+    vertical-align: top;
+    padding: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border: 1px solid #ffffff;
+}
+
+.fb_folder_row0 {background-color: #FFFFFF}
+.fb_folder_row1 {background-color: #FFFEEA}
+
+/* Tabellenmanager */
+.tabbrowser_group, .tabbrowser_group_func {
+	color: #396B9D;
+	padding: 2px;
+	padding-left: 8px;
+	padding-right: 12px;
+}
+
+.tabbrowser_group_icon, .tabbrowser_group, .tabbrowser_group_func {
+	border-top: 1px solid #396B9D;
+	background-color: #E1EBF4;
+}
+
+.tabbrowser_group_func {
+	text-align: right;
+}
+
+.tabbrowser_table0, .tabbrowser_table_func0, .tabbrowser_table_spacer0 {
+	background-color: #FFFFFF
+}
+
+.tabbrowser_table1, .tabbrowser_table_func1, .tabbrowser_table_spacer1 {
+	background-color: #F4F9F0
+}
+
+.tabbrowser_table0, .tabbrowser_table1, .tabbrowser_group_empty {
+	padding: 2px;
+	padding-left: 8px;
+	padding-right: 12px;
+}
+
+.tabbrowser_table_func0, .tabbrowser_table_func1 {
+	padding: 2px;
+	padding-left: 12px;
+	padding-right: 12px;
+	text-align: right;
+}
+
+.tabbrowser_group_icon {
+	padding-left: 12px;
+}
+
+.tabbrowser_group_empty {
+	padding-top: 6px;
+	padding-bottom: 6px;
+	color: #a0a0a0;
+}
+
+.tabbrowserDropdownGroup {
+	background-color: #E1EBF4;
+	color: #396B9D;
+	font-weight: normal;
+	font-style: normal;
+}
+
+.tabbrowserDropdownItem {
+	padding-left: 24px;
+	background-color: #FFFFFF;
+	color: #000000;
+}
+
+.tabbrowserDropdownItemDisabled {
+	padding-left: 24px;
+	background-color: #e8e8e8;
+	color: #a0a0a0;
+}
+
+/* Benutzerverwaltung */
+
+.rightsman_tab_groupicon, .rightsman_tab_usericon0, .rightsman_tab_usericon1  {
+	padding: 2px;
+	padding-left: 12px;
+}
+
+.rightsman_tab_groupname {
+	color: #396B9D;
+	padding-top: 6px;
+	padding-left: 8px;
+	padding-right: 12px;
+	vertical-align: middle;
+}
+
+.rightsman_tab_groupfuncs, .rightsman_tab_userfuncs0, .rightsman_tab_userfuncs1 {
+	padding: 2px;
+	padding-left: 12px;
+	padding-right: 12px;
+	text-align: right;
+}
+.rightsman_tab_groupicon, .rightsman_tab_groupname, .rightsman_tab_groupfuncs {
+	text-align: left;
+	vertical-align: top;
+	border-top: 1px solid #396B9D;
+	background-color: #E1EBF4;
+}
+
+.rightsman_tab_username0, .rightsman_tab_username1 {
+	padding-top: 6px;
+	padding-left: 8px;
+	padding-right: 12px;
+}
+
+.rightsman_tab_username0, .rightsman_tab_usericon0, .rightsman_tab_userfuncs0 {
+	background-color: #F4F9F0;
+}
+
+.rightsman_tab_username1, .rightsman_tab_userfuncs1 {
+	background-color: #FFFFFF;
+}
+
+.rightsman_text_grey {
+	color: #a0a0a0;
+}
+
+/*
+ Weitere Klassen
+*/
+.codebox,
+.cmtEditEntryRow .cmtCode {
+	font-family: courier new, courier, monospace;
+	line-height: 16px;
+	font-size: 12px;
+}
+
+/*
+* Hilfe-Boxen
+*/
+
+.cmtHelpbox {
+    background-color: #F6F6F6;
+	border-bottom: 1px solid #777777;
+}
+
+.helpboxHead,
+.cmtHelpboxHead {
+	background-color: #3878C6;
+	border-bottom: 2px solid #ffffff;
+	margin: 0px;
+    color: #FFFFFF;
+	font-weight: bold;
+	padding: 4px 8px 4px 8px;
+	text-align: left;
+}
+
+.helpboxHeadButton {
+	background-color: #D8D8D8;
+	float: right;
+}
+
+.helpboxHeadButton img {
+	border: 0px;
+}
+
+.helpboxContent,
+.cmtHelpboxContent {
+	padding-bottom: 12px;
+	padding-left: 12px;
+	padding-right: 12px;
+	padding-top: 6px;
+}
+
+.helpboxHead a, .helpboxHead a:hover {
+	margin: 0px;
+	color: #707070;
+}
+
+.helpbox_service {
+	color: #707070;
+}
+
+.helpbox_service_code {
+	color: #0F579F;
+	font-family: monospace;
+}
+
+.tabbrowser_editstruct_fieldscols {
+	padding-bottom: 12px;
+	padding-left: 12px;
+	padding-right: 12px;
+	padding-top: 6px;
+}
+
+/*
+ Klassen f�r Forumlarfelder
+*/
+.dropdown_usergroup_unselectable, .select_group {
+	background-color: #E1EBF4;
+	color: #396B9D;
+}
+
+.dropdown_user, .select_entry {
+	padding-left: 24px;
+}
+
+/*
+	Klassen f�r Homepageseiten-Ansicht (app_pages.php)
+*/
+
+.pages_row0, .pages_row1 {
+	white-space:nowrap;
+	clear:both;
+	border: 0px;
+	display: block;
+}
+
+/*
+	Allgemeine Klassen zur Container-Positionierung
+*/
+.containerInline {
+	display: inline;
+}
+
+.containerLeft {
+	float: left;
+}
+
+.containerRight {
+	float: right;
+}
+
+.containerClear {
+	clear: both;
+}
+
+/* clear nicht gut, besser clearFloats! */
+.clear {
+	clear: both;
+	visibility: hidden;
+}
+
+.clearFloats {
+	display: inline-table;
+	height: 1%;
+	display: block;
+}
+
+html>body .clearFloats {
+	height: auto;
+}
+
+.clearFloats:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+/* -----------------------------------------------------
+	Ajax-Selektoren
+   ----------------------------------------------------- */
+.ajaxLoading,
+.cmtInProgress {
+/* 	color: #808080; */
+/* 	font-weight: bold; */
+/* 	background-image: url('../../general/img/icon_inprogress.gif'); */
+/* 	background-repeat: no-repeat; */
+/* 	background-position: center center; */
+}
+
+.cmtDialogContainer.cmtInProgress {
+/* 	background-image: url('../../administration/img/spinner_bg_white_large.gif'); */
+/* 	background-repeat: no-repeat; */
+/* 	background-position: center center; */
+}
+
+.ajaxLoading:after,
+.cmtInProgress:after,
+.cmt-in-progress:after {
+  animation: rotate 0.8s infinite linear;
+  border: 4px solid #FF8000;
+  border-right-color: transparent;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 auto;
+  display: block;
+  content: ' ';
+  background-image: none;
+}
+
+@keyframes rotate {
+  0%    { transform: rotate(0deg); }
+  100%  { transform: rotate(360deg); }
+}
+
+.cmtDialogContainer.cmtInProgress:after {
+	margin-top: 20px;
+}
+
+.cmtEditRow.cmtInProgress {
+	padding: 8px 12px 8px 48px;
+	min-height: 16px;	
+	background-color: #F0F0F0;
+	border: 1px dashed #808080;
+	background-position: 6px 8px;	
+}
+
+.cmtLoading,
+.cmtWorking {
+	cursor: wait;
+}
+
+/* -----------------------------------------------------
+	Selektoren für Javascript-Tabs
+   ----------------------------------------------------- */
+
+.ui-tabs-nav li.cmtTabWithIcon a {
+	padding: 0;	
+}
+
+.ui-tabs-nav li.cmtTabWithIcon span {
+	padding: 6px 12px 6px 36px;
+	background-position: 6px center;
+	background-repeat: no-repeat;
+	display: inline-block;
+}
+
+.cmtTabNew span {
+	background-image: url("../../administration/img/icons/add_medium.png");
+}
+
+.cmtTabEdit span {
+	background-image: url("../../administration/img/icons/edit_large.png");
+}
+
+/* -----------------------------------------------------
+	Selektoren für Javascript-Baumansichten
+   ----------------------------------------------------- */
+.cmtTree {
+	
+}
+
+ul.cmtTree,
+ul.cmtTree ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	margin: 2px 6px 2px 32px;
+}
+
+ul.cmtTree {
+	margin-left: 0px;
+}
+
+.treeNodeContainer {
+	background-color: transparent;
+	margin-bottom: 2px !important;
+}
+
+.treeNodeOpen,
+.treeNodeClose {
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	top: 0;
+	left: 0px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	cursor: pointer;
+}
+
+.treeNodeClose {
+	background-image: url('../../general/img/nav_menu_close.gif');
+}
+.treeNodeOpen {
+	background-image: url('../../general/img/nav_menu_open.gif');
+}
+
+.drag-drop-tree-dropon-node {
+	background-color: #EFF9DF;
+}
+.drag-drop-tree-dropafter-node {
+	border-bottom: 2px solid #82B926 !important;
+	margin-bottom: 0px !important;
+}
+
+	  
+/* --------------------------------------------
+	Selektoren cmt 1.4!
+   -------------------------------------------- */
+/* ----------------------------------------------
+	Standard-Layer
+   ----------------------------------------------*/
+.cmtLayer {
+	border-bottom: 1px solid #C8C8C8;
+	/*margin-bottom: 1px;*/
+}
+
+.cmtLayerHandle,
+.cmtHandle {
+	padding: 0.8rem 1.5rem 0.8rem 4rem;
+	background-position: top left;
+	font-weight: bold;	
+	cursor: pointer;
+	position: relative;
+/* 	background-image: url("../img/bg_layer_handle.png"); */
+/* 	background-repeat: repeat-x; */
+	background-color: #E0E0E0;
+	color: #6A6A6A;
+}
+
+.cmtLayerHandleNoIcon {
+	padding-left: 1.5rem;
+}
+
+.cmtLayerHandle:hover,
+.cmtHandle:hover {
+	background-color: #478BCF;
+/* 	background-image: none; */
+/* 	background-image: url("../../general/css/jquery-ui/images/custom/cmt_button_hover.png"); */
+	background-repeat: repeat-x;
+	color: #FFFFFF;
+}
+
+.cmtHandleMove {
+	cursor: move;	
+}
+
+.cmtLayerHandleIndicator {
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	width: 16px;
+	height: 16px;
+	background-repeat: no-repeat;
+	/*background-position: top left; */
+/*	background-image: url("../../img/gui/nav_menu_close.gif");
+	background-image: url("../../general/img/icon_service_layer_close.gif");*/
+}
+
+/* .cmtLayerHandleIndicator.ui-icon { */
+/* 	background-image: url("../../general/css/jquery-ui/images/ui-icons_888888_256x240.png"); */
+/* } */
+
+/* .cmtLayerHandle:hover .ui-icon { */
+/* 	background-image: url("../../general/css/jquery-ui/images/ui-icons_ffffff_256x240.png"); */
+/* } */
+
+.cmtLayerOpen .cmtLayerHandleIndicator {
+
+}
+
+.cmtLayerContent {
+	display: none;
+	/* border-top: 1px dotted #A0A0A0; */
+}
+
+.cmtLayerOpen .cmtLayerContent {
+	display: block;
+}
+.cmtLayerHandleIndicator.cmtLayerClosed {
+}
+
+.cmtLayerActive .cmtLayerHandle {
+	background-color: #F08400;
+	color: #FFFFFF;
+	background-image: none;	
+}
+
+/* .cmtLayerActive .cmtLayerHandle .ui-icon { */
+/* 	background-image: url("../../general/css/jquery-ui/images/ui-icons_ffffff_256x240.png"); */
+/* } */
+
+.cmt-layer-open-close {
+	position: absolute;
+	right: 1rem;
+	top: 0.5rem;	
+}
+
+.cmtLayerOpen .cmt-layer-open-close:before {
+	content: "\f0d8";
+}
+
+.cmt-layer-open-close {
+	
+}
+.cmt-layer-icon {
+	position: absolute;
+	top: 0.5rem;
+	left: 1rem;
+/* 	color: #B0B0B0; */
+/* 	text-shadow: 0.1rem 0.1rem #888888; */
+}
+
+.cmt-icon-search:before {
+	content: "\f002";
+}
+
+.cmt-icon-index:before {
+	content: "\f03a";
+}
+/* ----------------------------------------------
+	Hover-Effekt
+   ----------------------------------------------*/
+.cmtHover {
+	
+}
+
+/* with Javascript */
+.cmtHovered,
+tbody tr.cmtHovered td,
+.ui-state-hover,
+/* without Javascript */
+.cmtHover:hover,
+.cmtHover:hover td
+ {
+	background-color: #C6E3FF;
+}
+
+tbody tr.cmtHovered,
+tbody tr.cmtSelected.cmtHovered,
+
+tr.cmtHover:hover ,
+tr.cmtHover.cmtSelected:hover  {
+/* 	box-shadow: 0px 0px 4px #3675B7; */
+	outline: 2px solid #478BCF; /* Box-Shadow funktioniert nicht auf IE9, <tr>.outline und Box-Shadow nicht auf Chrome/Webkit */ 
+}
+
+.cmtHovered .cmtTableFunctions {
+	background-color: #478BCF;
+	cursor: auto;
+}
+
+/* ----------------------------------------------
+	Eintragswawahl
+   ----------------------------------------------*/
+/* Dieser Selektor markiert auswählbare Elemente und sollte nicht gestylt werden */
+.cmtSelectable {
+	cursor: pointer;
+}
+
+.cmtSelected,
+tbody tr.cmtSelected td {
+	background-color: #FFCB8C;
+}
+
+
+.cmtSelected.cmtAlternate0,
+tbody tr.cmtSelected td.cmtAlternate0  {
+	background-color: #FFE9CE;
+	background-color: #FFDBAE;
+}
+
+.cmtSelected.cmtAlternate1,
+tbody tr.cmtSelected td.cmtAlternate1  {
+	background-color: #FFDBAE;
+}
+
+.cmtSelectableStatus {
+	display: none;	
+}
+
+.cmtSelected.cmtAlternate1,
+tbody tr.cmtSelected.cmtHovered {
+
+}
+
+tbody tr.cmtSelected td.cmtTableFunctions {
+	background-color: #FFAD48;
+}
+
+.cmtSelectableDontSelect {
+	
+}
+
+/* ----------------------------------------------
+	Dialoge
+   ----------------------------------------------*/
+.cmtDialogContentContainer {
+	display: none;	
+}
+.cmtDialogContainerInner {
+	padding: 12px;	
+}
+
+.cmtDialogContainerInner p {
+	margin: 0 0 12px 0;	
+}
+
+.cmtDialogContainerInner p:last-child {
+	margin-bottom: 0;
+}
+
+.cmtDialogVar {
+	font-weight: bold;	
+}
+
+div.cmtDialogVar,
+p.cmtDialogVar {
+	margin: 8px 0;
+}
+
+.cmtDialogOverlay {
+	background-color: #FFFFFF;
+	opacity: 0.7;
+}
+
+#cmtDialogMessageContainer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: auto;
+	z-index: 1000;
+}
+
+.cmtDialogButtons {
+	text-align: right;
+}
+
+input[type=text] {
+	border: 1px solid #C0C0C0;
+	padding: 4px 5px;
+	padding: 6px 5px 6px 5px;
+	/*margin-bottom: 3px; */
+	vertical-align: middle;
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+input[type=text]:focus,
+select:focus {
+/* 	border-color: #1B4163; */
+/* 	box-shadow: 0px 0px 3px #478BCF; */
+	outline: 2px solid #478BCF;
+}
+
+select {
+	border: 1px solid #C0C0C0;
+	padding: 2px 2px;	
+}
+
+/* ----------------------------------------------
+	Formular: Dateiauswahl
+   ----------------------------------------------*/
+.cmtEditEntryRow input.cmtFormFile {
+	width: 360px;	
+}
+.cmtCustomFileContainer {
+	display: inline-block;
+	position: relative;
+	width: auto;
+	vertical-align: bottom;
+}
+
+.cmtCustomFileText {
+	display: none;	
+}
+
+/* Original Dateiauswahlfeld */
+.cmtFormCustomFileInput {
+	background: none repeat scroll 0 0 transparent;
+	border: 0 none;
+	left: -999em;
+	opacity: 0;
+	position: absolute;
+}
+
+/* ----------------------------------------------
+	Knöpfe: global verwendet
+	TODO: alle globalen Knöpfe auf mehrere Hintergründe umstellen
+   ----------------------------------------------*/
+.cmtIcon {
+	width: 24px;
+	height: 24px;
+	overflow: hidden;
+	display: inline-block;
+	margin: 0px 0px 0px 0px;
+}
+
+.cmtButton.cmtDisabled,
+.cmtIcon.cmtDisabled {
+	opacity: 0.5;
+	filter: gray;
+	-webkit-filter: grayscale(100%);
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+ */
+}
+
+tr.cmtDisabled {
+	color: #888888;
+}
+
+.cmtButton.cmtDisabled:hover,
+.cmtIcon.cmtDisabled:hover {
+	cursor: default;
+}
+
+.cmtButton.cmtDisabled .cmtButtonIcon {
+	opacity: 0.3
+}
+
+/* zurück */
+.cmtButton.ui-button .cmtButtonBack {
+	background: url('../../administration/img/icons/back_large.png') no-repeat center center;
+}
+
+/* speichern */
+.cmtButton.ui-button .cmtButtonSave,
+.cmtButtonSave {
+	background: url('../../administration/img/icons/save_large.png') no-repeat center center	
+}
+
+/* löschen */
+.cmtButton.ui-button .cmtButtonDelete,
+.cmtButtonDelete {
+	background: url('../../administration/img/icons/delete_large.png') no-repeat right bottom
+}
+
+/* suchen */
+.cmtButton.ui-button .cmtButtonSearch,
+.cmtButtonSearch {
+	background: url('../../administration/img/icons/search_large.png') no-repeat right top
+}
+
+/* Datei auswählen */
+.cmtButton .cmtButtonSelectFile {
+	background: url('../../administration/img/icons/search_large.png') no-repeat right top,
+	url('../../administration/img/icons/icon_base_folder_large.png') no-repeat center center;
+}
+
+/* Datei hochladen */
+.cmtButton .cmtButtonUploadFile {
+	background: url('../../administration/img/icons/up_medium.png') no-repeat right top,
+	url('../../administration/img/icons/icon_base_harddisk_large.png') no-repeat center center;
+}
+
+/* Datei runterladen */
+.cmtButtonDownloadFile {
+	background: url('../../administration/img/icons/down_medium.png') no-repeat right top,
+	url('../../administration/img/icons/icon_base_harddisk_large.png') no-repeat center center;
+}
+
+/* hinzufügen */
+.cmtButton .cmtButtonAdd {
+	background: url('../../administration/img/icons/add_large.png') no-repeat center center;
+}
+
+/* bearbeiten */
+.cmtButton.ui-button .cmtButtonEdit,
+.cmtButtonEdit {
+	background: url('../../administration/img/icons/edit_large.png') no-repeat right top
+}
+
+/* Info */
+.cmtButtonInfo {
+	background: url('../../administration/img/icons/info_large.png') no-repeat center center;
+}
+
+/* Tabelle: neuer Eintrag */
+.cmtButton.ui-button .cmtButtonNewEntry,
+ .cmtButtonNewEntry {
+	background: url('../../administration/img/icons/add_medium.png') no-repeat right bottom,
+	url('../../administration/img/icons/icon_base_entry.png') no-repeat center center;
+}
+
+/* Tabelle: Eintrag bearbeiten */
+.cmtButton.ui-button .cmtButtonEditEntry,
+ .cmtButtonEditEntry {
+	background: url('../../administration/img/icons/edit_medium.png') no-repeat right 4px,
+	url('../../administration/img/icons/icon_base_entry.png') no-repeat center center;
+}
+
+/* Tabelle: Eintrag löschen */
+.cmtButton.ui-button .cmtButtonDeleteEntry,
+.cmtButtonDeleteEntry {
+	background: url('../../administration/img/icons/delete_medium.png') no-repeat right bottom,
+	url('../../administration/img/icons/icon_base_entry.png') no-repeat center center;
+}
+
+
+/* Tabelle: Eintrag duplizieren */
+.cmtButton.ui-button .cmtButtonDuplicateEntry,
+.cmtButtonDuplicateEntry {
+	background: url('../../administration/img/icons/icon_base_entry_medium.png') no-repeat right bottom,
+	url('../../administration/img/icons/icon_base_entry_medium.png') no-repeat top left;
+}
+
+/* Tabelle: Kalender anzeigen */
+.cmtButton .cmtButtonShowCalendar {
+	background-image: url('../../../app_showtable/img/icon_calendar.png');
+}
+
+/* Tabelle: vorheriger Eintrag */
+.cmtButton.ui-button .cmtButtonPrevEntry {
+	background: url('../../administration/img/icons/back_medium.png') no-repeat right bottom,
+	url('../../administration/img/icons/icon_base_entry_medium.png') no-repeat left top;
+}
+
+/* Tabelle: nächster Eintrag */
+.cmtButton.ui-button .cmtButtonNextEntry {
+	background: url('../../administration/img/icons/forward_medium.png') no-repeat left bottom,
+	url('../../administration/img/icons/icon_base_entry_medium.png') no-repeat right top;
+}
+
+/* Tabelle: speichern und vorheriger Eintrag */
+.cmtButton.ui-button .cmtButtonSaveShowPrev {
+	background:	url('../../administration/img/icons/save_medium.png') no-repeat 6px top,
+	url('../../administration/img/icons/back_medium.png') no-repeat -1px bottom
+}
+
+/* Tabelle: speichern und nächster Eintrag */
+.cmtButton.ui-button .cmtButtonSaveShowNext {
+	background:	url('../../administration/img/icons/save_medium.png') no-repeat 2px top,
+	url('../../administration/img/icons/forward_medium.png') no-repeat 9px bottom}
+
+/* Tabelle: löschen und vorheriger Eintrag */
+.cmtButton.ui-button .cmtButtonDeleteShowPrev {
+	background: url('../../administration/img/icons/delete_medium.png') no-repeat right top,
+	url('../../administration/img/icons/back_medium.png') no-repeat left bottom;
+}
+
+/* Tabelle: löschen und nächster Eintrag */
+.cmtButton.ui-button .cmtButtonDeleteShowNext {
+	background: url('../../administration/img/icons/delete_medium.png') no-repeat left top,
+	url('../../administration/img/icons/forward_medium.png') no-repeat right bottom;
+}
+
+/* Tabelle: Kalender */
+.cmtButton.ui-button .cmtButtonShowCalendar {
+	background: url('../../administration/img/icons/calendar_large.png') no-repeat center center	
+}
+
+/* Tabelle: Mehrere Einträge duplizieren */
+.cmtButton.ui-button .cmtButtonDuplicateMultiple {
+	background: url('../../administration/img/icons/icon_base_entry_medium.png') no-repeat right bottom,
+	url('../../administration/img/icons/icon_base_entry_medium.png') no-repeat 4px 4px,
+	url('../../administration/img/icons/icon_base_entry_medium.png') no-repeat 0px 0px;
+}
+
+/* Tabelle: Mehrere Einträge löschen */
+.cmtButton.ui-button .cmtButtonDeleteMultiple {
+	background: url('../../administration/img/icons/delete_medium.png') no-repeat right bottom,
+	url('../../administration/img/icons/icon_base_entry_medium.png') no-repeat 4px 4px,
+	url('../../administration/img/icons/icon_base_entry_medium.png') no-repeat 0px 0px;
+}
+
+/* Tabelle: Mehrere Einträge auswählen */
+.cmtButton.ui-button .cmtButtonSelectMultiple {
+	background: url('../../administration/img/icons/select_medium.png') no-repeat 8px 8px,
+	url('../../administration/img/icons/select_medium.png') no-repeat 8px -2px;
+}
+
+/* Tabelle: Mehrere Einträge auswählen */
+.cmtButton.ui-button .cmtButtonUnselectMultiple {
+	background: url('../../administration/img/icons/unselect_medium.png') no-repeat 8px 8px,
+	url('../../administration/img/icons/unselect_medium.png') no-repeat 8px -2px;
+}
+
+/* Tabelle: Eintrag ansehen */
+.cmtButton.ui-button .cmtButtonViewEntry,
+ .cmtButtonViewEntry {
+	background: url('../../administration/img/icons/search_medium.png') no-repeat right bottom,
+	url('../../administration/img/icons/icon_base_entry.png') no-repeat center center;
+}
+
+/* Tabelle: Kalender anzeigen */
+.cmtButton .cmtButtonConfirm {
+	background-image: url('../../administration/img/icons/accept_large.png');
+}
+
+.cmtButton.cmtButtonNoIcon span.cmtButtonIcon {
+	display: none;
+}
+
+.cmtButton.cmtButtonNoIcon span.ui-button-text {
+	padding-left: 9px;
+}
+
+/* ----------------------------------------------
+	global icons: filetypes
+   ----------------------------------------------*/
+.cmtFile,
+.cmtDirectory {
+	background-repeat: no-repeat;
+	background-position: center center;	
+	width: 24px;
+	height: 24px;
+	display: inline-block;
+}
+
+.cmtDirectory {
+	background-image: url('../img/filetypes/directory_large.png');
+}
+
+.cmtDirectoryEmpty {
+	background-image: url('../img/filetypes/directory_empty_large.png');
+}
+
+.cmtFile {
+	background-image: url('../img/filetypes/file_large.png');
+}
+
+.cmtFilePHP,
+.cmtFileINC {
+	background: url('../img/filetypes/label_php_large.png') no-repeat right bottom,
+	url('../img/filetypes/file_large.png') no-repeat left top;
+}
+
+.cmtFileGIF {
+	background: url('../img/filetypes/label_gif_large.png') no-repeat right bottom,
+	url('../img/filetypes/file_large.png') no-repeat left top;
+}
+
+.cmtFilePNG {
+	background: url('../img/filetypes/label_png_large.png') no-repeat right bottom,
+	url('../img/filetypes/file_large.png') no-repeat left top;
+}
+
+.cmtFileJPG,
+.cmtFileJPEG {
+	background: url('../img/filetypes/label_jpg_large.png') no-repeat right bottom,
+	url('../img/filetypes/file_large.png') no-repeat left top;
+}
+
+.cmtFilePDF {
+	background: url('../img/filetypes/label_pdf_large.png') no-repeat right bottom,
+	url('../img/filetypes/file_large.png') no-repeat left top;
+}
+
+.cmtFileTXT {
+	background: url('../img/filetypes/label_txt_large.png') no-repeat right bottom,
+	url('../img/filetypes/file_large.png') no-repeat left top;
+}
+
+.cmtFileTPL {
+	background: url('../img/filetypes/label_tpl_large.png') no-repeat right bottom,
+	url('../img/filetypes/file_large.png') no-repeat left top;
+}
+
+.cmtFileHTML,
+.cmtFileHTM {
+	background: url('../img/filetypes/label_html_large.png') no-repeat right bottom,
+	url('../img/filetypes/file_large.png') no-repeat left top;
+}
+
+.cmtFileCSS {
+	background: url('../img/filetypes/label_css_large.png') no-repeat right bottom,
+	url('../img/filetypes/file_large.png') no-repeat left top;
+}
+
+.cmtFileJS {
+	background: url('../img/filetypes/label_js_large.png') no-repeat right bottom,
+	url('../img/filetypes/file_large.png') no-repeat left top;
+}
+/* ----------------------------------------------
+	Formular: allgemein
+   ----------------------------------------------*/
+label.cmtSpecialLabel,
+.ui-buttonset label.cmtSpecialLabel .ui-button-text {
+	color: #333333;
+	font-weight: bold;
+}
+
+.ui-buttonset label.cmtSpecialLabel .ui-button-text {
+	color: #333333;
+	font-weight: bold;
+	padding-left: 24px;
+	padding-top: 3px;
+}
+
+.ui-buttonset label.cmtSpecialLabel.ui-state-active .ui-button-text {
+	background-position: 0px 3px;	
+}
+
+/* ----------------------------------------------
+	Texteditor
+   ----------------------------------------------*/
+.cmtEditor {
+	display: block;
+	height: 300px;
+	width: 100%;
+	position: relative !important;
+	background-color: #FFFFFF;
+	border: 1px solid #B0B0B0;
+/*	font-family: monospace;*/ /* müsste mit !important definiert werden. Aber immer Monospaced Schrift!!! */
+	line-height: 146%;
+	font-size: 13px !important;
+}
+
+.cmtEditorFullscreen {
+	height: auto;
+	width: auto;
+	border: 0;
+	margin: 0;
+	position: fixed !important;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+	background-color: #FFFFFF;
+}
+
+/* ----------------------------------------------
+	Helfer: clearfix
+   ----------------------------------------------*/
+
+.clearfix:after {
+    content:     ".";
+    display:     block;
+    height:     0;
+    clear:         both;
+    visibility: hidden;
+}
+.clearfix {
+    display: inline-block;
+}
+/* Hides from IE-mac \*/
+* html .clearfix {
+    height: 1%;
+}
+.clearfix {
+    display: block;
+}
+
+/* ----------------------------------------------
+	Font Icons
+   ----------------------------------------------*/
+.cmt-font-icon {
+/* 	position: relative; */
+}
+.cmt-font-icon:before,
+.cmt-font-icon:after {
+/* 	font-family: "FontAwesome"; */
+font: normal normal normal 14px/1 FontAwesome;
+text-rendering: auto;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+	margin-right: 0.5rem;
+	font-size: 2.1rem;
+	line-height: 2.1rem;
+/* 	vertical-align: middle; */
+	vertical-align: -0.3rem;
+	text-align: center;
+	display: inline-block;
+}
+
+.cmt-font-icon:before {
+	min-width: 1.6rem;
+}
+
+.cmt-icon-refresh:before {
+	content: "\f021";
+}
+
+/* ----------------------------------------------
+	Media Queries (??????)
+   ----------------------------------------------*/
+/* @media only screen and (min-width: 0) { */
+  .st-menu-open.st-menu-pinned .st-pusher::after,
+  .st-menu-pinned .st-pusher::after {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    display: none;
+  }
+  .st-menu-pinned .st-menu,
+  .st-menu-open.st-menu-pinned .st-menu {
+    visibility: visible;
+    display: block;
+  }
+  .st-menu-pinned .st-pusher,
+  .st-menu-open.st-menu-pinned .st-pusher {
+    -webkit-transition: -webkit-transform 0s;
+    transition: transform 0s;
+    -webkit-transform: translate3d(30rem, 0, 0);
+    transform: translate3d(30rem, 0, 0);
+    width: calc(100% - 30rem);
+    /* 		left: 30rem; */
+  }
+  .st-menu-pinned .st-menu {
+    visibility: visible;
+    -webkit-transition: -webkit-transform 00s;
+    transition: transform 0s;
+    /* 	overflow-y: scroll; */
+  }
+/* } */
+/* --------------------------------------------------
+	Progressbars
+   -------------------------------------------------- */
+.cmtProgressbar {
+	position: relative;
+	background: #F0F0F0;
+	border-radius: 0 !important;
+}
+
+.cmtProgressbar .cmtLabel {
+	position: absolute;
+	top: 0.5rem;
+	left: 47%;
+	font-weight: bold;
+	color: #333333;
+	text-shadow: 0 0 0.3rem #FFFFFF;
+}
+
+.cmtProgressbar.cmtInvertLabel .cmtLabel {
+	color: #FFFFFF;
+	text-shadow: none;
+}
+
+.cmtProgressbar .ui-widget-header {
+	background: #478BCF	
+}
+
+.cmtProgressbar .ui-progressbar-value {
+	height: 110%;
+}
+
+.cmtProgressbar.cmtSuccess .ui-progressbar-value {
+	background-color: #3D9722;
+}
+
+.cmtProgressbar.cmtError .ui-progressbar-value {
+	background-color: #A53D3F;
+}

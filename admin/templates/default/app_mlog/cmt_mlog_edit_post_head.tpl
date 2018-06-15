@@ -1,0 +1,2 @@
+<link rel="Stylesheet" href="{CMT_TEMPLATE}/app_mlog/css/cmt_mlog_style.css" type="text/css" />
+<script src="templates/default/app_mlog/javascript/cmt_mlog_functions.js" type="text/javascript"></script>

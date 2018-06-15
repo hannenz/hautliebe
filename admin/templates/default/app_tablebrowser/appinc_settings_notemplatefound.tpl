@@ -1,0 +1,1 @@
+<div class="cmtMessage cmtMessageError">F&uuml;r die gew&auml;hlte Anwendung / Tabelle k&ouml;nnen keine Einstellungen vorgenommen werden.</div>

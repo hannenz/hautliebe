@@ -1,0 +1,26 @@
+/* --------------------------------------------------
+	Main layout container
+   -------------------------------------------------- */
+#cmtPageWrapper {
+	padding: 5.6rem 0 0 0;
+	position: relative;
+}
+
+.cmtPositionContainer {
+	position: relative;
+}
+
+#cmtLogoContainer {
+	position: relative;
+/* 	top: 0; */
+	margin: 0 6rem 0 4.4rem;
+	width: 25rem;
+	padding: 0 0 0 0;
+	float: left;
+}
+
+#cmtWebTitle {
+	position: relative;
+	float: left;
+/* 	width: 50%; */
+}

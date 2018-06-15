@@ -1,0 +1,346 @@
+
+body {
+	padding-bottom: 0;
+}
+
+/* -------------------------------------
+	???
+  -------------------------------------- */
+.cmtDropZone {
+	height: 3px;
+}
+
+.cmtDropZoneAfter {
+	margin-top: -3px;	/* Negativer Seitenrand, damit das div.cmtDropZoneAfter keinen zusätzlichen Platz unter seiten-Icon verbraucht */	
+}
+
+.cmtDropZoneIn {
+	height: auto;
+	margin-bottom: 3px;
+}
+
+#cmtMessageSaveOrderSuccess,
+#cmtMessageSaveOrderError {
+	display: none;
+}
+
+.cmtFilesTableIDCol {
+	width: 48px;
+}
+
+.cmtTreeTable tbody td.cmtFilesTableIDCell {
+	padding: 0 6px;
+}
+
+.cmtFilesTableActionCol {
+	width: 120px;
+}
+
+.cmtFilesTableActionCell {
+	white-space: nowrap;
+	text-align: right;
+	padding-right: 8px;
+	padding-left: 8px;
+}
+
+.cmtButton.ui-button .cmtButtonNewDirectory, 
+.cmtButtonNewDirectory {
+	background: url('../../administration/img/icons/add_medium.png') no-repeat right bottom,
+	url('../../administration/img/icons/folder_empty_large.png') no-repeat -4px center;
+}
+
+
+.cmtButton.ui-button .cmtButtonNewFile,
+.cmtButtonNewFile {
+	background: url('../../administration/img/icons/add_medium.png') no-repeat right bottom,
+	url('../../administration/img/filetypes/file_large.png') no-repeat -2px top;
+	margin-right: 24px;
+}
+
+
+/* -------------------------------------
+	treeTable Styles
+  -------------------------------------- */
+
+.cmtTreeTable tbody td {
+	border: 0;
+	position: relative;
+}
+
+a.cmtNodeExpander {
+	background-repeat: no-repeat;
+	background-position: 2px center;
+	float: left;
+	height: 24px;
+	width: 24px;
+	margin-left: -24px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.cmtNodeCollapsed a.cmtNodeExpander {
+	background-image: url('../img/icon_expand_tree.png');
+}
+
+a.cmtNodeExpander {
+	background-image: url('../img/icon_collapse_tree.png');
+}
+
+/* .cmtDroppableAccept { */
+/* 	position: relative; */
+/* } */
+
+/* .cmtDroppableAccept.cmtDropZoneBefore, */
+/* .cmtDroppableAccept.cmtDropZoneAfter { */
+/* 	background-image: url('../img/bg_insert_page_after.png'); */
+/* 	background-position: left center; */
+/* 	background-repeat: no-repeat; */
+/* } */
+
+/* .cmtDroppableAccept.cmtDropZoneBefore .cmtInsertPageMarker, */
+/* .cmtDroppableAccept.cmtDropZoneAfter .cmtInsertPageMarker, */
+/* .cmtDroppableAccept.cmtDropZoneIn .cmtInsertPageMarker { */
+/* 	background-image: url('../img/bg_insert_in.png'); */
+/* 	background-position: left top; */
+/* 	background-repeat: no-repeat; */
+/* 	width: 16px; */
+/* 	height: 16px; */
+/* 	position: absolute; */
+/* 	left: -22px; */
+/* 	top: -6px; */
+/* 	display: block; */
+/* } */
+
+/* .cmtDroppableAccept.cmtDropZoneIn .cmtInsertPageMarker { */
+/* 	left: -8px; */
+/* 	top: 4px;	 */
+/* } */
+
+/* .cmtDropZoneBefore .cmtInsertPageMarker, */
+/* .cmtDropZoneAfter .cmtInsertPageMarker, */
+/* .cmtDropZoneIn .cmtInsertPageMarker { */
+/* 	display: none; */
+/* } */
+
+.cmtNodeLoading a.cmtNodeExpander {
+	background-image: url('../../administration/img/spinner_bg_white_small.gif') !important;
+}
+
+.ui-draggable-dragging.cmtDroppableReject {
+	background-color: #D90500;
+	border-color: #9B0400;
+	color: #FFFFFF;
+}
+
+.ui-draggable-dragging.cmtDroppableReject a {
+	color: #FFFFFF;	
+}
+
+.ui-draggable-dragging {
+	z-index: 10000;
+	border: 1px solid #C8C8C8;
+	background-color: #F0F0F0;
+	padding: 5px 10px;
+	border-radius: 5px;
+	opacity: 0.8
+}
+
+.ui-draggable-dragging.cmtDroppableAccept {
+	border-color: #82B926;
+	background-color: #EFF9DF;
+	box-shadow: 0 0 0 2px #82B926;
+}
+
+/* .ui-draggable-dragging.cmtDroppableReject { */
+/* 	border-color: #A53D3F; */
+/* 	background-color: #E9C5C6; */
+/* 	box-shadow: 0 0 0 2px #A53D3F;	 */
+/* } */
+
+.ui-draggable-dragging a {
+	color: #333333;	
+}
+
+/* -------------------------------------
+	layout containers, columns
+  -------------------------------------- */
+#cmtContentContainer {
+	background-color: #F6F6F6;
+}
+
+#directoriesColumn {
+	width: 25%;
+	float: left;
+	border: 1px solid #C8C8C8;
+	background-color: #FFFFFF;
+}
+
+#filesColumn {
+	width: 74%;
+	float: right;
+	position: relative;
+	border: 1px solid #C8C8C8;
+	background-color: #FFFFFF;
+}
+
+#filesColumn .cmtTable tbody td {
+	padding: 0 6px;
+	white-space: nowrap;
+}
+
+/* #filesColumn .cmtTable tbody td:first-child { */
+/* 	width: 100%; */
+/* 	white-space: wrap; */
+/* 	overflow: hidden; */
+/* } */
+
+/* -------------------------------------
+	selected directory content (right column)
+  -------------------------------------- */
+.cmtFile,
+.cmtDirectory {
+	vertical-align: middle;
+}
+
+#cmtDirectoriesTable .cmtFile,
+#cmtDirectoriesTable .cmtDirectory {
+	margin: 2px 5px 0 0;
+}
+
+#cmtFilesTable .cmtFile,
+#cmtFilesTable .cmtDirectory {
+	margin: 2px 3px 0 -32px;
+}
+
+#cmtFilesTable tbody td {
+	white-space: nowrap;
+}
+
+#cmtFilesTable tbody td.cmtDirectoryCell,
+#cmtFilesTable tbody td.cmtFileCell {
+	width: 100%;
+	white-space: normal;
+	padding-left: 35px;
+}
+
+.cmtRenameEntryContainer {
+	display: none;
+	position: absolute;
+}
+
+.cmtRenameEntryContainer input {
+	margin: 0 5px 0 0;
+	padding: 2px 2px;
+}
+
+.cmtEditFileBack,
+.cmtEditFileSave {
+	display: inline-block;
+	margin: 0 0 0 2px;
+	height: 24px;
+	width: 24px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	vertical-align: middle;
+}
+
+.cmtEditFileBack {
+	background-image: url('../../administration/img/icons/back_large.png');
+}
+.cmtEditFileSave {
+	background-image: url('../../administration/img/icons/save_large.png');
+}
+
+/* -------------------------------------
+	modal dialogs
+  -------------------------------------- */
+.cmtDialogContainer .cmtDialogVar {
+	display: block;
+	text-align: middle;
+	margin: 10px 0;
+}
+
+.cmtDialogContainer input[type=text] {
+	width: 364px;
+}
+/* -------------------------------------
+	upload dialog
+  -------------------------------------- */
+form#cmtUploadForm {
+	overflow: hidden;
+}
+
+/* -------------------------------------
+	image preview
+  -------------------------------------- */
+#cmtDialogPreviewImage {
+	text-align: center;
+}
+
+/* -------------------------------------
+	breadcrumbs
+  -------------------------------------- */
+.cmtBreadcrumb,
+.cmtLastBreadcrumb {
+	
+}
+
+.cmtBreadcrumbSeparator {
+	content: '/';
+	margin: 0 5px
+	
+}
+
+
+/* -------------------------------------
+    drop upload
+  -------------------------------------- */
+
+.cmtDropUploadDropZone {
+	width: 200px;
+	height: 80px;
+	background-color: skyblue;
+}
+.cmtDropUploadDropZone.cmtDropAccepted {
+	outline: 2px dotted #406FC8;
+	position: relative;
+}
+
+/* #cmtDropUploadProgressBar { */
+/* 	width: 100%; */
+/* 	height: 24px; */
+/* 	display: none; */
+/* 	background-color: hotpink; */
+/* } */
+
+#cmtDropUploadSelect,
+#cmtDropUploadProgressBar {
+	display: none;
+}
+
+#cmtDropUploadSelect.isActive,
+#cmtDropUploadProgressBar.isActive {
+	display: block;
+}
+
+.cmtProgressBar {
+	min-height: 24px;
+}
+
+.cmtProgressBar.cmtInvertLabel {
+	color: #888888;
+}
+
+.cmtProgressBar.cmtInvertLabel .cmtLabel {
+	color: #FFFFFF;
+}
+
+.cmtInProgress {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom:0;
+	left: 0;
+	background-color: #FF0000;
+}
+

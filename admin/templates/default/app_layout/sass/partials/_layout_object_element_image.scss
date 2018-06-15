@@ -1,0 +1,69 @@
+// ---------------------------------------
+//	CMT layout object element: image
+// ---------------------------------------
+
+.ui-wrapper.cmt-selected {
+	outline: 1px solid $cmt-selected;
+}
+
+.cmt-is-placeholder {
+	background: #ECEFF1;
+	outline: 1px solid #37474F; 
+}
+
+.cmt-image-is-placeholder {
+/* 	width: 256px; */
+/* 	height: 256px; */
+}
+
+ .cmt-label {
+	padding: 5px;
+	background-color: #B3E5FC;
+	color: #0D47A1;
+	border: 1px solid #0D47A1;
+	display: block;
+	font-size: 11px;
+} 
+
+.cmt-element-image {
+
+	.cmt-label {
+		display: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	&:hover .cmt-label {
+		display: block;
+	} 
+
+	.cmt-image-shrunk {
+		display: none;	
+	}
+
+	&.cmt-image-resized {
+
+		.cmt-image-shrunk {
+			display: none;
+			position: absolute;
+			top: 0;
+			left: 0;
+
+			 span {
+				display: none;	
+			}
+		}
+	}
+
+	&.cmt-image-resized:hover {
+		
+		.cmt-image-shrunk {
+			left: auto !important;
+			right: 2px;
+			top: 2px;
+			display: block;
+			text-shadow: 0 0 1px #333333;
+		} 
+	}
+}
