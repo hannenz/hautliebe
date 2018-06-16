@@ -98,13 +98,23 @@ var settings = {
 	
 	jsvendor: {
 		src:	[
-				'./src/js/vendor/**/*.js'
+			'./src/js/vendor/**/*.js',
+			'./node_modules/jquery/dist/jquery.min.js',
+			'./node_modules/jquery/dist/jquery.slim.min.js',
+			'./node_modules/modernizr/modernizr.js',
+			'./node_modules/blazy/blazy.min.js',
+			'./node_modules/flickity/dist/flickity.pkgd.min.js',
+			'./node_modules/leaflet/dist/leaflet.js'
 		],
 		dest:	pkg.project_settings.prefix + 'js/vendor/'
 	},
 	
 	cssvendor: {
-		src:	'./src/css/vendor/**/*.css',
+		src:	[
+			'./src/css/vendor/**/*.css',
+			'./node_modules/flickity/dist/flickity.min.css',
+			'./node_modules/leaflet/dist/leaflet.css'
+		],
 		dest:	pkg.project_settings.prefix + 'css/vendor/'
 	},
 

@@ -2,28 +2,26 @@
  * src/css/partials/_typography.scss
  *
  * Typography related styles
- *
  */
 
+$font-weight-thin: 100;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-bold: 600;
 
-/************
- * Webfonts *
- ************/
+@include font-face ('Bariol', '../fonts/bariol_thin-webfont', $font-weight-thin, normal, $file-formats: woff woff2 ttf eot);
+@include font-face ('Bariol', '../fonts/bariol_thin_italic-webfont', $font-weight-thin, italic, $file-formats: woff woff2 ttf eot);
+@include font-face ('Bariol', '../fonts/bariol_light-webfont', $font-weight-light, normal, $file-formats: woff woff2 ttf eot);
+@include font-face ('Bariol', '../fonts/bariol_light_italic-webfont', $font-weight-light, italic, $file-formats: woff woff2 ttf eot);
+@include font-face ('Bariol', '../fonts/bariol_regular-webfont', $font-weight-regular, normal, $file-formats: woff woff2 ttf eot);
+@include font-face ('Bariol', '../fonts/bariol_regular_italic-webfont', $font-weight-regular, italic, $file-formats: woff woff2 ttf eot);
+@include font-face ('Bariol', '../fonts/bariol_bold-webfont', $font-weight-bold, normal, $file-formats: woff woff2 ttf eot);
+@include font-face ('Bariol', '../fonts/bariol_bold_italic-webfont', $font-weight-bold, italic, $file-formats: woff woff2 ttf eot);
 
-// Woff2 is preferered and - if available - the only format needed.
-// Use a font-face include line for each font face (regular, bold, italic, bold-italic, like shown below
-
-/**
- * @example
- *
- * @include font-face('FontName', '../fonts/FontName-Regular', normal, normal, $file-types: woff2);
- * @include font-face('FontName', '../fonts/FontName-Bold', bold, normal, $file-types: woff2);
- * @include font-face('FontName', '../fonts/FontName-Italic', normal, italic, $file-types: woff2);
- */
 
 
 html {
-	@include fluid-type(font-size, $bp1, $bp3, 11, 22);
+	@include fluid-type(font-size, $bp1, $bp3, 12px, 22px);
 }
 
 body {
@@ -32,5 +30,6 @@ body {
 	// @see mixins in mixins/_vertical_rhythm.scss
 	@include type-setting(0);
 	color: $text-color;
+	font-family: Bariol, sans-serif;
 }
 

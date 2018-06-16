@@ -1,5 +1,5 @@
 {
-  "name": "CHANGE-ME",
+  "name": "hautliebe",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
@@ -8,14 +8,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git@gitlab.halma.dyndns.org:25676/halma/CHANGE-ME"
+    "url": "ssh://git@github.com/hannenz/hautliebe"
   },
-  "author": "CHANGE-ME",
+  "author": "Johannes Braun",
   "license": "MIT",
-  "copyright": "HALMA GmbG & Co. KG",
+  "copyright": "Johannes Braun",
   "devDependencies": {
+    "blazy": "^1.8.2",
     "browser-sync": "^2.18.13",
     "del": "^3.0.0",
+    "flickity": "^2.1.2",
     "git-rev-sync": "^1.9.1",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-autoprefixer": "^4.0.0",
@@ -35,7 +37,9 @@
     "gulp-svgstore": "^6.1.0",
     "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.8",
-    "jquery": "^3.2.1",
+    "jquery": "^3.3.1",
+    "leaflet": "^1.3.1",
+    "modernizr": "^3.6.0",
     "moment": "^2.18.1",
     "node-bourbon": "^4.2.8",
     "node-neat": "^2.0.0-beta.0"

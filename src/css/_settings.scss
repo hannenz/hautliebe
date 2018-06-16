@@ -6,10 +6,10 @@
  * Colors *
  **********/
 
-$primary-color:firebrick;
-$accent-color:hotpink;
+$primary-color: rgb(238, 208, 212);
+$light-grey: rgb(228, 228, 228);
 
-$text-color:#303036;
+$text-color: rgb(75, 75, 75);
 
 
 
@@ -17,13 +17,13 @@ $text-color:#303036;
  * Measures *
  ************/
 
-$gutter:1rem;
-$header-height:100px;
-$inner-bound-width:42em;
+$gutter: 1rem;
+$header-height: 100px;
+$inner-bound-width: 42em;
 
 
 
 /********************
  * Options/Switches *
  ********************/
-$debug-base-line-grid:false;
+$debug-base-line-grid: false;
