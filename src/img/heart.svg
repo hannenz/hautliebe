@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="44.881241mm" height="39.527767mm" viewBox="0 0 159.02802 140.05902" id="svg5985" version="1.1" inkscape:version="0.91 r13725" sodipodi:docname="heart.svg">
+    <defs id="defs5987">
+        <clipPath clipPathUnits="userSpaceOnUse" id="clipPath818">
+            <path d="m 0,0 3840,0 0,12080 L 0,12080 0,0 Z" id="path820" inkscape:connector-curvature="0" />
+        </clipPath>
+    </defs>
+    <sodipodi:namedview id="base" pagecolor="#ffffff" bordercolor="#666666" borderopacity="1.0" inkscape:pageopacity="0.0" inkscape:pageshadow="2" inkscape:zoom="1.4" inkscape:cx="-135.33193" inkscape:cy="-56.659401" inkscape:document-units="px" inkscape:current-layer="layer1" showgrid="false" fit-margin-top="0" fit-margin-left="0" fit-margin-right="0" fit-margin-bottom="0" inkscape:window-width="1920" inkscape:window-height="1017" inkscape:window-x="0" inkscape:window-y="30" inkscape:window-maximized="1" />
+    <metadata id="metadata5990">
+        <rdf:RDF>
+            <cc:Work rdf:about="">
+                <dc:format>image/svg+xml</dc:format>
+                <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+                <dc:title></dc:title>
+            </cc:Work>
+        </rdf:RDF>
+    </metadata>
+    <g inkscape:label="Ebene 1" inkscape:groupmode="layer" id="layer1" transform="translate(-320.48602,-85.189804)">
+        <path inkscape:connector-curvature="0" id="path828" style="fill:none;stroke:#fabfcd;stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="m 359.11318,95.612825 c 17.07125,-2.775 33.94375,8.626255 40.88625,26.357505 6.9425,-17.73 23.815,-29.132505 40.88625,-26.357505 19.645,3.1925 32.0975,23.935005 27.8125,46.332495 -3.53625,25.44501 -68.0125,73.30375 -68.0125,73.30375 0,0 -63.175,-47.85874 -69.38375,-73.30375 -4.285,-22.39749 8.16625,-43.139995 27.81125,-46.332495 z" />
+    </g>
+</svg>

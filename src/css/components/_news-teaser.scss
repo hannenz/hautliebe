@@ -1,0 +1,32 @@
+.news-teaser {
+
+	width: 100%;
+
+
+	padding: $vertical-unit $gutter;
+
+	&__inner {
+		@include inner-bound ();
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+		align-items: center;
+	}
+
+	&__image {
+		width: 25%;
+		max-width: 25%;
+		flex: 1 0  auto;
+	}
+
+	&__body {
+		margin-left: 3 * $gutter;
+	}
+
+	.headline,
+	.subheadline,
+	.title {
+		color: $primary-color;
+	}
+}

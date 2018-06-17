@@ -1,0 +1,57 @@
+@mixin inner-bound {
+	max-width: $inner-bound-width;
+	margin: 0 auto;
+}
+
+.inner-bound {
+	@include inner-bound ();
+	position: relative;
+}
+
+.container-break {
+	margin-left: calc(50% - 50vw);
+	margin-right: calc(50% - 50vw);
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	overflow-x: hidden;
+}
+
+.main-content {
+	flex: 1;
+}
+
+.section:not(:first-child) {
+	min-height: 100vh;
+}
+
+.section {
+	padding-top: calc(#{$header-height} + 3 * #{$vertical-unit});
+	padding-bottom: 3 * $vertical-unit;
+
+	.title {
+		color: $primary-color;
+	}
+}
+
+.section--dark,
+.section--dark {
+	background-color: $light-grey;
+	.title {
+		color: #fff;
+	}
+}
+
+.section--rotated-title {
+
+	.title {
+		writing-mode: vertical-rl;
+		position: absolute;
+		top: 0;
+		left: -210px;
+		transform: rotate(180deg);
+	}
+}

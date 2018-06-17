@@ -39,7 +39,7 @@ function APP () {
 	this.scrollSpy = function () {
 		// Cache selectors
 		var lastId,
-			topMenu = $("#js-sticky-nav"),
+			topMenu = $(".main-nav"),
 			topMenuHeight = topMenu.outerHeight()+15,
 			// All list items
 			menuItems = topMenu.find("a"),
@@ -96,6 +96,15 @@ function APP () {
 
 		this.scrollSpy ();
 		this.createMap ();
+
+		// Flickity carousel
+		window.onload = function () {
+			$('.carousel').flickity({
+				cellAlign: 'left',
+				wrapAround: true,
+				contain: true
+			});
+		}
 
 		// this.initThrottleResize();
 

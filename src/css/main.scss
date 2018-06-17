@@ -14,32 +14,11 @@
 @import "partials/layout";
 
 @import "atoms/map";
+@import "molecules/timeline";
 @import "components/header";
 @import "components/nav";
+@import "components/news-teaser";
+@import "components/tabs";
+@import "components/bottom-aligned-columns";
+@import "components/about";
 
-.test {
-	display: flex;
-	justify-items: space-between;
-	align-items: flex-end;
-	margin: 6rem auto;
-	max-width: 920px;
-}
-
-.column {
-	width: 45%;
-
-	// position: relative;
-	// &:first-child h3 {
-	// 	position: absolute;
-	// 	top: 0;
-	// }
-
-	h2 {
-		margin-bottom: 3rem;
-		}
-	figure {
-		text-align: center;
-		margin-top: 3rem;
-		}
-
-}

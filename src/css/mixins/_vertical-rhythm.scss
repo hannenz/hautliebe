@@ -3,8 +3,8 @@
  */
 
 // Vertical Rhythm
-$base-font-size: 1rem;
-$vertical-unit: $base-font-size * 1.6; // "vertical unit"
+$base-font-size: 1rem !default;
+$vertical-unit: $base-font-size * 1.6 !default; // "vertical unit"
 
 
 // $visual-base-line-grid:true;

@@ -1,0 +1,50 @@
+.main-nav {
+
+	margin: auto 1 * $gutter;
+	width: 100%;
+
+	&__brand {
+		display: block;
+		img {
+			display: block;
+		}
+	}
+
+	&__menu {
+		list-style-type: none;
+		background-color: $primary-color;
+		margin-left: -$gutter;
+		margin-right: -$gutter;
+		padding: 0 $gutter $vertical-unit $gutter;
+	}
+
+	&__item.active > .main-nav__link {
+		border-bottom: 2px solid #fff;
+	}
+
+	&__link {
+		display: inline-block;
+		@include versal ();
+		text-decoration: none;
+		color: #fff;
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	@include for-size (tablet-portrait-up) {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.main-nav__item {
+			margin-left: $gutter;
+		}
+		.main-nav__menu {
+			display: flex;
+			padding: 0;
+			margin-left: 0 0 0 auto;
+		}
+	}
+}

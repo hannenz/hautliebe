@@ -1,0 +1,18 @@
+.bottom-aligned-columns {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+
+	.column {
+		width: calc(50% - #{$gutter});
+
+		.headline {
+			margin-bottom: 3rem;
+		}
+		figure {
+			text-align: center;
+			margin-top: 3rem;
+		}
+	}
+}
+

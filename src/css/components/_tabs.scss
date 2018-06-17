@@ -1,0 +1,17 @@
+.tabs {
+	input[type=radio] {
+		display: none;
+	}
+
+	.tab {
+		display: none;
+	}
+
+	label {
+		cursor: pointer;
+	}
+
+	input[type=radio]:checked + .tab {
+		display: block;
+	}
+}

@@ -18,7 +18,10 @@ $font-weight-bold: 600;
 @include font-face ('Bariol', '../fonts/bariol_bold-webfont', $font-weight-bold, normal, $file-formats: woff woff2 ttf eot);
 @include font-face ('Bariol', '../fonts/bariol_bold_italic-webfont', $font-weight-bold, italic, $file-formats: woff woff2 ttf eot);
 
-
+@mixin versal {
+	text-transform: uppercase;
+	letter-spacing: 0.125em;
+}
 
 html {
 	@include fluid-type(font-size, $bp1, $bp3, 12px, 22px);
@@ -31,5 +34,55 @@ body {
 	@include type-setting(0);
 	color: $text-color;
 	font-family: Bariol, sans-serif;
+	letter-spacing: 0.125em;
 }
 
+p,
+.body-text {
+	@include type-setting (0, 1);
+}
+
+.title {
+	@include type-setting (5);
+	@include versal ();
+	font-weight: bold;
+}
+
+.headline {
+	@include type-setting (2);
+	@include versal ();
+	font-weight: bold;
+
+	&--large {
+		@include type-setting (3);
+		text-transform: none;
+	}
+}
+
+.subheadline {
+	@include type-setting (1);
+	@include versal ();
+	font-weight: bold;
+}
+
+.kicker {
+	@include versal ();
+	@include type-setting (0);
+	color: #fff;
+}
+
+ul.bullets {
+	list-style-type: none;
+	margin: $vertical-unit 0;
+
+	li {
+		position: relative;
+		padding-left: 1em;
+
+		&::before {
+			content: '•';
+			position: absolute;
+			left: 0;
+		}
+	}
+}

@@ -1,0 +1,25 @@
+.main-header {
+	background-color: $primary-color;
+	z-index: 1;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: $header-height;
+	display: flex;
+}
+
+.logo {
+	max-width: 10rem;
+	margin-bottom: $vertical-unit;
+}
+
+@include for-size (tablet-portrait-up) {
+	// .main-header {
+	// 	height: $header-height;
+	// }
+
+	.logo {
+		margin-bottom: 0;
+	}
+}
