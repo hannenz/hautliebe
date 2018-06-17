@@ -74,52 +74,7 @@
 		<section id="treatments" class="section section--2 section--dark section--rotated-title">
 			<div class="inner-bound">
 				<h2 class="title">Behandlungs-<br>angebot</h2>
-
-				<div class="tabs">
-
-					<div class="tab__triggers">
-						<label for="tab-1">Icon 1</label>
-						<label for="tab-2">Icon 2</label>
-						<label for="tab-3">Icon 3</label>
-					</div>
-
-					<div class="tabs__content">
-
-						<input id="tab-1" type="radio" name="tabs">
-						<div class="tab treatment" id="tab-1">
-							<header class="treatment__header">
-								<h4 class="kicker">Verfahren etwo</h4>
-								<h2 class="headline">Faltenbehandlung, Hautverjüngung, Hautstraffungm die Behandlung von Augenringen</h2>
-							</header>
-							<div class="treatment__body">
-								<p>Sie wünschen sich ein jüngeres Aussehen und möchten der Faltenbildung auf natürliche Art entgegenwirken? Ohne dass Präparate in die Haut injiziert werden?  Dann ist die Behandlung mit dem eTwo genau das Richtige. Die Haut reduziert mit zunehmendem Alter die Kollagenbildung und schafft es nicht mehr die Haut straff und glatt zu halten. Durch das nicht vorhandene Kollagen und Elastin fällt die Haut ein und es entstehen Falten und Augenringe. Leider können da auch teure Feuchtigkeitscremes nur oberflächlich Abhilfe schaffen. Mit der einzigartigen Sublime- und Sublativemethode dringen wir in die tiefen Schichten der Epidermis ein und regen die Kollagen- und Elastinbildung auf ganz natürliche Weise an. Sichtbare Verbesserungen sind schon nach einer Behandlung möglich.</p>
-								<p>Das Resultat: Die Hautstruktur wird verbessert und wirkt ebenmäßiger, Falten werden sichtbar aufgepolstert und Augenringe deutlich minimiert.</p>
-								<p>Vorteile:</p>
-								<ul class="bullets">
-									<li>Für alle Hauttypen sicher und effektiv</li>
-									<li>Glättet Falten jeglicher Art</li>
-									<li>Kollagen und Elastin wird auf natürliche Weise aufgebaut</li>
-									<li>Es wird kein Präparat in die Haut injiziert</li>
-									<li>Für eine ebenmäßige Hautstruktur und eine jüngere Optik</li>
-									<li>Schnell sichtbare Resultate, keine Ausfallzeit (2-3 Tage kein Make-up)</li>
-									<li>Kurze Behandlungszeiten (typischerweise 20-40 Minuten)</li>
-									<li>Kann im Gesicht und am Körper angewandt werden</li>
-								</ul>
-							</div>
-						</div>
-
-						<input id="tab-2" type="radio" name="tabs">
-						<div class="tab treatment" id="tab-2">
-							Inhalt Tab 2
-						</div>
-
-						<input id="tab-3" type="radio" name="tabs">
-						<div class="tab treatment" id="tab-2">
-							Inhalt Tab 3
-						</div>
-					</div>
-				</div>
-					{LOOP CONTENT(1)}{ENDLOOP CONTENT}
+				{LOOP CONTENT(1)}{ENDLOOP CONTENT}
 			</div>
 		</section>
 
@@ -167,10 +122,10 @@
 		</section>
 
 		<section id="about" class="section section--4">
-			<div class="inner-bound">
+			<div class="outer-bound">
 				<div class="about">
 					<figure class="about__image">
-						<img src="" alt="Finja Kessler" />
+						<img src="http://placehold.it/300x300" alt="Finja Kessler" />
 					</figure>
 					<div class="about__text">
 						<h2 class="title">Über mich</h2>

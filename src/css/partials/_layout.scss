@@ -1,10 +1,28 @@
+/**
+ * src/css/partials/_layout.scss
+ * 
+ * @author Johannes Braun <me@hannenz.de>
+ * @package hautliebe
+ */
 @mixin inner-bound {
+	width: $inner-bound-width;
 	max-width: $inner-bound-width;
+	margin: 0 auto;
+}
+
+@mixin outer-bound {
+	width: $outer-bound-width;
+	max-width: $outer-bound-width;
 	margin: 0 auto;
 }
 
 .inner-bound {
 	@include inner-bound ();
+	position: relative;
+}
+
+.outer-bound {
+	@include outer-bound ();
 	position: relative;
 }
 

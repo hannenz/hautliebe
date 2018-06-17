@@ -24,7 +24,7 @@ $font-weight-bold: 600;
 }
 
 html {
-	@include fluid-type(font-size, $bp1, $bp3, 12px, 22px);
+	@include fluid-type(font-size, $bp1, $bp3, 12px, 20px);
 }
 
 body {

@@ -1,17 +1,40 @@
-.tabs {
-	input[type=radio] {
-		display: none;
-	}
+/**
+ * src/css/components/_tabs.scss
+ *
+ * @author Johannes Braun <johannes.braun@hannenz.de>
+ * @package hautliebe
+ */
 
-	.tab {
-		display: none;
-	}
+.tabs__triggers {
+	padding: $vertical-unit 0;
+}
 
-	label {
-		cursor: pointer;
-	}
+.tabs__radio {
+	display: none;
+}
 
-	input[type=radio]:checked + .tab {
-		display: block;
-	}
+.tab {
+	opacity: 0;
+	transform: translate(0, 6 * $vertical-unit);
+	transition: opacity 150ms, transform 500ms ease-out;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.tabs__label {
+	cursor: pointer;
+	padding: 8px 0;
+	margin-right: $gutter;
+}
+
+.tabs__radio[data-for-tab-id="tab-1"]:checked ~ .tab#tab-1,
+.tabs__radio[data-for-tab-id="tab-2"]:checked ~ .tab#tab-2,
+.tabs__radio[data-for-tab-id="tab-3"]:checked ~ .tab#tab-3 {
+	opacity: 1;
+	transform: translate(0, 3 * $vertical-unit);
+}
+
+.tabs__radio:checked + label {
+	border-top: 2px solid $text-color;
 }

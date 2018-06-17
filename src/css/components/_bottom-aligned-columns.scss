@@ -1,3 +1,14 @@
+/**
+ * src/css/components/_bottom-aligned-columns.scss
+ *
+ * @author Johannes Braun
+ * @package hautliebe
+ */
+
+#techniques {
+	background-image: linear-gradient(to bottom, #fff 0, #fff 50%, $light-grey 50%, $light-grey 100%);
+}
+
 .bottom-aligned-columns {
 	display: flex;
 	justify-content: space-between;

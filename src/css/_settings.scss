@@ -1,5 +1,10 @@
 /**
  * _settings.scss
+ *
+ * Settings for hautliebe website
+ *
+ * @author Johannes Braun
+ * @package hautliebe
  */
 
 /**********
@@ -20,6 +25,7 @@ $vertical-unit: $base-font-size * 1.1;
 $gutter: 1rem;
 $header-height: 3 * $vertical-unit;
 $inner-bound-width: 50em;
+$outer-bound-width: 70em;
 
 /**
  * Perfect Fourth is rather close:
