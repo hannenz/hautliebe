@@ -7,14 +7,17 @@
  * @package hautliebe
  */
 
+
+
 /**********
  * Colors *
  **********/
 
 $primary-color: rgb(238, 208, 212);
 $light-grey: rgb(228, 228, 228);
-
 $text-color: rgb(75, 75, 75);
+
+
 
 /************
  * Measures *
@@ -23,9 +26,11 @@ $base-font-size: 1rem;
 $vertical-unit: $base-font-size * 1.1;
 
 $gutter: 1rem;
-$header-height: 3 * $vertical-unit;
+$header-height: 5 * $vertical-unit;
 $inner-bound-width: 50em;
 $outer-bound-width: 70em;
+
+
 
 /**
  * Perfect Fourth is rather close:
@@ -39,6 +44,7 @@ $outer-bound-width: 70em;
  * 160 / 4 				4.208
  */
 $modular-scale-ratio: $perfect-fourth;
+
 
 
 /********************

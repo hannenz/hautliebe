@@ -3,12 +3,12 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>{PAGETITLE} - </title>
+	<title>Hautliebe</title>
 	<meta name="description" content="{PAGEVAR:cmt_meta_description:recursive}">
 	<meta name="keywords" content="{PAGEVAR:cmt_meta_keywords:recursive}">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="shortcut icon" href="/favicon.png" />
+	<link rel="shortcut icon" href="/dist/img/favicon.png" />
 
 	<link rel="stylesheet" type="text/css" href="/dist/css/vendor/flickity.min.css" />
 	<link rel="stylesheet" type="text/css" href="/dist/css/vendor/leaflet.css" />
@@ -17,6 +17,7 @@
 	{LAYOUTMODE_STARTSCRIPT}
 	{IF (!{LAYOUTMODE})}
 	<script type="text/javascript" src="/dist/js/vendor/modernizr.js"></script>
+	<script src="/dist/js/vendor/ScrollMagic.min.js"></script>
 	<script src="/dist/js/vendor/jquery.min.js"></script>
 	<script src="/dist/js/vendor/jquery-scrollspy.min.js"></script>
 	<script src="/dist/js/vendor/flickity.pkgd.min.js"></script>
@@ -123,33 +124,6 @@
 
 		<section id="about" class="section section--4">
 			<div class="outer-bound">
-				<div class="about">
-					<figure class="about__image">
-						<img src="http://placehold.it/300x300" alt="Finja Kessler" />
-					</figure>
-					<div class="about__text">
-						<h2 class="title">Über mich</h2>
-						<p>
-							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-							tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-							vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-							no sea takimata sanctus est Lorem ipsum dolor sit amet.
-						</p>
-						<p>
-							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-							tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-							vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-							no sea takimata sanctus est Lorem ipsum dolor sit amet.
-						</p>
-					</div>
-					<div class="about__timeline">
-						<ul class="timeline">
-						<li class="timeline__item"> Seit 2009 ausgelernte Orthopädietechnikerin </li>
-						<li class="timeline__item">Seit 2007 zertifiziert im Bereich Nachsorgevon Narbengewebe</li>
-						<li class="timeline__item">Seit 2018 ausgelernte Laserschutzbeauftragte</li>
-						<li class="timeline__item">Seit 2018 Geschäfthtsinhaberin von Hautliebe</li>
-					</div>
-				</div>
 				{LOOP CONTENT(3)}{ENDLOOP CONTENT}
 			</div>
 		</section>
@@ -175,24 +149,13 @@
 
 		<section id="appointments" class="section section--6">
 			<div class="inner-bound">
-				<h2 class="title">Termin nach Vereinbarung</h2>
-				<p>
-					Sie erreichen mich<br>
-					Mo bis Fr: 8.00 — 19.00 Uhr<br>
-					Sa: 8.00 - 13:00 Uhr
-				</p>
-				<p>
-					<strong class="big">0152&thinsp;&ndash;&thinsp;3183074
-				</p>
-				<p>
-					Oder per Mail <a href="mailto:info@hautliebe-ulm.de">info@hautliebe-ulm.de</a>
-				</p>
-
 				{LOOP CONTENT(5)}{ENDLOOP CONTENT}
+			</div>
+		</section>
 
-				<div class="container-break">
-					<div id="map"></div>
-				</div>
+		<section id="contact" class="section section--7 section--dark">
+			<div class="inner-bound">
+				{LOOP CONTENT(6)}{ENDLOOP CONTENT}
 			</div>
 		</section>
 	</div>

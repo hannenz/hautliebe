@@ -48,7 +48,10 @@ body {
 
 .section {
 	padding-top: calc(#{$header-height} + 3 * #{$vertical-unit});
-	padding-bottom: 3 * $vertical-unit;
+
+	&:not(.section--6):not(.section--7) {
+		padding-bottom: 3 * $vertical-unit;
+	}
 
 	.title {
 		color: $primary-color;

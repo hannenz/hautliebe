@@ -13,6 +13,7 @@ function APP () {
 
 	var self = this;
 	self.debug = false;
+	self.mapHasBeenCreated = false;
 
 
 
@@ -98,7 +99,12 @@ function APP () {
 
 	this.createMap = function () {
 
-		var map = new L.map('map').setView([48.40091, 9.99367 ], 17);
+		var mapElem = document.getElementById('map'),
+			lat = parseFloat(mapElem.getAttribute('data-latitude')),
+			lng = parseFloat(mapElem.getAttribute('data-longitude')),
+			zoom = parseInt(mapElem.getAttribute('data-zoom')),
+			map = new L.map('map').setView([lat, lng], zoom);
+
 		L.tileLayer('https://{s}.tiles.mapbox.com/v3/hannenz.iodb36pi/{z}/{x}/{y}.png', {
 			attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 		}).addTo(map);
@@ -126,7 +132,22 @@ function APP () {
 	this.main = function() {
 
 		this.scrollSpy ();
-		this.createMap ();
+
+		var ctl = new ScrollMagic.Controller ();
+		var loadMap = new ScrollMagic.Scene ({
+			triggerElement: '#map',
+			triggerHook: 1
+		})
+		.on ('enter', function () {
+				if (!self.mapHasBeenCreated) {
+					self.createMap ();
+					self.mapHasBeenCreated = true;
+				}
+			}
+		)
+		.addTo (ctl);
+
+
 
 		// Flickity carousel
 		window.onload = function () {

@@ -20,7 +20,7 @@ $font-weight-bold: 600;
 
 @mixin versal {
 	text-transform: uppercase;
-	letter-spacing: 0.125em;
+	letter-spacing: 0.1125em;
 }
 
 html {
@@ -42,9 +42,19 @@ p,
 	@include type-setting (0, 1);
 }
 
+a {
+	color: $primary-color;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
 .title {
-	@include type-setting (5);
+	@include type-setting (4, 1);
 	@include versal ();
+	line-height: 1;
 	font-weight: bold;
 }
 
@@ -52,6 +62,7 @@ p,
 	@include type-setting (2);
 	@include versal ();
 	font-weight: bold;
+	line-height: 1;
 
 	&--large {
 		@include type-setting (3);
@@ -85,4 +96,9 @@ ul.bullets {
 			left: 0;
 		}
 	}
+}
+
+.big-text {
+	@include type-setting(3, 1);
+	font-weight: bold;
 }

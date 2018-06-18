@@ -1,0 +1,32 @@
+.main-footer {
+
+	padding: $vertical-unit  0;
+
+	a {
+		color: $text-color;
+	}
+
+	.inner-bound {
+		display: flex;
+	}
+
+	.footer-nav {
+
+		width: 50%;
+
+		.footer-nav__item {
+			@include type-setting(1);
+			font-weight: bold;
+		}
+	}
+
+	.instagram-link {
+		vertical-align: middle;
+		img {
+			vertical-align: middle;
+			width: 2rem;
+			height: 2rem;
+			margin-right: 0.5em;
+		}
+	}
+}

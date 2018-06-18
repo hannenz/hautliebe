@@ -104,7 +104,8 @@ var settings = {
 			'./node_modules/modernizr/modernizr.js',
 			'./node_modules/blazy/blazy.min.js',
 			'./node_modules/flickity/dist/flickity.pkgd.min.js',
-			'./node_modules/leaflet/dist/leaflet.js'
+			'./node_modules/leaflet/dist/leaflet.js',
+			'./node_modules//scrollmagic/scrollmagic/minified/ScrollMagic.min.js'
 		],
 		dest:	pkg.project_settings.prefix + 'js/vendor/'
 	},
