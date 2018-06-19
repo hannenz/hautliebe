@@ -16,6 +16,10 @@
 
 	.column {
 		width: calc(50% - #{$gutter});
+		.title {
+			position: absolute;
+			top: 0;
+		}
 
 		.headline {
 			margin-bottom: 3rem;

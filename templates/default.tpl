@@ -14,6 +14,44 @@
 	<link rel="stylesheet" type="text/css" href="/dist/css/vendor/leaflet.css" />
 	<link rel="stylesheet" type="text/css" href="/dist/css/main.css" />
 
+	<!-- Schema.org JSON+LD -->
+	<script type="application/ld+json">
+		{
+			"@context": "http://schema.org/",
+			"@type": "WebSite",
+			"name": "www.hautliebe-ulm.de",
+			"url": "https://www.hautliebe-ulm.de"
+		}
+	</script>
+	<script type="application/ld+json">
+		{
+			"@context": "http://schema.org/",
+			"@type": "LocalBusiness",
+			"name": "Hautliebe®",
+			"legalName": "Hautliebe®",
+			"description": "{PAGEVAR:cmt_meta_description",
+			"url": "https://www.hautliebe-ulm.de",
+			"email": "info@hautliebe-ulm.de",
+			"telephone": "+49 (0)152 318 307 42",
+			"address": {
+				"@type": "PostalAddress",
+				"addressLocality": "Ulm",
+				"postalCode": "89073",
+				"streetAddress": "Hafenbad 31"
+			},
+			"openingHours": [
+				"Mo-Fr 10:00-18:00"
+			],
+			"geo": {
+				"@type": "GeoCoordinates",
+				"latitude": "48.40091",
+				"longitude": "9.99367"
+			},
+			"areaServed": "Ulm, Neu-Ulm",
+			"logo": "/dist/img/logo.svg"
+		}
+	</script>
+
 	{LAYOUTMODE_STARTSCRIPT}
 	{IF (!{LAYOUTMODE})}
 	<script type="text/javascript" src="/dist/js/vendor/modernizr.js"></script>
@@ -26,11 +64,13 @@
 </head>
 <body>
 	<!-- Inject SVG sprites -->
-	<object 
-		type="image/svg+xml" 
-		data="/img/icons.svg" 
-		onload="this.parentNode.replaceChild(this.getSVGDocument().childNodes[0], this)">
-	</object>
+	<div style="visibility: hidden; height:0; overflow: hidden">
+		<object 
+			type="image/svg+xml" 
+			data="/img/icons.svg" 
+			onload="this.parentNode.replaceChild(this.getSVGDocument().childNodes[0], this)">
+		</object>
+	</div>
 
 	{INCLUDE:PATHTOWEBROOT.'templates/partials/header.tpl'}
 
@@ -81,43 +121,7 @@
 
 		<section id="techniques" class="section section--3">
 			<div class="inner-bound">
-				<div class="bottom-aligned-columns">
-					<div class="column">
-						<h2 class="title">Verfahren</h2>
-						<h3 class="headline headline--large">eTwo</h3>
-						<p>
-							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-							tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-							vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-							no sea takimata sanctus est Lorem ipsum dolor sit amet.
-						</p>
-						<p>
-							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-							tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-							vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-							no sea takimata sanctus est Lorem ipsum dolor sit amet.
-						</p>
-					</div>
-					<div class="column">
-						<h3 class="headline headline--large">&amp;<br>GentleLase Pro</h3>
-						<p>
-							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-							tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-						</p>
-						<p>
-							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-							tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-							vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-							no sea takimata sanctus est Lorem ipsum dolor sit amet.
-						</p>
-						<p>
-							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-							tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-							vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-							no sea takimata sanctus est Lorem ipsum dolor sit amet.
-						</p>
-					</div>
-				</div>
+
 				{LOOP CONTENT(2)}{ENDLOOP CONTENT}
 			</div>
 		</section>
