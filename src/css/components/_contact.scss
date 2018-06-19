@@ -1,2 +1,50 @@
 .contact-directions {
+
+	.row {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.spacer {
+		margin: $vertical-unit 0;
+		border: 0;
+		position: relative;
+		height: 6px;
+		&::after {
+			content: '';
+			width: 100%;
+			height: 6px;
+			background-color: #fff;
+			border-radius: 15px;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+
+
+	@include for-size (tablet-landscape-up) {
+		.row {
+			flex-flow: row nowrap;
+		}
+
+		.column {
+			flex: 1 0 0;
+		}
+
+		.spacer {
+			width: 6px;
+			flex: 0 1 auto;
+			// height: 100%;
+			background-color: lime;
+			height: auto;
+			margin: 0 2 * $gutter;
+
+			&::after {
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
 }
+

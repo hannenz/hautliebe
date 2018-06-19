@@ -74,7 +74,7 @@
 
 		<section id="treatments" class="section section--2 section--dark section--rotated-title">
 			<div class="inner-bound">
-				<h2 class="title">Behandlungs-<br>angebot</h2>
+				<!-- <h2 class="title">Behandlungs&#45;<br>angebot</h2> -->
 				{LOOP CONTENT(1)}{ENDLOOP CONTENT}
 			</div>
 		</section>

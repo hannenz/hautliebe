@@ -1,5 +1,5 @@
 {IF({LAYOUTMODE})}
-<label>Tab Nr. (1-3)</label>
+<label>Tab Nr. (1-5)</label>
 <div>{HEAD:3}</div>
 <div class="">
 {ELSE}

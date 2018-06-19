@@ -1,9 +1,10 @@
 /**
  * src/css/partials/_layout.scss
- * 
+ *
  * @author Johannes Braun <me@hannenz.de>
  * @package hautliebe
  */
+
 @mixin inner-bound {
 	width: $inner-bound-width;
 	max-width: $inner-bound-width;
@@ -56,23 +57,34 @@ body {
 	.title {
 		color: $primary-color;
 	}
+
+	padding-left: $gutter;
+	padding-right: $gutter;
+	@include for-size (tablet-landscape-up) {
+		padding-left: 0;
+		padding-right: 0;
+	}
 }
 
 .section--dark,
 .section--dark {
+
 	background-color: $light-grey;
+
 	.title {
 		color: #fff;
 	}
 }
 
-.section--rotated-title {
+@include for-size (desktop-up) {
+	.section--rotated-title {
 
-	.title {
-		writing-mode: vertical-rl;
-		position: absolute;
-		top: 0;
-		left: -210px;
-		transform: rotate(180deg);
+		.title {
+			writing-mode: vertical-rl;
+			position: absolute;
+			top: 0;
+			left: -210px;
+			transform: rotate(180deg);
+		}
 	}
 }
