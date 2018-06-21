@@ -3,36 +3,19 @@ RewriteBase /
 
 # Disable all PHP messages on production servers
 # (https://stackoverflow.com/a/8652987)
-php_flag display_startup_errors off
-php_flag display_errors off
-php_flag html_errors off
-php_value error_reporting -1
-
-# Force www
-RewriteCond %{HTTP_HOST} ^agentur-halma.de [NC]
-RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301,L]
+# php_flag display_startup_errors off
+# php_flag display_errors off
+# php_flag html_errors off
+# php_value error_reporting -1
 
 #Force HTTPS
-# ..but not for "EM Special" and "Tetris" since we need an iframe to http here
 RewriteCond %{HTTPS} off
-RewriteCond %{HTTP_HOST} agentur-halma.de
-RewriteCond %{REQUEST_URI} !110|104
-RewriteCOnd %{QUERY_STRING} !110|104
+RewriteCond %{HTTP_HOST} hautliebe.de
 RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
-# Own error documents
-ErrorDocument 404 /de/102/404-page-not-found.html
-ErrorDocument 500 /error500.html
-
-# SEO: redirect to homepage when URL is blank domain
-RewriteRule ^$ /de/2/Start.html [R=301,L]
-
-# XML Sitemap
-RewriteRule ^sitemap.xml$ /de/115/Sitemap.html [R=301,L]
-
-# Microsites / Shortcuts
-RewriteRule ^smartbox/?$ /de/97/Smartbox.html [R=301,NC,L]
-RewriteRule ^blog/?$ /de/85/News.html#pane-3 [R=301,NC,L]
+# Force WWW
+RewriteCond %{HTTP_HOST} ^hautliebe.de$
+RewriteRule (.*) https://www.${HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
 #stop auto filename correction if enabled
 <IfModule mod_speling.c>

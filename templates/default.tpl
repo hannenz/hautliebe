@@ -8,8 +8,73 @@
 	<meta name="keywords" content="{PAGEVAR:cmt_meta_keywords:recursive}">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="shortcut icon" href="/dist/img/favicon.png" />
+	<style type="text/css">
+		.pace {
+			-webkit-pointer-events: none;
+			pointer-events: none;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			user-select: none;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100vw;
+			height: 100vh;
+			background-color: #fff;
+			z-index: 1000;
+			transition: opacity 500ms ease-out;
+			display: flex;
+		}
 
+		.pace-inactive {
+			opacity: 0;
+		}
+
+		.pace .pace-progress {
+			visibility: hidden;
+			background: rgb(238, 208, 212);
+			position: fixed;
+			z-index: 2000;
+			top: 0;
+			left: 0%;
+			width: 100%;
+			height: 100vh;
+		}
+		.pace  svg {
+			margin: auto;
+		}
+	</style>
+
+	<script src="/dist/js/vendor/pace.min.js"></script>
+	<script>
+
+		var intervalId;
+		var heartPath;
+
+		Pace.on('start', function () {
+			paceElement = document.querySelector ('.pace');
+			
+			paceElement.innerHTML = '<svg width="100" height="100" viewBox="0 0 100 100" version="1.1"><path id="heart-path" style="fill:none;stroke:#fabfcd;stroke-width:11.94119644;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 25.588103,14.41136 C 35.780661,12.754519 45.854552,19.56175 49.99964,30.148367 54.144728,19.562496 64.218618,12.754519 74.411175,14.41136 c 11.72924,1.906113 19.164128,14.29063 16.605726,27.663271 -2.111353,15.192193 -40.607528,43.766728 -40.607528,43.766728 0,0 -37.719254,-28.574535 -41.4262494,-43.766728 C 6.4247218,28.70199 13.858864,16.317473 25.588103,14.41136 Z" id="path8" /></svg>';
+			heartPath = document.getElementById('heart-path');
+			heartPath.style.strokeDasharray = '256 256';
+			heartPath.style.strokeDashoffset = 256;
+			heartPath.style.transition = '150ms ease-out';
+			intervalId = window.setInterval (function () {
+				var perc = parseInt(paceElement.firstChild.getAttribute('data-progress')) / 100;
+				heartPath.style.strokeDashoffset = 256 - (256 * perc);
+			}, 50);
+		});
+
+		// Remove the pace overlay after it has done it's job...
+		Pace.on('hide', function () {
+			window.clearInterval (intervalId);
+			heartPath.style.strokeDashoffset = 0;
+			setTimeout (function () {
+				// paceElement.parentNode.removeChild (paceElement);
+			}, 500);
+		});
+	</script>
+	<link rel="shortcut icon" href="/dist/img/favicon.png" />
 	<link rel="stylesheet" type="text/css" href="/dist/css/vendor/flickity.min.css" />
 	<link rel="stylesheet" type="text/css" href="/dist/css/vendor/leaflet.css" />
 	<link rel="stylesheet" type="text/css" href="/dist/css/main.css" />
@@ -54,7 +119,7 @@
 
 	{LAYOUTMODE_STARTSCRIPT}
 	{IF (!{LAYOUTMODE})}
-	<script type="text/javascript" src="/dist/js/vendor/modernizr.js"></script>
+	<script src="/dist/js/vendor/modernizr.js"></script>
 	<script src="/dist/js/vendor/ScrollMagic.min.js"></script>
 	<script src="/dist/js/vendor/jquery.min.js"></script>
 	<script src="/dist/js/vendor/jquery-scrollspy.min.js"></script>
@@ -110,7 +175,22 @@
 					</div>
 				</div>
 			</div>
+			<div class="inner-bound">
+				<svg width="100" height="100" viewBox="0 0 100 100" version="1.1">
+					<path id="heart-path" style="fill:none;stroke:#fabfcd;stroke-width:11.94119644;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 25.588103,14.41136 C 35.780661,12.754519 45.854552,19.56175 49.99964,30.148367 54.144728,19.562496 64.218618,12.754519 74.411175,14.41136 c 11.72924,1.906113 19.164128,14.29063 16.605726,27.663271 -2.111353,15.192193 -40.607528,43.766728 -40.607528,43.766728 0,0 -37.719254,-28.574535 -41.4262494,-43.766728 C 6.4247218,28.70199 13.858864,16.317473 25.588103,14.41136 Z" id="path8" />
+				</svg>
+				<button onclick="document.getElementById('heart-path').style.strokeDashoffset = 0;">Click me</button>
+				<button onclick="var path = document.getElementById('heart-path');path.style.strokeDashoffset=path.getTotalLength();">Reset</button>
+				<script>
+					var path = document.getElementById('heart-path');
+					var len = path.getTotalLength ();
+					path.style.strokeDasharray = len;
+					path.style.strokeDashoffset = len;
+					path.style.transition = '1s ease-out';
+				</script>
+			</div>
 		</section>
+
 
 		<section id="treatments" class="section section--2 section--dark section--rotated-title">
 			<div class="inner-bound">
