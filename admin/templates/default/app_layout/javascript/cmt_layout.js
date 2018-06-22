@@ -515,7 +515,7 @@ var CMTLayout = {
 						selector: '#cmt-mce-editor-' + this.htmlEditorNr,
 						fixed_toolbar_container: '#cmt-mce-menu-' + this.htmlEditorNr,
 						inline: true,
-						auto_focus: true,
+						auto_focus: false,
 					};
 					
 					var addSettings = this.htmlEditorSettings;
