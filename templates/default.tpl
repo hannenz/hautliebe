@@ -175,20 +175,6 @@
 					</div>
 				</div>
 			</div>
-			<div class="inner-bound">
-				<svg width="100" height="100" viewBox="0 0 100 100" version="1.1">
-					<path id="heart-path" style="fill:none;stroke:#fabfcd;stroke-width:11.94119644;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 25.588103,14.41136 C 35.780661,12.754519 45.854552,19.56175 49.99964,30.148367 54.144728,19.562496 64.218618,12.754519 74.411175,14.41136 c 11.72924,1.906113 19.164128,14.29063 16.605726,27.663271 -2.111353,15.192193 -40.607528,43.766728 -40.607528,43.766728 0,0 -37.719254,-28.574535 -41.4262494,-43.766728 C 6.4247218,28.70199 13.858864,16.317473 25.588103,14.41136 Z" id="path8" />
-				</svg>
-				<button onclick="document.getElementById('heart-path').style.strokeDashoffset = 0;">Click me</button>
-				<button onclick="var path = document.getElementById('heart-path');path.style.strokeDashoffset=path.getTotalLength();">Reset</button>
-				<script>
-					var path = document.getElementById('heart-path');
-					var len = path.getTotalLength ();
-					path.style.strokeDasharray = len;
-					path.style.strokeDashoffset = len;
-					path.style.transition = '1s ease-out';
-				</script>
-			</div>
 		</section>
 
 
