@@ -8,6 +8,7 @@
 	<meta name="keywords" content="{PAGEVAR:cmt_meta_keywords:recursive}">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
+	{IF (!{LAYOUTMODE})}
 	<style type="text/css">
 		.pace {
 			-webkit-pointer-events: none;
@@ -74,6 +75,7 @@
 			}, 500);
 		});
 	</script>
+	{ENDIF}
 	<link rel="shortcut icon" href="/dist/img/favicon.png" />
 	<link rel="stylesheet" type="text/css" href="/dist/css/vendor/flickity.min.css" />
 	<link rel="stylesheet" type="text/css" href="/dist/css/vendor/leaflet.css" />
