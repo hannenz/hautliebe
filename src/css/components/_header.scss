@@ -11,8 +11,9 @@
 }
 
 .logo {
-	max-width: 10rem;
-	margin-bottom: $vertical-unit;
+	// max-width: 10rem;
+	max-width: 200px;
+	// margin-bottom: $vertical-unit;
 }
 
 @include for-size (tablet-portrait-up) {

@@ -11,19 +11,25 @@
 
 .bottom-aligned-columns {
 	display: flex;
+	flex-flow: row wrap;
 	justify-content: space-between;
 	align-items: flex-end;
 
 	.column {
-		width: calc(50% - #{$gutter});
-		.title {
-			position: absolute;
-			top: 0;
+
+		@include for-size (tablet-landscape-up) {
+			width: calc(50% - #{$gutter});
+
+			.title {
+				position: absolute;
+				top: 0;
+			}
 		}
 
 		.headline {
 			margin-bottom: 3rem;
 		}
+
 		figure {
 			text-align: center;
 			margin-top: 3rem;

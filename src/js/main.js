@@ -92,6 +92,9 @@ function APP () {
 					.parent().removeClass("active")
 					.end().filter("[href='#"+id+"']").parent().addClass("active");
 			}                   
+
+			// Close mobile menu
+			document.body.classList.remove ('menu-is-open');
 		});
 	};
 
@@ -103,7 +106,15 @@ function APP () {
 			lat = parseFloat(mapElem.getAttribute('data-latitude')),
 			lng = parseFloat(mapElem.getAttribute('data-longitude')),
 			zoom = parseInt(mapElem.getAttribute('data-zoom')),
-			map = new L.map('map').setView([lat, lng], zoom);
+			map = new L.map('map', { scrollWheelZoom: false }).setView([lat, lng], zoom);
+		
+		// "Click to scroll"
+		map.addEventListener ('focus', function () {
+			map.scrollWheelZoom.enable ();
+		});
+		map.addEventListener ('blur', function () {
+			map.scrollWheelZoom.disable ();
+		});
 
 		L.tileLayer('https://{s}.tiles.mapbox.com/v3/hannenz.iodb36pi/{z}/{x}/{y}.png', {
 			attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'

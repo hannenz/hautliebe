@@ -82,7 +82,7 @@ a {
 	color: #fff;
 }
 
-ul.bullets {
+%bullets {
 	list-style-type: none;
 	margin: $vertical-unit 0;
 
@@ -96,6 +96,10 @@ ul.bullets {
 			left: 0;
 		}
 	}
+}
+
+.treatment__body ul {
+	@extend %bullets;
 }
 
 .big-text {

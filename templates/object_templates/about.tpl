@@ -7,7 +7,7 @@
 		<div>{TEXT:1:all}</div>
 	</div>
 	<div class="about__timeline">
-		<div>{TEXT:2}</div>
+		<div>{HTML:1}</div>
 	</div>
 </div>
 

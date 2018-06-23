@@ -1,27 +1,51 @@
+/**
+ * src/css/components/_about.scss
+ *
+ * @author Johannes Braun <me@hannenz.de>
+ * @package hautliebe
+ */
 .about {
 	display: flex;
+	flex-flow: row wrap;
 	align-items: stretch;
+	justify-content: center;
 
-	&__image {
+	img {
+		width: 66vw;
+		height: auto;
+		display: block;
+		border: 4px solid #fff;
+		border-radius: 50%;
+		margin: 0 auto;
+		transform: translateY(-70%);
+	}
 
-		flex: 3;
-		align-self: flex-start;
+	@include for-size (tablet-portrait-up) {
 
-		img {
-			width: 100%;
-			height: auto;
-			display: block;
-			border: 4px solid #fff;
-			border-radius: 50%;
+		justify-content: flex-start;
+
+		&__image {
+
+			flex: 3;
+			align-self: flex-start;
+
+			img {
+				width: 100%;
+				height: auto;
+				display: block;
+				border: 4px solid #fff;
+				border-radius: 50%;
+				transform: none;
+			}
 		}
-	}
 
-	&__text {
-		flex: 6;
-		margin: 0 $gutter;
-	}
+		&__text {
+			flex: 6;
+			margin: 0 $gutter;
+		}
 
-	&__timeline {
-		flex: 0 1;
+		&__timeline {
+			flex: 0 1;
+		}
 	}
 }

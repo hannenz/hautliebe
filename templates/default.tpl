@@ -202,19 +202,6 @@
 
 		<section id="pricing" class="section section--5 section--dark section--rotated-title">
 			<div class="inner-bound">
-				<h2 class="title">Preise &<br>Angebote</h2>
-				<p>
-					Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-					tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-					vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-					no sea takimata sanctus est Lorem ipsum dolor sit amet.
-				</p>
-				<p>
-					Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-					tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-					vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-					no sea takimata sanctus est Lorem ipsum dolor sit amet.
-				</p>
 				{LOOP CONTENT(4)}{ENDLOOP CONTENT}
 			</div>
 		</section>
