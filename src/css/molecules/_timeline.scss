@@ -3,7 +3,8 @@
 		list-style-type: none;
 		position: relative;
 		padding-left: 2 * $gutter;
-		background-image: url('../img/heart.svg');
+		background-image: url('../img/heart_line.svg');
+
 		background-size: 2rem;
 		background-repeat: no-repeat;
 		background-position: top left;
@@ -13,16 +14,16 @@
 		flex-direction: column;
 		justify-content: flex-end;
 
-		&::before {
-			content: '';
-			position: absolute;
-			top: 1.7rem;
-			left: calc(1rem - 3px);
-			width: 6px;
-			height: calc(100% - 1.7rem);
-			border-radius: 15px;
-			background-color: $primary-color;
-		}
+		// &::before {
+		// 	content: '';
+		// 	position: absolute;
+		// 	top: 1.7rem;
+		// 	left: calc(1rem - 3px);
+		// 	width: 6px;
+		// 	height: calc(100% - 1.7rem);
+		// 	border-radius: 15px;
+		// 	background-color: $primary-color;
+		// }
 
 		li, &__item {
 			margin-top: 2 * $vertical-unit;

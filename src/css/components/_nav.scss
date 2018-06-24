@@ -23,6 +23,7 @@
 		z-index: -1;
 		padding-left: 2 * $gutter;
 		padding-right: 2 * $gutter;
+		padding-bottom: $vertical-unit;
 	}
 
 
@@ -36,7 +37,7 @@
 		letter-spacing: 0.05em;
 		text-decoration: none;
 		color: #fff;
-		padding: 6px 0;
+		padding: 2px 0;
 		font-weight: bold;
 		transition: 100ms;
 
@@ -78,10 +79,6 @@
 
 	@include for-size (desktop-up) {
 
-		.main-nav__item {
-			margin-left: $gutter;
-		}
-
 		.main-nav__menu {
 			transform: none;
 			position: static;
@@ -89,6 +86,14 @@
 			padding: 0;
 			margin-left: 0 0 0 auto;
 			z-index: 1;
+		}
+
+		.main-nav__item {
+			margin-left: $gutter;
+		}
+
+		.main-nav__link {
+			padding: 2px 0;
 		}
 
 		.main-nav__trigger {

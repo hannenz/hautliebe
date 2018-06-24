@@ -90,7 +90,7 @@ body {
 	}
 }
 
-@include for-size (desktop-up) {
+@include for-size (medium-desktop-up) {
 	.section--rotated-title {
 
 		.title {

@@ -51,6 +51,10 @@ a {
 	}
 }
 
+.section--dark a {
+	color: #fff;
+}
+
 .title {
 	@include type-setting (4, 1);
 	@include versal ();
