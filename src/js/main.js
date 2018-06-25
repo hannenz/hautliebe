@@ -144,6 +144,22 @@ function APP () {
 
 		this.scrollSpy ();
 
+
+
+		// Flickity carousel
+
+		window.onload = function () {
+			$('.carousel').flickity({
+				cellAlign: 'left',
+				wrapAround: true,
+				contain: true
+			});
+		}
+
+
+
+		// Load the map only when scrolling near to it
+
 		var ctl = new ScrollMagic.Controller ();
 		var loadMap = new ScrollMagic.Scene ({
 			triggerElement: '#map',
@@ -160,14 +176,36 @@ function APP () {
 
 
 
-		// Flickity carousel
-		window.onload = function () {
-			$('.carousel').flickity({
-				cellAlign: 'left',
-				wrapAround: true,
-				contain: true
-			});
-		}
+		// Heart line animation (timeline)
+
+		var heartLinePath = document.getElementById ('path814');
+		var pathLength = heartLinePath.getTotalLength ();
+		heartLinePath.style.strokeDasharray = pathLength + ' ' + pathLength;
+		heartLinePath.style.strokeDashoffset = pathLength;
+		var heartLineTween = new TimelineMax()
+			.add (TweenMax.to (heartLinePath, 1, { strokeDashoffset: 0, ease: Linear.easeNone }));
+
+		var heartLine = new ScrollMagic.Scene ({
+			triggerElement: '.about__timeline',
+			triggerHook: 0.8,
+			duration: "50%",
+			tweenChanges: true
+		})
+		.setTween (heartLineTween)
+		.addTo (ctl);
+
+		var timelineStaggerTween = new TweenMax.staggerFromTo ('.timeline__text ul > li', 1,
+			{ opacity: 0, x: 140 }, { opacity: 1, x: 0 },
+			0.25
+		);
+		var timelineStagger = new ScrollMagic.Scene ({
+			triggerElement: '.about__timeline',
+			triggerHook: 1,
+			duration: "75%"
+		})
+		.setTween (timelineStaggerTween)
+		.addTo (ctl);
+
 	};
 };
 

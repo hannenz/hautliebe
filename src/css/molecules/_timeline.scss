@@ -1,29 +1,35 @@
-.about__timeline {
-	ul,.timeline {
+/**
+ * src/css/molecules/_timeline.scss
+ *
+ * @author Johannes Braun <johannes.braun@hannenz.de>
+ * @package hautliebe
+ */
+.timeline {
+
+	display: flex;
+	align-items: stretch;
+
+	.timeline__ornament {
+		position: relative;
+		width: 120px;
+
+		svg {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	.timeline__text ul {
 		list-style-type: none;
 		position: relative;
-		padding-left: 2 * $gutter;
-		background-image: url('../img/heart_line.svg');
-
-		background-size: 2rem;
-		background-repeat: no-repeat;
-		background-position: top left;
 		padding-top: 2 * $vertical-unit;
 		height: 100%;
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
-
-		// &::before {
-		// 	content: '';
-		// 	position: absolute;
-		// 	top: 1.7rem;
-		// 	left: calc(1rem - 3px);
-		// 	width: 6px;
-		// 	height: calc(100% - 1.7rem);
-		// 	border-radius: 15px;
-		// 	background-color: $primary-color;
-		// }
 
 		li, &__item {
 			margin-top: 2 * $vertical-unit;

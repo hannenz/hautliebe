@@ -121,9 +121,12 @@
 
 	{LAYOUTMODE_STARTSCRIPT}
 	{IF (!{LAYOUTMODE})}
-	<script src="/dist/js/vendor/modernizr.js"></script>
-	<script src="/dist/js/vendor/ScrollMagic.min.js"></script>
+	<!-- <script src="/dist/js/vendor/modernizr.js"></script> -->
 	<script src="/dist/js/vendor/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+	<!-- <script src="/dist/js/vendor/umd/TimelineMax.js"></script> -->
+	<script src="/dist/js/vendor/ScrollMagic.min.js"></script>
+	<script src="/dist/js/vendor/animation.gsap.min.js"></script>
 	<script src="/dist/js/vendor/jquery-scrollspy.min.js"></script>
 	<script src="/dist/js/vendor/flickity.pkgd.min.js"></script>
 	<script src="/dist/js/vendor/leaflet.js"></script>
@@ -144,18 +147,6 @@
 	<div id="top" class="main-content">
 
 		<section id="news" class="section section--1">
-			<div class="inner-bound">
-				<svg xmlns="http://www.w3.org/2000/svg" width="100" height="2000" viewBox="0 0 100 2000" id="svg5985" version="1.1"><defs id="defs5987"><clipPath clipPathUnits="userSpaceOnUse" id="clipPath818"><path d="M0 0h3840v12080H0z" id="path820"/></clipPath></defs><path id="path814" style="fill:none;fill-rule:evenodd;stroke:#fabfcd;stroke-width:11.94099998;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M50.41 80.841S12.69 52.267 8.982 37.075C6.425 23.702 13.86 11.318 25.588 9.41 35.781 7.755 45.855 14.561 50 25.148 54.145 14.563 64.219 7.755 74.41 9.411c11.73 1.907 19.164 14.291 16.606 27.664-2.11 15.192-40.607 43.765-40.607 43.765v1899.184"/></svg>
-				<button style="position: fixed; top: 190px; right: 10px" onclick="document.getElementById('path814').style.strokeDashoffset = 0">Klick</button>
-				<script>
-					var path = document.getElementById ('path814');
-					var len = path.getTotalLength ();
-					console.log (len);
-					path.style.strokeDasharray = len + ' ' + len; 
-					path.style.strokeDashoffset = len;
-					path.style.transition = '6s';
-				</script>
-			</div>
 			<div class="carousel">
 				<div class="carousel__slide news-teaser">
 					<div class="news-teaser__inner">
