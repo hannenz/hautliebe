@@ -105,7 +105,10 @@ var settings = {
 			'./node_modules/blazy/blazy.min.js',
 			'./node_modules/flickity/dist/flickity.pkgd.min.js',
 			'./node_modules/leaflet/dist/leaflet.js',
-			'./node_modules//scrollmagic/scrollmagic/minified/ScrollMagic.min.js'
+			'./node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js',
+			'./node_modules/scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js',
+			'./node_modules/gsap/TimelineMax.js'
+
 		],
 		dest:	pkg.project_settings.prefix + 'js/vendor/'
 	},
