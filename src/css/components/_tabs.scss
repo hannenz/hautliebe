@@ -16,7 +16,7 @@
 .tab {
 	opacity: 0;
 	transform: translate(0, 6 * $vertical-unit);
-	transition: opacity 150ms, transform 500ms ease-out;
+	transition: opacity 350ms, transform 500ms ease-out;
 	position: absolute;
 	top: 6 * $vertical-unit;
 	left: 0;
@@ -33,7 +33,9 @@
 
 .tabs__radio[data-for-tab-id="tab-1"]:checked ~ .tab#tab-1,
 .tabs__radio[data-for-tab-id="tab-2"]:checked ~ .tab#tab-2,
-.tabs__radio[data-for-tab-id="tab-3"]:checked ~ .tab#tab-3 {
+.tabs__radio[data-for-tab-id="tab-3"]:checked ~ .tab#tab-3,
+.tabs__radio[data-for-tab-id="tab-4"]:checked ~ .tab#tab-4,
+.tabs__radio[data-for-tab-id="tab-5"]:checked ~ .tab#tab-5 {
 	opacity: 1;
 	transform: translate(0, 3 * $vertical-unit);
 }
@@ -68,6 +70,7 @@
 		transform: scaleY(0);
 		max-height: 0;
 		overflow: hidden;
+		padding-left: 0.75em;
 	}
 
 	&__trigger:checked {
