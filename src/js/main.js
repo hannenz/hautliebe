@@ -61,8 +61,9 @@ function APP () {
             }, 350, mina.easein);
         });
 
-        document.getElementById ('js-placeholder-wrinkles').innerHTML = '';
-        document.getElementById ('js-placeholder-wrinkles').append (s.node);
+        $('#js-placeholder-wrinkles').replaceWith ($(s.node));
+        // document.getElementById ('js-placeholder-wrinkles').innerHTML = '';
+        // document.getElementById ('js-placeholder-wrinkles').append (s.node);
     };
 
     this.createScarIcon = function () {
@@ -85,8 +86,9 @@ function APP () {
             }, 350, mina.easein);
         });
 
-        document.getElementById ('js-placeholder-scars').innerHTML = '';
-        document.getElementById ('js-placeholder-scars').append (s.node);
+        $('#js-placeholder-scars').replaceWith ($(s.node));
+        // document.getElementById ('js-placeholder-scars').innerHTML = '';
+        // document.getElementById ('js-placeholder-scars').append (s.node);
     };
 
     this.createEpilationIcon = function () {
@@ -97,7 +99,7 @@ function APP () {
 
         });
         var hairPath = s.path ('M 46.956855,50.312638 C 53.41525,44.884108 65.835241,30.973717 59.849304,4.4942936');
-        var circlePath = s.path ('m 73.355192,22.128068 c 7.95201,6.670358 13.00766,16.680827 13.00766,27.872106 0,20.082648 -16.2802,36.362852 -36.36285,36.362854 -20.08265,0 -36.362854,-16.280204 -36.362854,-36.362854 0,-20.08265 16.280204,-36.362856 36.362854,-36.362854');
+        var circlePath = s.path ('M 71.847848,20.93155 C 80.141602,27.171886 85.719752,36.90088 86.311799,48.076487 87.374223,68.131013 71.978085,85.249685 51.923557,86.31211 31.86903,87.374534 14.750359,71.978392 13.687935,51.923865 12.625511,31.869336 28.021652,14.750663 48.076181,13.688241');
 
         var hairPathLength = hairPath.getTotalLength ();
         hairPath.node.style.strokeDasharray = hairPathLength + 'px ' + hairPathLength + 'px';
@@ -118,12 +120,13 @@ function APP () {
                 hairPath.node.style.strokeDashoffset = 0;
             }, 75);
             circlePath.animate ({
-                d: 'm 73.355192,22.128068 c 7.95201,6.670358 13.00766,16.680827 13.00766,27.872106 0,20.082648 -16.2802,36.362852 -36.36285,36.362854 -20.08265,0 -36.362854,-16.280204 -36.362854,-36.362854 0,-20.08265 16.280204,-36.362856 36.362854,-36.362854'
+                d: 'M 71.847848,20.93155 C 80.141602,27.171886 85.719752,36.90088 86.311799,48.076487 87.374223,68.131013 71.978085,85.249685 51.923557,86.31211 31.86903,87.374534 14.750359,71.978392 13.687935,51.923865 12.625511,31.869336 28.021652,14.750663 48.076181,13.688241'
             }, 350, mina.linear); 
         });
 
-        document.getElementById ('js-placeholder-epilation').innerHTML = '';
-        document.getElementById ('js-placeholder-epilation').append (s.node);
+        $('#js-placeholder-epilation').replaceWith ($(s.node));
+        // document.getElementById ('js-placeholder-epilation').innerHTML = '';
+        // document.getElementById ('js-placeholder-epilation').append (s.node);
     };
 
 

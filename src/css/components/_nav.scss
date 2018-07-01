@@ -28,7 +28,7 @@
 
 
 	&__item.active > .main-nav__link {
-		border-bottom: 3px solid #fff;
+		border-color: #fff;
 	}
 
 	&__link {
@@ -40,10 +40,11 @@
 		padding: 2px 0;
 		font-weight: bold;
 		transition: 100ms;
+        border-bottom: 4px solid transparent;
 
 		&:hover {
 			text-decoration: none;
-			color: shade($primary-color, 15%);
+			// color: shade($primary-color, 15%);
 		}
 
 		&:focus {
@@ -93,7 +94,7 @@
 		}
 
 		.main-nav__link {
-			padding: 2px 0;
+			padding: 5px 0;
 		}
 
 		.main-nav__trigger {
