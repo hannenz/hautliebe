@@ -107,7 +107,8 @@ var settings = {
 			'./node_modules/leaflet/dist/leaflet.js',
 			'./node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js',
 			'./node_modules/scrollmagic/scrollmagic/minified/plugins/animation.gsap.min.js',
-			'./node_modules/gsap/TimelineMax.js'
+			'./node_modules/gsap/TimelineMax.js',
+            './node_modules/snapsvg/dist/snap.svg-min.js'
 
 		],
 		dest:	pkg.project_settings.prefix + 'js/vendor/'

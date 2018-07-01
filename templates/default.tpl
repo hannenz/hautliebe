@@ -130,6 +130,7 @@
 	<script src="/dist/js/vendor/jquery-scrollspy.min.js"></script>
 	<script src="/dist/js/vendor/flickity.pkgd.min.js"></script>
 	<script src="/dist/js/vendor/leaflet.js"></script>
+	<script src="/dist/js/vendor/snap.svg-min.js"></script>
 	{ENDIF}
 </head>
 <body>

@@ -29,6 +29,16 @@
 	cursor: pointer;
 	padding: 8px 0;
 	margin-right: $gutter;
+
+    svg {
+        width: 4rem;
+        height: 4rem;
+        fill: none;
+        stroke-width: 8;
+        stroke: #fff;
+        stroke-linejoin: round;
+        stroke-linecap: round;
+    }
 }
 
 .tabs__radio[data-for-tab-id="tab-1"]:checked ~ .tab#tab-1,
@@ -85,4 +95,11 @@
 			font-weight: bold;
 		}
 	}
+}
+
+.tabs__triggers {
+}
+
+.tab {
+    pointer-events: none;
 }
