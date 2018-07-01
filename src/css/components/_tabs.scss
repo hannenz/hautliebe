@@ -13,17 +13,16 @@
 	display: none;
 }
 
+.tabs__wrapper {
+  position: relative;
+  margin-top: 3 * $vertical-unit;
+}
+
 .tab {
-    // outline: 1px dashed pink;
-	opacity: 0;
-	transform: translate(0, 4 * $vertical-unit);
-	transition: opacity 350ms, transform 350ms ease-in;
-	position: absolute;
-	top: 8 * $vertical-unit;
-	left: 0;
-	@include for-size (desktop-up) {
-		top: 12 * $vertical-unit;
-	}
+  display: none;
+  .headline {
+    margin-bottom: 2 * $vertical-unit;
+  }
 }
 
 .tabs__label {
@@ -56,13 +55,20 @@
     }
 }
 
+// Without javascript
 .tabs__radio[data-for-tab-id="tab-1"]:checked ~ .tab#tab-1,
 .tabs__radio[data-for-tab-id="tab-2"]:checked ~ .tab#tab-2,
 .tabs__radio[data-for-tab-id="tab-3"]:checked ~ .tab#tab-3,
 .tabs__radio[data-for-tab-id="tab-4"]:checked ~ .tab#tab-4,
-.tabs__radio[data-for-tab-id="tab-5"]:checked ~ .tab#tab-5 {
-	opacity: 1;
-	transform: translate(0, 3 * $vertical-unit);
+.tabs__radio[data-for-tab-id="tab-5"]:checked ~ .tab#tab-5,
+// with javascript
+.tabs__radio[data-for-tab-id="tab-1"]:checked ~ .tabs__wrapper .tab#tab-1,
+.tabs__radio[data-for-tab-id="tab-2"]:checked ~ .tabs__wrapper .tab#tab-2,
+.tabs__radio[data-for-tab-id="tab-3"]:checked ~ .tabs__wrapper .tab#tab-3,
+.tabs__radio[data-for-tab-id="tab-4"]:checked ~ .tabs__wrapper .tab#tab-4,
+.tabs__radio[data-for-tab-id="tab-5"]:checked ~ .tabs__wrapper .tab#tab-5
+{
+  display: block;
 }
 
 .tabs__radio:checked + label {
@@ -114,9 +120,3 @@
 	}
 }
 
-// .tabs__triggers {
-// }
-
-// .tab {
-//     pointer-events: none;
-// }

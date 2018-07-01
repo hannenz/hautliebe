@@ -5,27 +5,29 @@
  * @package hautliebe
  */
 
-@mixin inner-bound {
-	// width: $inner-bound-width;
-	width: 100%;
-	max-width: $inner-bound-width;
-	margin: 0 auto;
+%bound {
 }
 
-@mixin outer-bound {
-	// width: $outer-bound-width;
+@mixin bound ($w) {
+    max-width: calc(#{$w} - 4 * #{$gutter});
 	width: 100%;
-	max-width: $outer-bound-width;
-	margin: 0 auto;
+    margin: 0 auto;
+    padding-left: 2 * $gutter;
+    padding-right: 2 * $gutter;
+    @media screen and (min-width: #{$w}) {
+      padding-left: 0;
+      padding-right: 0;
+    }
 }
+
 
 .inner-bound {
-	@include inner-bound ();
+	@include bound ($inner-bound-width);
 	position: relative;
 }
 
 .outer-bound {
-	@include outer-bound ();
+	@include bound ($outer-bound-width);
 	position: relative;
 }
 
@@ -46,13 +48,15 @@ body {
 	flex: 1;
 }
 
-.section:not(:first-child) {
-	// min-height: 100vh;
-}
-
 .section {
-	padding-top: calc(#{$header-height} + 3 * #{$vertical-unit});
-	padding-bottom: 3 * $vertical-unit;
+  overflow: hidden;
+    padding-top: calc(#{$header-height} + 1 * #{$vertical-unit});
+    padding-bottom: 1 * $vertical-unit;
+
+    @include for-size (tablet-portrait-up) {
+      padding-top: calc(#{$header-height} + 3 * #{$vertical-unit});
+      padding-bottom: 3 * $vertical-unit;
+    }
 
 	&--2,
 	&--5 {
@@ -68,19 +72,11 @@ body {
 		color: $primary-color;
 	}
 
-	padding-left: $gutter;
-	padding-right: $gutter;
-	@include for-size (tablet-landscape-up) {
-		padding-left: 0;
-		padding-right: 0;
-	}
-
 	#map {
 		margin-bottom: 3 * $vertical-unit;
 	}
 }
 
-.section--dark,
 .section--dark {
 
 	background-color: $light-grey;
@@ -88,6 +84,18 @@ body {
 	.title {
 		color: #fff;
 	}
+}
+
+.section--hidden {
+  transform: 350ms ease-in;
+  max-height: 5000px;
+  overflow: hidden;
+
+  &.section--is-hidden {
+    max-height: 0;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 @include for-size (medium-desktop-up) {

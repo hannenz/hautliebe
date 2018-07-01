@@ -4,11 +4,21 @@
  * @author Johannes Braun <me@hannenz.de>
  * @package hautliebe
  */
+
+#about {
+    $y: 190px;
+    background-image: linear-gradient(to bottom, #{$light-grey} #{$y}, #fff #{$y}, #fff 100%);
+    @include for-size (tablet-portrait-up) {
+      background-image: none;
+    }
+}
+
 .about {
 	display: flex;
 	flex-flow: row wrap;
 	align-items: stretch;
 	justify-content: center;
+
 
 	&__timeline {
 		margin-bottom: 2 * $vertical-unit;

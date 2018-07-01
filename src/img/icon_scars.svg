@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="100" height="100" viewBox="0 0 100 100" version="1.1" id="icon-scars" inkscape:version="0.92.3 (unknown)" sodipodi:docname="icon_scars.svg" class="icon icon--scars">
+    <defs id="defs830" />
+    <sodipodi:namedview id="base" pagecolor="#ffffff" bordercolor="#666666" borderopacity="1.0" inkscape:pageopacity="0.0" inkscape:pageshadow="2" inkscape:zoom="1.979899" inkscape:cx="20.318081" inkscape:cy="43.060065" inkscape:document-units="px" inkscape:current-layer="icon-scars" showgrid="false" units="px" inkscape:window-width="1920" inkscape:window-height="1017" inkscape:window-x="0" inkscape:window-y="30" inkscape:window-maximized="1" />
+    <metadata id="metadata833">
+        <rdf:RDF>
+            <cc:Work rdf:about="">
+                <dc:format>image/svg+xml</dc:format>
+                <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+                <dc:title></dc:title>
+            </cc:Work>
+        </rdf:RDF>
+    </metadata>
+    <path inkscape:connector-curvature="0" d="m 53.226321,20.28883 13.200969,-6.84177 3.644634,14.42058 14.708047,2.21153 -5.53538,13.80945 10.603241,10.43636 -12.591326,7.91663 2.435923,14.6725 L 64.856547,75.93218 58.199021,89.22443 46.77508,79.7111 33.573056,86.55293 29.927839,72.13324 15.220265,69.92253 20.755234,56.11331 10.152168,45.6763 22.743428,37.75862 20.307333,23.08676 35.14339,24.06805 41.801324,10.77557 Z" id="scars-path" sodipodi:nodetypes="ccccccccccccccccccccc" style="fill:none" />
+</svg>

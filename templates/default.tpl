@@ -22,7 +22,7 @@
 			width: 100vw;
 			height: 100vh;
 			background-color: #fff;
-			z-index: 1000;
+			z-index: 2000; /* Override leaflet map controls */
 			transition: opacity 500ms ease-out;
 			display: flex;
 		}
@@ -186,21 +186,18 @@
 
 		<section id="treatments" class="section section--2 section--dark section--rotated-title">
 			<div class="inner-bound">
-				<!-- <h2 class="title">Behandlungs&#45;<br>angebot</h2> -->
 				{LOOP CONTENT(1)}{ENDLOOP CONTENT}
 			</div>
 		</section>
 
 		<section id="techniques" class="section section--3">
 			<div class="inner-bound">
-
 				{LOOP CONTENT(2)}{ENDLOOP CONTENT}
 			</div>
 		</section>
 
 		<section id="about" class="section section--4">
 			<div class="outer-bound">
-				
 				{LOOP CONTENT(3)}{ENDLOOP CONTENT}
 			</div>
 		</section>
@@ -225,6 +222,37 @@
 	</div>
 
 	{INCLUDE:PATHTOWEBROOT.'templates/partials/footer.tpl'}
+	<div>
+		<section id="legal" class="section section--8 section--hidden">
+			<div class="inner-bound">
+				
+				<h2 class="headline">Impressum</h2>
+				<p>Officia incididunt Lorem mollit incididunt. Sunt adipisicing cupidatat laboris anim enim ea sed consectetur, in est exercitation sit. Nulla Ut consectetur sed deserunt laboris nulla. Esse consequat proident Ut anim, ea ex enim. Do laboris deserunt ut fugiat occaecat ut quis ut eu eiusmod. Quis minim sunt labore voluptate officia adipisicing consectetur et ea enim ea, sunt commodo.</p>
+				<p>Officia incididunt Lorem mollit incididunt. Sunt adipisicing cupidatat laboris anim enim ea sed consectetur, in est exercitation sit. Nulla Ut consectetur sed deserunt laboris nulla. Esse consequat proident Ut anim, ea ex enim. Do laboris deserunt ut fugiat occaecat ut quis ut eu eiusmod. Quis minim sunt labore voluptate officia adipisicing consectetur et ea enim ea, sunt commodo.</p>
+				<h2 class="headline">Datenschutzerklärung</h2>
+				<p>Officia incididunt Lorem mollit incididunt. Sunt adipisicing cupidatat laboris anim enim ea sed consectetur, in est exercitation sit. Nulla Ut consectetur sed deserunt laboris nulla. Esse consequat proident Ut anim, ea ex enim. Do laboris deserunt ut fugiat occaecat ut quis ut eu eiusmod. Quis minim sunt labore voluptate officia adipisicing consectetur et ea enim ea, sunt commodo.</p>
+				<p>Officia incididunt Lorem mollit incididunt. Sunt adipisicing cupidatat laboris anim enim ea sed consectetur, in est exercitation sit. Nulla Ut consectetur sed deserunt laboris nulla. Esse consequat proident Ut anim, ea ex enim. Do laboris deserunt ut fugiat occaecat ut quis ut eu eiusmod. Quis minim sunt labore voluptate officia adipisicing consectetur et ea enim ea, sunt commodo.</p>
+				<p>Officia incididunt Lorem mollit incididunt. Sunt adipisicing cupidatat laboris anim enim ea sed consectetur, in est exercitation sit. Nulla Ut consectetur sed deserunt laboris nulla. Esse consequat proident Ut anim, ea ex enim. Do laboris deserunt ut fugiat occaecat ut quis ut eu eiusmod. Quis minim sunt labore voluptate officia adipisicing consectetur et ea enim ea, sunt commodo.</p>
+				<p>Officia incididunt Lorem mollit incididunt. Sunt adipisicing cupidatat laboris anim enim ea sed consectetur, in est exercitation sit. Nulla Ut consectetur sed deserunt laboris nulla. Esse consequat proident Ut anim, ea ex enim. Do laboris deserunt ut fugiat occaecat ut quis ut eu eiusmod. Quis minim sunt labore voluptate officia adipisicing consectetur et ea enim ea, sunt commodo.</p>
+				<p>Officia incididunt Lorem mollit incididunt. Sunt adipisicing cupidatat laboris anim enim ea sed consectetur, in est exercitation sit. Nulla Ut consectetur sed deserunt laboris nulla. Esse consequat proident Ut anim, ea ex enim. Do laboris deserunt ut fugiat occaecat ut quis ut eu eiusmod. Quis minim sunt labore voluptate officia adipisicing consectetur et ea enim ea, sunt commodo.</p>
+				<p>Officia incididunt Lorem mollit incididunt. Sunt adipisicing cupidatat laboris anim enim ea sed consectetur, in est exercitation sit. Nulla Ut consectetur sed deserunt laboris nulla. Esse consequat proident Ut anim, ea ex enim. Do laboris deserunt ut fugiat occaecat ut quis ut eu eiusmod. Quis minim sunt labore voluptate officia adipisicing consectetur et ea enim ea, sunt commodo.</p>
+				<p>Officia incididunt Lorem mollit incididunt. Sunt adipisicing cupidatat laboris anim enim ea sed consectetur, in est exercitation sit. Nulla Ut consectetur sed deserunt laboris nulla. Esse consequat proident Ut anim, ea ex enim. Do laboris deserunt ut fugiat occaecat ut quis ut eu eiusmod. Quis minim sunt labore voluptate officia adipisicing consectetur et ea enim ea, sunt commodo.</p>
+				<p>Officia incididunt Lorem mollit incididunt. Sunt adipisicing cupidatat laboris anim enim ea sed consectetur, in est exercitation sit. Nulla Ut consectetur sed deserunt laboris nulla. Esse consequat proident Ut anim, ea ex enim. Do laboris deserunt ut fugiat occaecat ut quis ut eu eiusmod. Quis minim sunt labore voluptate officia adipisicing consectetur et ea enim ea, sunt commodo.</p>
+				<p>Officia incididunt Lorem mollit incididunt. Sunt adipisicing cupidatat laboris anim enim ea sed consectetur, in est exercitation sit. Nulla Ut consectetur sed deserunt laboris nulla. Esse consequat proident Ut anim, ea ex enim. Do laboris deserunt ut fugiat occaecat ut quis ut eu eiusmod. Quis minim sunt labore voluptate officia adipisicing consectetur et ea enim ea, sunt commodo.</p>
+				<p>Officia incididunt Lorem mollit incididunt. Sunt adipisicing cupidatat laboris anim enim ea sed consectetur, in est exercitation sit. Nulla Ut consectetur sed deserunt laboris nulla. Esse consequat proident Ut anim, ea ex enim. Do laboris deserunt ut fugiat occaecat ut quis ut eu eiusmod. Quis minim sunt labore voluptate officia adipisicing consectetur et ea enim ea, sunt commodo.</p>
+				<p>Officia incididunt Lorem mollit incididunt. Sunt adipisicing cupidatat laboris anim enim ea sed consectetur, in est exercitation sit. Nulla Ut consectetur sed deserunt laboris nulla. Esse consequat proident Ut anim, ea ex enim. Do laboris deserunt ut fugiat occaecat ut quis ut eu eiusmod. Quis minim sunt labore voluptate officia adipisicing consectetur et ea enim ea, sunt commodo.</p>
+				<p>Officia incididunt Lorem mollit incididunt. Sunt adipisicing cupidatat laboris anim enim ea sed consectetur, in est exercitation sit. Nulla Ut consectetur sed deserunt laboris nulla. Esse consequat proident Ut anim, ea ex enim. Do laboris deserunt ut fugiat occaecat ut quis ut eu eiusmod. Quis minim sunt labore voluptate officia adipisicing consectetur et ea enim ea, sunt commodo.</p>
+				<p>Officia incididunt Lorem mollit incididunt. Sunt adipisicing cupidatat laboris anim enim ea sed consectetur, in est exercitation sit. Nulla Ut consectetur sed deserunt laboris nulla. Esse consequat proident Ut anim, ea ex enim. Do laboris deserunt ut fugiat occaecat ut quis ut eu eiusmod. Quis minim sunt labore voluptate officia adipisicing consectetur et ea enim ea, sunt commodo.</p>
+				<p>Officia incididunt Lorem mollit incididunt. Sunt adipisicing cupidatat laboris anim enim ea sed consectetur, in est exercitation sit. Nulla Ut consectetur sed deserunt laboris nulla. Esse consequat proident Ut anim, ea ex enim. Do laboris deserunt ut fugiat occaecat ut quis ut eu eiusmod. Quis minim sunt labore voluptate officia adipisicing consectetur et ea enim ea, sunt commodo.</p>
+				<p>Officia incididunt Lorem mollit incididunt. Sunt adipisicing cupidatat laboris anim enim ea sed consectetur, in est exercitation sit. Nulla Ut consectetur sed deserunt laboris nulla. Esse consequat proident Ut anim, ea ex enim. Do laboris deserunt ut fugiat occaecat ut quis ut eu eiusmod. Quis minim sunt labore voluptate officia adipisicing consectetur et ea enim ea, sunt commodo.</p>
+				<p>Officia incididunt Lorem mollit incididunt. Sunt adipisicing cupidatat laboris anim enim ea sed consectetur, in est exercitation sit. Nulla Ut consectetur sed deserunt laboris nulla. Esse consequat proident Ut anim, ea ex enim. Do laboris deserunt ut fugiat occaecat ut quis ut eu eiusmod. Quis minim sunt labore voluptate officia adipisicing consectetur et ea enim ea, sunt commodo.</p>
+				<p>Officia incididunt Lorem mollit incididunt. Sunt adipisicing cupidatat laboris anim enim ea sed consectetur, in est exercitation sit. Nulla Ut consectetur sed deserunt laboris nulla. Esse consequat proident Ut anim, ea ex enim. Do laboris deserunt ut fugiat occaecat ut quis ut eu eiusmod. Quis minim sunt labore voluptate officia adipisicing consectetur et ea enim ea, sunt commodo.</p>
+				<p>Officia incididunt Lorem mollit incididunt. Sunt adipisicing cupidatat laboris anim enim ea sed consectetur, in est exercitation sit. Nulla Ut consectetur sed deserunt laboris nulla. Esse consequat proident Ut anim, ea ex enim. Do laboris deserunt ut fugiat occaecat ut quis ut eu eiusmod. Quis minim sunt labore voluptate officia adipisicing consectetur et ea enim ea, sunt commodo.</p>
+				<a href="#top">Nach oben</a>
+			</div>
+
+		</section>
+	</div>
 
 	{IF(!{LAYOUTMODE})}
 		<script src="/dist/js/main.min.js"></script>

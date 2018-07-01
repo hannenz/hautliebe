@@ -1,25 +1,22 @@
 .news-teaser {
 
+  padding: $vertical-unit 0;
 	width: 100%;
-	padding: $vertical-unit $gutter;
+    overflow: hidden;
 
 	&__inner {
-		@include inner-bound ();
+		@include bound ($inner-bound-width);
 		display: flex;
-		flex-direction: row;
-		flex-wrap: nowrap;
+        flex-flow: column wrap;
 		justify-content: flex-start;
 		align-items: center;
 	}
 
 	&__image {
-		width: 25%;
-		max-width: 25%;
+		width: 75%;
+		max-width: 180px;
 		flex: 1 0  auto;
-	}
-
-	&__body {
-		margin-left: 3 * $gutter;
+        margin-bottom: 3 * $vertical-unit;
 	}
 
 	.headline,
@@ -27,5 +24,22 @@
 	.title {
 		color: $primary-color;
 	}
+}
+
+@include for-size (tablet-portrait-up) {   
+  .news-teaser {
+
+	padding: $vertical-unit $gutter;
+
+    &__inner {
+      flex-flow: row nowrap;
+    }
+
+    &__image {
+      width: 25%;
+      margin-bottom: 0;
+      margin-right: 3 * $gutter;
+    }
+  }
 }
 

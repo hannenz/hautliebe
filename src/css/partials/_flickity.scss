@@ -1,0 +1,35 @@
+/**
+ * src/css/partials/_flickity.scss
+ *
+ * Overrides for flickity slider
+ *
+ * @author Johannes Braun <me@hannenz.de>
+ * @package hautliebe
+ */
+.flickity-page-dots {
+
+  bottom: 0;
+
+  .dot {
+    background-color: $light-grey;
+    opacity: 1;
+
+    &.is-selected {
+      background-color: $primary-color;
+    }
+  }
+}
+
+.flickity-prev-next-button {
+  
+  display: none;
+
+  &.previous {
+    left: 0;
+  }
+  &.next {
+    right: 0;
+  }
+}
+
+

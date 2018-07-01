@@ -13,20 +13,28 @@
 	.footer-nav {
 
 		width: 50%;
-
 		.footer-nav__item {
 			@include type-setting(1);
 			font-weight: bold;
+            text-transform: uppercase;
 		}
 	}
 
 	.instagram-link {
-		vertical-align: middle;
-		img {
-			vertical-align: middle;
-			width: 2rem;
-			height: 2rem;
-			margin-right: 0.5em;
-		}
+        vertical-align: bottom;
+        img {
+          vertical-align: bottom;
+          width: 3rem;
+          height: 3rem;
+          margin-right: 0.25em;
+        }
+        @include for-size (tablet-portrait-up) {
+          vertical-align: middle;
+          img {
+              vertical-align: middle;
+              width: 2rem;
+              height: 2rem;
+          }
+        }
 	}
 }

@@ -1,5 +1,4 @@
-<div class="container-break contact-directions">
-	<div class="inner-bound">
+<div class="contact-directions">
 		<div class="row">
 			<div class="column">
 				<h2 class="title">{HEAD:1}</h2>
@@ -11,6 +10,5 @@
 				<div class="body-text">{TEXT:2:all}</div>
 			</div>
 		</div>
-	</div>
 </div>
 

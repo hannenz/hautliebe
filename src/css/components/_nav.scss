@@ -10,9 +10,9 @@
 	&__menu {
 		list-style-type: none;
 		background-color: $primary-color;
-		margin-left: -$gutter;
-		margin-right: -$gutter;
-		// padding: 0 $gutter $vertical-unit $gutter;
+		// margin-left: -$gutter;
+		// margin-right: -$gutter;
+        // @include bound($outer-bound-width);
 
 		transform: translate(0, -100%);
 		transition: 250ms ease-out;
