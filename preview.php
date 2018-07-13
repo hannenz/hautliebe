@@ -147,6 +147,7 @@ use \Contentomat\DBCex;
 
 	$session->saveSessionVars();
 	
+
 	$parser->pagevars['refering_page'] = $refering_page; 
 	define ('REFERINGPAGE', $refering_page);
 

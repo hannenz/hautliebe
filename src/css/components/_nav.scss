@@ -18,8 +18,8 @@
 		transition: 250ms ease-out;
 		position: absolute;
 		top: $header-height;
-		left: -$gutter;
-		right: -$gutter;
+		left: 0;
+		right: 0;
 		z-index: -1;
 		padding-left: 2 * $gutter;
 		padding-right: 2 * $gutter;
@@ -40,7 +40,7 @@
 		padding: 2px 0;
 		font-weight: bold;
 		transition: 100ms;
-        border-bottom: 4px solid transparent;
+        border-bottom: 2px solid transparent;
 
 		&:hover {
 			text-decoration: none;

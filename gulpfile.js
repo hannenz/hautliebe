@@ -61,13 +61,13 @@ var svgoOptions = {
 var settings = {
 	
 	browserSync: {
-		proxy:	'https://' + pkg.name + '.localhost',
+		proxy:	'http://' + pkg.name + '.localhost',
 		open: false,	// Don't open browser, change to "local" if you want or see https://browsersync.io/docs/options#option-open
 		notify: false,	// Don't notify on every change
-		https: {
-			key: '/etc/ssl/private/ssl-cert-snakeoil.key',
-			cert: '/etc/ssl/certs/ssl-cert-snakeoil.pem'
-		}
+		// https: {
+		// 	key: '/etc/ssl/private/ssl-cert-snakeoil.key',
+		// 	cert: '/etc/ssl/certs/ssl-cert-snakeoil.pem'
+		// }
 	},
 	
 	css: {
@@ -101,7 +101,7 @@ var settings = {
 			'./src/js/vendor/**/*.js',
 			'./node_modules/jquery/dist/jquery.min.js',
 			'./node_modules/jquery/dist/jquery.slim.min.js',
-			'./node_modules/modernizr/modernizr.js',
+			// './node_modules/modernizr/modernizr.js',
 			'./node_modules/blazy/blazy.min.js',
 			'./node_modules/flickity/dist/flickity.pkgd.min.js',
 			'./node_modules/leaflet/dist/leaflet.js',
