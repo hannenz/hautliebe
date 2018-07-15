@@ -1,0 +1,45 @@
+#techniques {
+	background-image:
+		url('/dist/img/GentleLase.png'),
+		url('/dist/img/eTwoSublime.png'),
+		url('/dist/img/eTwoSublative.png');
+	background-position: 100% 75px, calc(50% - 25vw) 100%, calc(50% + 25vw) 100%;
+	background-size: auto 130px, auto 50vw, auto 50vw;
+	background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+	/* padding-top: calc(6 * #{$vertical-unit} + 150px); */
+	padding-bottom: calc(6 * #{$vertical-unit} + 50vw);
+
+	@include for-size(tablet-portrait-up) {
+		background-image:
+			url('/dist/img/GentleLase_portrait.png'),
+			url('/dist/img/eTwoSublime.png'),
+			url('/dist/img/eTwoSublative.png'),
+			linear-gradient(to bottom, #fff 0, #fff calc(100% - 100px), $primary-color calc(100% - 100px), $primary-color 100%);
+		background-position: calc(50% - 25vw) 100%, 50% 100%, calc(50% + 25vw) 100%, 0 0;
+		background-size: auto 200px, auto 200px, auto 200px, 100% 100%;
+		padding-bottom: calc(6 * #{$vertical-unit} + 200px);
+	}
+
+}
+.techniques {
+	margin-top: 160px;
+	@include for-size (tablet-portrait-up) {
+		margin-top: 0;
+		columns: 2;
+	}
+}
+
+.technique {
+	break-inside: avoid;
+	page-break-inside: avoid;
+
+	&__icon {
+		width: 5rem;
+		height: 5rem;
+	}
+
+	&__name, p {
+		margin-bottom: $vertical-unit;
+	}
+
+}

@@ -8,28 +8,44 @@
  */
 .flickity-page-dots {
 
-  bottom: 0;
+	bottom: 0;
 
-  .dot {
-    background-color: $light-grey;
-    opacity: 1;
+	.dot {
+		/* background-color: $light-grey; */
+		background-color: $primary-color;
+		opacity: 1;
+		margin-top: 3px;
+		margin-bottom: 3px;
 
-    &.is-selected {
-      background-color: $primary-color;
-    }
-  }
+		&.is-selected {
+			background-color: $primary-color;
+			background-color: #fff;
+			border: 5px solid $primary-color;
+			width: 16px;
+			height: 16px;
+			margin-top: 0px;
+			margin-bottom: 0px;
+		}
+	}
 }
 
 .flickity-prev-next-button {
-  
-  display: none;
 
-  &.previous {
-    left: 0;
-  }
-  &.next {
-    right: 0;
-  }
+	/* display: none; */
+	background-color: transparent !important;
+
+	&:hover {
+		background-color: transparent !important;
+	}
+
+	svg {
+		fill: $primary-color;
+	}
+
+	&.previous {
+		left: -12px;
+	}
+	&.next {
+		right: -12px;
+	}
 }
-
-

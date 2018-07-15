@@ -1,3 +1,4 @@
+
 /**
  * _settings.scss
  *
@@ -8,6 +9,7 @@
  */
 
 
+$debug: 0;
 
 /**********
  * Colors *
@@ -27,9 +29,10 @@ $base-font-size: 1rem;
 $vertical-unit: $base-font-size * 1.1;
 
 $gutter: 1rem;
-$header-height: 5 * $vertical-unit;
-$inner-bound-width: 1000px;
-$outer-bound-width: 1400px;
+$header-height: 3 * $vertical-unit;
+
+$inner-bound-width: 960px;
+$outer-bound-width: 1280px;
 
 
 

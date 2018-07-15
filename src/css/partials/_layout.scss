@@ -9,15 +9,23 @@
 }
 
 @mixin bound ($w) {
-    max-width: calc(#{$w} - 4 * #{$gutter});
+	max-width: calc(#{$w} - 4 * #{$gutter});
 	width: 100%;
-    margin: 0 auto;
-    padding-left: 2 * $gutter;
-    padding-right: 2 * $gutter;
-    @media screen and (min-width: #{$w}) {
-      padding-left: 0;
-      padding-right: 0;
-    }
+	margin: 0 auto;
+	padding-left: 2 * $gutter;
+	padding-right: 2 * $gutter;
+	@media screen and (min-width: #{$w}) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	@if $debug == 1 {
+		@if $w == $outer-bound-width {
+			outline: 1px dashed yellow;
+		}
+		@else {
+			outline: 1px dashed lime;
+		}
+	}
 }
 
 
@@ -42,6 +50,11 @@ body {
 	min-height: 100vh;
 	overflow-x: hidden;
 	max-width: 100vw;
+	padding-top: $header-height;
+
+	@include for-size (tablet-portrait-up) {
+		padding-top: $header-height * 2.785;
+	}
 }
 
 .main-content {
@@ -49,14 +62,16 @@ body {
 }
 
 .section {
-  overflow: hidden;
-    padding-top: calc(#{$header-height} + 1 * #{$vertical-unit});
-    padding-bottom: 1 * $vertical-unit;
+	overflow: hidden;
+	/* padding-top: calc(#{$header-height} + 1 * #{$vertical-unit}); */
+	padding-top: 1 * $vertical-unit;
+	padding-bottom: 1 * $vertical-unit;
 
-    @include for-size (tablet-portrait-up) {
-      padding-top: calc(#{$header-height} + 3 * #{$vertical-unit});
-      padding-bottom: 3 * $vertical-unit;
-    }
+	@include for-size (tablet-portrait-up) {
+		/* padding-top: calc(#{$header-height} + 3 * #{$vertical-unit}); */
+		padding-top: 3 * $vertical-unit;
+		padding-bottom: 3 * $vertical-unit;
+	}
 
 	&--2,
 	&--5 {
@@ -69,7 +84,7 @@ body {
 	}
 
 	.title {
-		color: $primary-color;
+		// color: $primary-color;
 	}
 
 	#map {
@@ -79,7 +94,7 @@ body {
 
 .section--dark {
 
-	background-color: $light-grey;
+	background-color: $primary-color;
 
 	.title {
 		color: #fff;
@@ -87,25 +102,25 @@ body {
 }
 
 .section--hidden {
-  transform: 350ms ease-in;
-  max-height: 5000px;
-  overflow: hidden;
+	transform: 350ms ease-in;
+	max-height: 5000px;
+	overflow: hidden;
 
-  &.section--is-hidden {
-    max-height: 0;
-    margin: 0;
-    padding: 0;
-  }
+	&.section--is-hidden {
+		max-height: 0;
+		margin: 0;
+		padding: 0;
+	}
 }
 
-@include for-size (medium-desktop-up) {
+@include for-size (desktop-up) {
 	.section--rotated-title {
 
 		.title {
 			writing-mode: vertical-rl;
 			position: absolute;
 			top: 0;
-			left: -210px;
+			left: calc(((#{$outer-bound-width} - (4 * #{$gutter})) - (#{$inner-bound-width} - (4 * #{$gutter}))) * -0.5);
 			transform: rotate(180deg);
 		}
 	}

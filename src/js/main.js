@@ -244,6 +244,13 @@ function APP () {
 				wrapAround: true,
 				contain: true
 			});
+
+			// Sticky header
+			new ScrollMagic.Scene ({
+				offset: 120,
+			})
+			.setClassToggle (document.body, 'page-has-scrolled')
+			.addTo (ctl);
 		}
 
 
@@ -266,6 +273,7 @@ function APP () {
 
 
 
+
 		// Heart line animation (timeline)
 
 		var heartLinePath = document.getElementById ('path814');
@@ -278,7 +286,7 @@ function APP () {
 		var heartLine = new ScrollMagic.Scene ({
 			triggerElement: '.about__timeline',
 			triggerHook: 0.8,
-			duration: "50%",
+			duration: 0, //"50%",
 			tweenChanges: true
 		})
 		.setTween (heartLineTween)
@@ -291,7 +299,7 @@ function APP () {
 		var timelineStagger = new ScrollMagic.Scene ({
 			triggerElement: '.about__timeline',
 			triggerHook: 1,
-			duration: "75%"
+			duration: 0 //"75%"
 		})
 		.setTween (timelineStaggerTween)
 		.addTo (ctl);

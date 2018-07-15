@@ -7,7 +7,7 @@
 
 #about {
     $y: 190px;
-    background-image: linear-gradient(to bottom, #{$light-grey} #{$y}, #fff #{$y}, #fff 100%);
+    background-image: linear-gradient(to bottom, #{$primary-color} #{$y}, #fff #{$y}, #fff 100%);
     @include for-size (tablet-portrait-up) {
       background-image: none;
     }

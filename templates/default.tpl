@@ -138,7 +138,7 @@
 	<div style="visibility: hidden; height:0; overflow: hidden">
 		<object 
 			type="image/svg+xml" 
-			data="/img/icons.svg" 
+			data="/dist/img/icons.svg" 
 			onload="this.parentNode.replaceChild(this.getSVGDocument().childNodes[0], this)">
 		</object>
 	</div>
@@ -148,38 +148,8 @@
 	<div id="top" class="main-content">
 
 		<section id="news" class="section section--1">
-			<div class="carousel">
-				<div class="carousel__slide news-teaser">
-					<div class="news-teaser__inner">
-						<figure class="news-teaser__image">
-							<img src="/media/mlog/hautliebe.svg" alt="" />
-						</figure>
-						<div class="news-teaser__body">
-							<h2 class="news-teaser__title title"> Neueröffnung</h2>
-							<h3 class="news-teaser__subheadline subheadline">01. Juli 2018 in Ulm</h3>
-							<div class="news-teaser__text">
-								Ich freue mich auf Ihr Kommen.
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="carousel__slide news-teaser">
-					<div class="news-teaser__inner">
-						<figure class="news-teaser__image">
-							<img src="/media/mlog/hautliebe.svg" alt="" />
-						</figure>
-						<div class="news-teaser__body">
-							<h2 class="news-teaser__title title"> Was anderes</h2>
-							<h3 class="news-teaser__subheadline subheadline">Wichtige Meldung</h3>
-							<div class="news-teaser__text">
-								Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-								tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-								vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-								no sea takimata sanctus est Lorem ipsum dolor sit amet.
-							</div>
-						</div>
-					</div>
-				</div>
+			<div class="outer-bound">
+				{LOOP CONTENT(99)}{ENDLOOP CONTENT}
 			</div>
 		</section>
 

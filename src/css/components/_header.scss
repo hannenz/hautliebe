@@ -7,18 +7,42 @@
 	width: 100%;
 	height: $header-height;
 	display: flex;
-    z-index: 2000; // Override leadlet map controls
+	z-index: 2000; // Override leadlet map controls
+	transition: 200ms ease-in;
+	box-shadow: 0 3px 2px rgba(30, 30, 30, 0.25);
+}
+
+.main-nav__brand {
+	display: block;
+	/* width: 100%; */
 }
 
 .logo {
-	// max-width: 10rem;
-	max-width: 200px;
-	// margin-bottom: $vertical-unit;
+	height: 0.4 * $header-height;
+	width: 0.4 * $header-height * 8;
+	transition: 200ms ease-in;
+	display: block;
 }
 
 @include for-size (tablet-portrait-up) {
 
+	.main-header {
+		height: 2.785 * $header-height;
+	}
+
 	.logo {
 		margin-bottom: 0;
+		width: 2.785 * 0.83 * $header-height;
+		height: 2.785 * 0.83 * $header-height;
+		position: relative;
+	}
+
+	.page-has-scrolled .main-header {
+
+		height: $header-height;
+
+		.logo {
+			height: 0.4 * $header-height;
+		}
 	}
 }
