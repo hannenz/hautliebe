@@ -62,7 +62,7 @@ body {
 }
 
 .section {
-	overflow: hidden;
+	/* overflow: hidden; */
 	/* padding-top: calc(#{$header-height} + 1 * #{$vertical-unit}); */
 	padding-top: 1 * $vertical-unit;
 	padding-bottom: 1 * $vertical-unit;
@@ -71,6 +71,15 @@ body {
 		/* padding-top: calc(#{$header-height} + 3 * #{$vertical-unit}); */
 		padding-top: 3 * $vertical-unit;
 		padding-bottom: 3 * $vertical-unit;
+	}
+
+	&--1 {
+		/* outline: 2px dashed hotpink; */
+		/* padding-bottom: 12 * $vertical-unit; */
+	}
+
+	&--2 {
+		background-image: linear-gradient(to bottom, #fff 0, #fff 200px, $primary-color 100px, $primary-color 100%) !important;
 	}
 
 	&--2,

@@ -131,6 +131,10 @@
 	<script src="/dist/js/vendor/flickity.pkgd.min.js"></script>
 	<script src="/dist/js/vendor/leaflet.js"></script>
 	<script src="/dist/js/vendor/snap.svg-min.js"></script>
+	<script src="/dist/js/vendor/jquery.event.move.js"></script>
+	<script src="/dist/js/vendor/jquery.twentytwenty.js"></script>
+	<link rel="stylesheet" type="text/css" href="/dist/css/vendor/foundation.css">
+	<link rel="stylesheet" type="text/css" href="/dist/css/vendor/twentytwenty-no-compass.css">
 	{ENDIF}
 </head>
 <body>
@@ -155,6 +159,12 @@
 
 
 		<section id="treatments" class="section section--2 section--dark section--rotated-title">
+			<div class="inner-bound">
+				<div class="compare">
+					<img src="/dist/img/wrinkles-before-1.jpg" alt="" />
+					<img src="/dist/img/wrinkles-after-1.jpg" alt="" />
+				</div>
+			</div>
 			<div class="inner-bound">
 				{LOOP CONTENT(1)}{ENDLOOP CONTENT}
 			</div>

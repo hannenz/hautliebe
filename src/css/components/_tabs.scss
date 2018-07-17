@@ -120,3 +120,14 @@
 	}
 }
 
+// --
+//
+.tabs {
+
+	&__panel {
+		display: none;
+		&--is-active {
+			display: block;
+		}
+	}
+}

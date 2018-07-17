@@ -217,6 +217,20 @@ function APP () {
 		$wrapper.insertAfter ($('#tab-5'));
 		$wrapper.append ($('#tab-4'));
 		$wrapper.append ($('#tab-5'));
+
+		$('.tabs').each (function (i, el) {
+			var $el = $(el);
+			$el.find('.tabs__trigger').on ('click', function (ev) {
+				ev.stopPropagation ();
+				$el.find ('.tabs__trigger').removeClass ('tabs__trigger--is-active');
+				$el.find ('.tabs__panel').removeClass ('tabs__panel--is-active');
+				$el.find ($(this).attr('href')).addClass ('tabs__panel--is-active');
+				$(this).addClass ('tabs__trigger--is-active');
+				return false;
+			});
+			$el.find ('.tabs__trigger').first().addClass ('tabs__trigger--is-active');
+			$el.find ('.tabs__panel').first().addClass ('tabs__panel--is-active');
+		});
 	};
 
 	this.setupHiddenSection = function () {
@@ -251,6 +265,12 @@ function APP () {
 			})
 			.setClassToggle (document.body, 'page-has-scrolled')
 			.addTo (ctl);
+
+			// TwentyTwenty: Comparison slider
+			$('.compare').twentytwenty ({
+				before_label: 'Vorher',
+				after_label: 'Nach 1 Behandlung'
+			});
 		}
 
 
