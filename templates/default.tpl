@@ -133,7 +133,7 @@
 	<script src="/dist/js/vendor/snap.svg-min.js"></script>
 	<script src="/dist/js/vendor/jquery.event.move.js"></script>
 	<script src="/dist/js/vendor/jquery.twentytwenty.js"></script>
-	<link rel="stylesheet" type="text/css" href="/dist/css/vendor/foundation.css">
+	<!-- <link rel="stylesheet" type="text/css" href="/dist/css/vendor/foundation.css"> -->
 	<link rel="stylesheet" type="text/css" href="/dist/css/vendor/twentytwenty-no-compass.css">
 	{ENDIF}
 </head>
