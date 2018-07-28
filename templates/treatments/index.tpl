@@ -15,7 +15,6 @@
 					{BREAK}
 				{ENDSWITCH}
 				</span>
-				<span class="tab__label"> {VAR:treatment_shortname} </span>
 			</a>
 		{ENDLOOP VAR}
 	</nav>

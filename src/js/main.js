@@ -201,8 +201,8 @@ function APP () {
 
 		L.marker([48.40091, 9.99367 ], { icon: heartIcon }).addTo(map);
 		L.marker([48.40198, 9.99213 ], { icon: busIcon }).addTo(map);
-		L.marker([48.40111, 9.99604 ], { icon: parking1Icon }).addTo(map);
-		L.marker([48.40073, 9.99491 ], { icon: parking2Icon }).addTo(map);
+		L.marker([48.40073, 9.99491 ], { icon: parking1Icon }).addTo(map);
+		L.marker([48.40111, 9.99604 ], { icon: parking2Icon }).addTo(map);
 	};
 
 
