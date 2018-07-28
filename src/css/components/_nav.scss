@@ -12,7 +12,7 @@
 		background-color: $primary-color;
 		// margin-left: -$gutter;
 		// margin-right: -$gutter;
-        // @include bound($outer-bound-width);
+		// @include bound($outer-bound-width);
 
 		transform: translate(0, -100%);
 		transition: 250ms ease-out;
@@ -28,7 +28,17 @@
 
 
 	&__item.active > .main-nav__link {
-		border-color: #fff;
+
+		&::after {
+			position: absolute;
+			content: '';
+			height: 3px;
+			width: 100%;
+			bottom: 0;
+			left: 0;
+			background-color: #fff;
+			border-radius: 10px;
+		}
 	}
 
 	&__link {
@@ -40,7 +50,8 @@
 		padding: 2px 0;
 		font-weight: bold;
 		transition: 100ms;
-        border-bottom: 2px solid transparent;
+		border-bottom: 2px solid transparent;
+		position: relative;
 
 		&:hover {
 			text-decoration: none;
@@ -90,7 +101,7 @@
 		}
 
 		.main-nav__item {
-			margin-left: $gutter;
+			margin-left: 2 * $gutter;
 		}
 
 		.main-nav__link {

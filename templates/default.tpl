@@ -159,12 +159,12 @@
 
 
 		<section id="treatments" class="section section--2 section--dark section--rotated-title">
-			<div class="inner-bound">
-				<div class="compare">
-					<img src="/dist/img/wrinkles-before-1.jpg" alt="" />
-					<img src="/dist/img/wrinkles-after-1.jpg" alt="" />
-				</div>
-			</div>
+			<!-- <div class="inner&#45;bound"> -->
+			<!-- 	<div class="compare"> -->
+			<!-- 		<img src="/dist/img/wrinkles&#45;before&#45;1.jpg" alt="" /> -->
+			<!-- 		<img src="/dist/img/wrinkles&#45;after&#45;1.jpg" alt="" /> -->
+			<!-- 	</div> -->
+			<!-- </div> -->
 			<div class="inner-bound">
 				{LOOP CONTENT(1)}{ENDLOOP CONTENT}
 			</div>
