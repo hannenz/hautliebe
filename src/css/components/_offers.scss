@@ -1,3 +1,9 @@
+/**
+ * src/css/components/_offers.scss
+ *
+ * @author Johannes Braun <johannes.braun@hannenz.de>
+ * @package hautliebe
+ */
 .offers {
 	list-style: none;
 	margin-top: $vertical-unit;
@@ -5,4 +11,8 @@
 
 .offer {
 	margin-bottom: $vertical-unit;
+
+	&__title {
+		@include type-setting(0);
+	}
 }

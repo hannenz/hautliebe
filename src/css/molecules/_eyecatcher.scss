@@ -1,0 +1,31 @@
+/**
+ * src/css/molecules/_eyectacher.scss
+ *
+ * @author Johannes Braun <johannes.braun@hannenz.de>
+ * @package hautliebe
+ */
+
+.eyecatcher {
+	width: 45vw;
+	height: 45vw;
+	max-width: 200px;
+	max-height: 200px;
+	margin: 3 * $vertical-unit auto;
+	display: block;
+
+	@include for-size (tablet-landscape-up) {
+		position: absolute;
+		right: $gutter;
+		margin: 0;
+	}
+}
+
+.eyecatcher--discount {
+	@include for-size (tablet-landscape-up) {
+		top: -25%;
+	}
+}
+
+.eyecatcher--freebie {
+	top: 0;
+}

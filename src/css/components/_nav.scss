@@ -17,7 +17,7 @@
 		transform: translate(0, -100%);
 		transition: 250ms ease-out;
 		position: absolute;
-		top: $header-height;
+		top: $header-height * 2.785;
 		left: 0;
 		right: 0;
 		z-index: -1;
@@ -73,6 +73,8 @@
 		stroke-width: 8;
 		stroke-linecap: round;
 
+		margin-left: auto;
+
 		&:focus {
 			outline: none;
 			border: none;
@@ -106,6 +108,7 @@
 
 		.main-nav__link {
 			padding: 5px 0;
+			font-size: 15px;
 		}
 
 		.main-nav__trigger {
@@ -124,4 +127,8 @@
 	.main-nav__icon--menu {
 		display: none;
 	}
+}
+
+body.page-has-scrolled .main-nav__menu {
+	top: $header-height;
 }

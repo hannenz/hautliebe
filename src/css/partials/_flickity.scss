@@ -33,6 +33,9 @@
 
 	/* display: none; */
 	background-color: transparent !important;
+	bottom: 0;
+	top: auto;
+	transform: translate(0, 25%);
 
 	&:hover {
 		background-color: transparent !important;
@@ -43,9 +46,25 @@
 	}
 
 	&.previous {
-		left: -12px;
+		left: -2 * $gutter;
 	}
 	&.next {
-		right: -12px;
+		right: -2 * $gutter;
+	}
+}
+
+@include for-size (tablet-landscape-up) {
+	.flickity-prev-next-button {
+		bottom: auto;
+		top: 50%;
+		transform: translate(0, -50%);
+
+		&.previous {
+			left: -12px;
+		}
+
+		&.next {
+			right: -12px;
+		}
 	}
 }

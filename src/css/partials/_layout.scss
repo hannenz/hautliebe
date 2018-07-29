@@ -5,9 +5,6 @@
  * @package hautliebe
  */
 
-%bound {
-}
-
 @mixin bound ($w) {
 	max-width: calc(#{$w} - 4 * #{$gutter});
 	width: 100%;
@@ -50,11 +47,11 @@ body {
 	min-height: 100vh;
 	overflow-x: hidden;
 	max-width: 100vw;
-	padding-top: $header-height;
+	/* padding-top: $header-height; */
 
-	@include for-size (tablet-portrait-up) {
+	// @include for-size (tablet-portrait-up) {
 		padding-top: $header-height * 2.785;
-	}
+	// }
 }
 
 .main-content {
@@ -64,22 +61,13 @@ body {
 .section {
 	/* overflow: hidden; */
 	/* padding-top: calc(#{$header-height} + 1 * #{$vertical-unit}); */
-	padding-top: 1 * $vertical-unit;
-	padding-bottom: 1 * $vertical-unit;
+	padding-top: 3 * $vertical-unit;
+	padding-bottom: 3 * $vertical-unit;
 
 	@include for-size (tablet-portrait-up) {
 		/* padding-top: calc(#{$header-height} + 3 * #{$vertical-unit}); */
-		padding-top: 3 * $vertical-unit;
-		padding-bottom: 3 * $vertical-unit;
-	}
-
-	&--1 {
-		/* outline: 2px dashed hotpink; */
-		/* padding-bottom: 12 * $vertical-unit; */
-	}
-
-	&--2 {
-		/* background-image: linear-gradient(to bottom, #fff 0, #fff 200px, $primary-color 100px, $primary-color 100%) !important; */
+		padding-top: 5 * $vertical-unit;
+		padding-bottom: 5 * $vertical-unit;
 	}
 
 	&--2,
@@ -89,15 +77,10 @@ body {
 
 	&--7 {
 		padding-top: 0;
-		// padding-bottom: 0;
-	}
-
-	.title {
-		// color: $primary-color;
 	}
 
 	#map {
-		margin-bottom: 3 * $vertical-unit;
+		margin-bottom: 5 * $vertical-unit;
 	}
 }
 
@@ -133,4 +116,8 @@ body {
 			transform: rotate(180deg);
 		}
 	}
+}
+
+#pricing .title {
+	max-height: 6em;
 }

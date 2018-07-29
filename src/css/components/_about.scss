@@ -6,11 +6,13 @@
  */
 
 #about {
-    $y: 190px;
+    $y: 210px;
     background-image: linear-gradient(to bottom, #{$primary-color} #{$y}, #fff #{$y}, #fff 100%);
     @include for-size (tablet-portrait-up) {
       background-image: none;
     }
+
+	padding-top: 8 * $vertical-unit;
 }
 
 .about {

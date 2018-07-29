@@ -14,7 +14,24 @@
 
 .main-nav__brand {
 	display: block;
-	/* width: 100%; */
+	position: absolute;
+	top: $vertical-unit;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+
+body.page-has-scrolled {
+	.main-nav__brand {
+		position: static;
+		transform: none;
+	}
+}
+
+@include for-size (desktop-up) {
+	.main-nav__brand {
+		position: static;
+		transform: none;
+	}
 }
 
 .logo {
@@ -24,25 +41,25 @@
 	display: block;
 }
 
-@include for-size (tablet-portrait-up) {
 
-	.main-header {
-		height: 2.785 * $header-height;
-	}
+.main-header {
+	height: 2.785 * $header-height;
+}
+
+.logo {
+	margin-bottom: 0;
+	width: 2.785 * 0.83 * $header-height;
+	height: 2.785 * 0.83 * $header-height;
+	position: relative;
+}
+
+.page-has-scrolled .main-header {
+
+	height: $header-height;
 
 	.logo {
-		margin-bottom: 0;
-		width: 2.785 * 0.83 * $header-height;
-		height: 2.785 * 0.83 * $header-height;
-		position: relative;
-	}
-
-	.page-has-scrolled .main-header {
-
-		height: $header-height;
-
-		.logo {
-			height: 0.4 * $header-height;
-		}
+		width: 2.785 * 1.125 * $header-height;
+		height: 2.785 * 1.125 * $header-height;
+		height: 0.7 * $header-height;
 	}
 }

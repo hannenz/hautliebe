@@ -14,6 +14,9 @@
 					{VAR:post_text}
 				</div>
 			</div>
+			{IF({ISSET:post_eyecatcher})}
+				<img class="news-teaser__eyecatcher" src="/media/mlog/{VAR:post_eyecatcher}">
+			{ENDIF}
 		</div>
 	</div>
 	{ENDLOOP VAR}

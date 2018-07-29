@@ -22,7 +22,7 @@
 			width: 100vw;
 			height: 100vh;
 			background-color: #fff;
-			z-index: 2000; /* Override leaflet map controls */
+			z-index: 8000;
 			transition: opacity 500ms ease-out;
 			display: flex;
 		}
@@ -154,6 +154,8 @@
 		<section id="news" class="section section--1">
 			<div class="outer-bound">
 				{LOOP CONTENT(99)}{ENDLOOP CONTENT}
+
+				<img class="eyecatcher eyecatcher--discount" src="/dist/img/eyecatcher_discount.svg" title="-15 % Rabatt - nur für kurze Zeit" alt="Banner zur Neueröffnungsaktion mit der Aufschrift: 15 % Rabatt - nur für kurze Zeit" />
 			</div>
 		</section>
 
@@ -185,6 +187,7 @@
 		<section id="pricing" class="section section--5 section--dark section--rotated-title">
 			<div class="inner-bound">
 				{LOOP CONTENT(4)}{ENDLOOP CONTENT}
+				<img class="eyecatcher eyecatcher--freebie" src="/dist/img/eyecatcher_freebie.svg" title="Kostenlos: Erstberartungsgespräch und Testbehandlung (nicht für Sublative)" alt="Banner mit der Aufschrift: Kostenlos: Erstberatungsgespräch und Testbehandlung (nicht für Sublative)" />
 			</div>
 		</section>
 

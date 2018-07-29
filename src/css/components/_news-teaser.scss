@@ -6,6 +6,7 @@
 
 	&__inner {
 		@include bound ($inner-bound-width);
+		padding: 0;
 		display: flex;
 		flex-flow: column wrap;
 		justify-content: flex-start;
@@ -19,11 +20,15 @@
 		margin-bottom: 3 * $vertical-unit;
 	}
 
-	// .headline,
-	.subheadline,
-	// .title
-	{
-	 	color: $primary-color;
+	&__body {
+		max-width: 48em;
+		margin-bottom: 3 * $vertical-unit;
+	}
+
+	.subheadline {
+		color: $primary-color;
+		@include type-setting(2);
+		margin: $vertical-unit 0;
 	}
 }
 

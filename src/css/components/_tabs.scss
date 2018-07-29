@@ -9,8 +9,16 @@
 	padding: $vertical-unit 0;
 }
 
-.tabs__trigger:hover {
-	text-decoration: none;
+.tabs__trigger {
+	outline: none;
+
+	&::-mox-focus-inner {
+		border: none;
+	}
+
+	&:hover {
+		text-decoration: none;
+	}
 }
 
 .tabs__radio {
@@ -35,6 +43,7 @@
 	margin-right: $gutter;
 	position: relative;
 
+
 	svg {
 		width: 4rem;
 		height: 4rem;
@@ -51,7 +60,7 @@
 		bottom: 0;
 		left: 0.3rem;
 		width: 3.4rem;
-		height: 6px;
+		height: 5px;
 		border-radius: 5px;
 		transform: scaleX(0);
 		transition: transform 150ms ease-in;
@@ -75,10 +84,8 @@
 	display: block;
 }
 
-.tabs__radio:checked + label {
-	&::after {
-		transform: scaleX(1);
-	}
+.tabs__trigger--is-active .tabs__label::after {
+	transform: scaleX(1);
 }
 
 .more {
@@ -129,6 +136,7 @@
 .tabs {
 
 	&__panel {
+		margin-top: 2 * $vertical-unit;
 		display: none;
 		&--is-active {
 			display: block;
