@@ -68,6 +68,11 @@
 		background-color: transparent;
 		cursor: pointer;
 		border: none;
+		outline: none;
+
+		&::-moz-focus-inner {
+			border: none;
+		}
 
 		stroke: #fff;
 		stroke-width: 8;
@@ -103,7 +108,7 @@
 		}
 
 		.main-nav__item {
-			margin-left: 2 * $gutter;
+			margin-left: 4 * $gutter;
 		}
 
 		.main-nav__link {

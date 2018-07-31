@@ -70,10 +70,9 @@ body {
 		padding-bottom: 5 * $vertical-unit;
 	}
 
-	&--2,
-	&--5 {
-		min-height: 100vh;
-	}
+	/* &--2 { */
+	/* 	min-height: 100vh; */
+	/* } */
 
 	&--7 {
 		padding-top: 0;

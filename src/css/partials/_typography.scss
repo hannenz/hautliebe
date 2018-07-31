@@ -75,6 +75,7 @@ a {
 	@include versal ();
 	font-weight: bold;
 	line-height: 1;
+	margin-bottom: 2 * $vertical-unit;
 
 	&--large {
 		@include type-setting (3);
@@ -113,6 +114,7 @@ a {
 
 .treatment__body ul {
 	@extend %bullets;
+	margin-top: 0;
 }
 
 .big-text {

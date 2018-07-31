@@ -253,11 +253,18 @@ function APP () {
 		// Flickity carousel
 
 		window.onload = function () {
-			$('.carousel').flickity({
+
+			var nSlides = $('.carousel > *').length;
+			var flickityOptions = {
 				cellAlign: 'left',
 				wrapAround: true,
 				contain: true
-			});
+			};
+			if (nSlides <= 1) {
+				flickityOptions.prevNextButtons = false;
+				flickityOptions.pageDots = false;
+			}
+			$('.carousel').flickity(flickityOptions);
 
 			// Sticky header
 			new ScrollMagic.Scene ({

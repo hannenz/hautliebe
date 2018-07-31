@@ -9,7 +9,7 @@ class Technique extends Model {
 	
 	public function init () {
 		$this->tableName = 'hl_techniques';
-		$this->order (['techniques_pos' => 'asc']);
+		$this->order (['technique_pos' => 'asc']);
 		$this->cmt = Contentomat::getContentomat ();
 	}
 

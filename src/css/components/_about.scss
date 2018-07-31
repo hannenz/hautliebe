@@ -23,12 +23,14 @@
 
 
 	&__timeline {
-		margin-bottom: 2 * $vertical-unit;
-		order: 1;
+		/* margin-bottom: 2 * $vertical-unit; */
+		margin-top: 2 * $vertical-unit;
+		order: 2;
 	}
 
 	&__text {
-		order: 2;
+		order: 1;
+		margin-top: 2 * $vertical-unit;
 	}
 
 	img {

@@ -1,3 +1,9 @@
+/**
+ * src/css/components/_news-teaser.scss
+ *
+ * @author Johannes Braun <johannes.braun@hannenz.de>
+ * @package hautliebe
+ */
 .news-teaser {
 
 	padding: $vertical-unit 0;
@@ -16,8 +22,12 @@
 	&__image {
 		width: 75%;
 		max-width: 180px;
-		flex: 1 0  auto;
+		flex: 1 0 auto;
 		margin-bottom: 3 * $vertical-unit;
+	}
+
+	&__title {
+		margin-bottom: -0.4 * $vertical-unit;
 	}
 
 	&__body {

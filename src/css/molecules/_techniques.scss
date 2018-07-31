@@ -1,3 +1,5 @@
+$factor: 1.35;
+$line: 216px;
 #techniques {
 	background-image:
 		url('/dist/img/GentleLase.png'),
@@ -14,9 +16,9 @@
 			url('/dist/img/GentleLase_portrait.png'),
 			url('/dist/img/eTwoSublime.png'),
 			url('/dist/img/eTwoSublative.png'),
-			linear-gradient(to bottom, #fff 0, #fff calc(100% - 160px), $primary-color calc(100% - 160px), $primary-color 100%);
+			linear-gradient(to bottom, #fff 0, #fff calc(100% - #{$line}), $primary-color calc(100% - #{$line}), $primary-color 100%);
 		background-position: calc(50% - 25vw) 100%, 50% 100%, calc(50% + 25vw) 100%, 0 0;
-		background-size: auto 300px, auto 200px, auto 200px, 100% 100%;
+		background-size: auto $factor * 300px, auto $factor * 200px, auto $factor * 200px, 100% 100%;
 		padding-bottom: calc(6 * #{$vertical-unit} + 200px);
 	}
 
@@ -26,6 +28,7 @@
 	@include for-size (tablet-portrait-up) {
 		margin-top: 0;
 		columns: 2;
+		column-gap: 4 * $gutter;
 	}
 }
 

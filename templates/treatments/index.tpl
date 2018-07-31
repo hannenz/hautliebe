@@ -24,7 +24,7 @@
 		<div id="treatment-{VAR:id}" class="tabs__panel">
 			<div class="treatment">
 				<div class="treatment__header">
-					<h4 class="kicker">{VAR:treatment_kicker}</h4>
+					{IF(!empty ("{VAR:treatment_techniques}"))} <h4 class="kicker">Verfahren: {VAR:treatment_techniques}</h4>{ENDIF}
 					<h2 class="headline">{VAR:treatment_name}</h2>
 					<div class="treatment__body">{VAR:treatment_description}</div>
 
