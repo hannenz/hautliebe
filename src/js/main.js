@@ -39,6 +39,32 @@ function APP () {
 		this.main();
 	};
 
+
+
+	this.animateWrinklesIcon = function () {
+		var s = Snap ('#icon-wrinkles');
+		var path =  s.select ('#wrinkles-path');
+		var origPath = path.attr ('d');
+		var destPath = 'm 65.589186,17.110641 c 2.572515,1.219343 7.330574,4.472429 9.400383,6.427044 2.069809,1.954615 5.589732,6.518803 6.954228,9.017358 1.364496,2.498556 3.301731,7.927074 3.827348,10.724995 0.525616,2.797919 0.690531,8.559384 0.325818,11.382788 -0.364714,2.823405 -1.988261,8.353847 -3.207604,10.926361 -1.219343,2.572515 -4.472428,7.330572 -6.427043,9.400381 -1.954615,2.069809 -6.518805,5.589733 -9.01736,6.95423 -2.498556,1.364496 -7.927073,3.30173 -10.724992,3.827346 -2.797921,0.525617 -8.559387,0.690532 -11.382792,0.325819 C 42.513768,85.732249 36.983328,84.108702 34.410814,82.889359 31.838299,81.670016 27.08024,78.41693 25.010431,76.462315 22.940622,74.5077 19.420699,69.943512 18.056203,67.444957 16.691707,64.946401 14.754472,59.517883 14.228855,56.719962 13.703239,53.922043 13.538324,48.160578 13.903037,45.337174 c 0.364714,-2.823405 1.988261,-8.353847 3.207604,-10.926361 1.219343,-2.572515 4.472428,-7.330572 6.427043,-9.400381 1.954615,-2.069809 6.518805,-5.589733 9.01736,-6.95423 2.498556,-1.364496 7.927073,-3.30173 10.724992,-3.827346 2.797921,-0.525617 8.559387,-0.690532 11.382792,-0.325819 2.823404,0.364714 8.353844,1.988261 10.926358,3.207604 z';
+
+		function doAnimate () {
+			path.animate ({
+				d: destPath
+			}, 1000, mina.easein, swap);
+		}
+
+		function swap () {
+			var tmp = destPath;
+			destPath = origPath;
+			origPath = tmp;
+			doAnimate ();
+		}
+
+		doAnimate ();
+	};
+
+
+
     this.createWrinklesIcon = function () {
 
 		var s = Snap('#icon-wrinkles');
@@ -186,23 +212,57 @@ function APP () {
 		L.tileLayer('https://{s}.tiles.mapbox.com/v3/hannenz.iodb36pi/{z}/{x}/{y}.png', {
 			attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 		}).addTo(map);
-		
-		var HautliebeIcon = L.Icon.extend ({
-			options: {
-				iconSize: [ 100, 100 ],
-				iconAnchor: [ 50, 100 ]
+
+		var pins = [
+			{
+				iconUrl: '/dist/img/pin_heart.png',
+				latLng: [ 48.40091, 9.99367 ],
+				popup: "<b>HAUTLIEBE®</b><br>Hafenbad 31<br>89073 Ulm",
+				iconSize: 120
+			},
+			{
+				iconUrl: '/dist/img/pin_bus.png',
+				latLng: [ 48.40198, 9.99213 ],
+				popup: "Haltestelle &bdquo;Justizgebäude&ldquo;",
+				iconSize: 100
+			},
+			{
+				iconUrl: '/dist/img/pin_parking1.png',
+				latLng: [ 48.40073, 9.99491 ],
+				popup: "Parkhaus &bdquo;Kornhaus&ldquo;",
+				iconSize: 100
+			},
+			{
+				iconUrl: '/dist/img/pin_parking2.png',
+				latLng: [ 48.40111, 9.99604 ],
+				popup: "Parkhaus &bdquo;Frauenstraße&ldquo;",
+				iconSize: 100
 			}
+		];
+
+		pins.forEach (function (pin, i) {
+			var icon = new L.Icon ({
+				iconUrl: pin.iconUrl,
+				iconSize: [ pin.iconSize, pin.iconSize ],
+				iconAnchor: [ pin.iconSize / 2 , pin.iconSize ]
+			});
+
+			var marker = L.marker (pin.latLng, { icon: icon }).addTo (map);
+			
+			var popupOptions = {
+				offset: L.point (0, -pin.iconSize * 2 / 3)
+			};
+
+			var popup = L.popup (popupOptions)
+				.setLatLng (pin.latLng)
+				.setContent (pin.popup)
+			;
+			if (i == 0) {
+				popup.openOn (map);
+			}
+			marker.bindPopup (popup, popupOptions);
+
 		});
-
-		var heartIcon = new HautliebeIcon ({ iconUrl: '/dist/img/pin_heart.png', iconSize: [150, 150], iconAnchor: [75, 150] }),
-			busIcon = new HautliebeIcon ({ iconUrl: '/dist/img/pin_bus.png' }),
-			parking1Icon = new HautliebeIcon ({ iconUrl: '/dist/img/pin_parking1.png' }),
-			parking2Icon = new HautliebeIcon ({ iconUrl: '/dist/img/pin_parking2.png' });
-
-		L.marker([48.40091, 9.99367 ], { icon: heartIcon }).addTo(map);
-		L.marker([48.40198, 9.99213 ], { icon: busIcon }).addTo(map);
-		L.marker([48.40073, 9.99491 ], { icon: parking1Icon }).addTo(map);
-		L.marker([48.40111, 9.99604 ], { icon: parking2Icon }).addTo(map);
 	};
 
 
@@ -337,6 +397,8 @@ function APP () {
         this.createEpilationIcon ();
 		this.setupTabs ();
 		this.setupHiddenSection ();
+
+		this.animateWrinklesIcon ();
 	};
 };
 
