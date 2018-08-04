@@ -29,10 +29,10 @@ define ('WEBNAME', '[INSERT NAME]');
 define ('CMT_DBERRORLOG', '1');
 
 // Sollen Cookies benutzt werden?
-define('CMT_USECOOKIES', '1');
+define('CMT_USECOOKIES', '0');
 
 // Cookies nutzen, auch wenn keine Cookies aktiviert sind?
-define('CMT_FORCECOOKIES', '1');
+define('CMT_FORCECOOKIES', '0');
 
 // Apache Mod-Rewrite nutzen?
 define('CMT_MODREWRITE', '1');

@@ -1,3 +1,9 @@
+/**
+ * src/css/molecules/_price-table.scss
+ *
+ * @author Johannes Braun <johannes.braun@hannenz.de>
+ * @package hautliebe
+ */
 #pricing {
 	.headline, p, .offers {
 		margin-bottom: 3 * $vertical-unit;
@@ -20,17 +26,9 @@
 			font-weight: 600;
 			text-align: right;
 
-
-			/* writing-mode: vertical-rl; */
-			/* transform: rotate(180deg) translate(50%, 0); */
-
-			padding: 0;
+			padding: 0 0 0 1rem;
 			max-width: 5em;
 
-			/* @include for-size (tablet-portrait-up) { */
-			/* 	writing-mode: horizontal-tb; */
-			/* 	transform: none; */
-			/* } */
 		}
 	}
 
@@ -55,8 +53,7 @@
 			text-align: right;
 		}
 		&.price__price--bundle {
-			/* width: 27%; */
-				min-width: 27%;
+			width: 27%;
 			text-align: right;
 			span {
 				width: auto;

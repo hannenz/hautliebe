@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="{PAGELANG}">
+<html lang="{PAGELANG}">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -41,11 +41,10 @@
 			width: 100%;
 			height: 100vh;
 		}
-		.pace  svg {
+		.pace svg {
 			margin: auto;
 		}
 	</style>
-
 	<script src="/dist/js/vendor/pace.min.js"></script>
 	<script>
 
@@ -121,19 +120,21 @@
 
 	{LAYOUTMODE_STARTSCRIPT}
 	{IF (!{LAYOUTMODE})}
-	<script src="/dist/js/vendor/jquery.min.js"></script>
+	<script src="/dist/js/vendor/jquery.min.js" defer></script>
 	<script src="/dist/js/vendor/TweenMax.js" defer></script>
-	<script src="/dist/js/vendor/ScrollMagic.min.js"i defer></script>
+	<script src="/dist/js/vendor/ScrollMagic.min.js" defer></script>
 	<script src="/dist/js/vendor/animation.gsap.min.js" defer></script>
-	<script src="/dist/js/vendor/jquery-scrollspy.min.js" defer></script>
 	<script src="/dist/js/vendor/flickity.pkgd.min.js" defer></script>
 	<script src="/dist/js/vendor/leaflet.js" defer></script>
 	<script src="/dist/js/vendor/snap.svg-min.js" defer></script>
-	<script src="/dist/js/vendor/jquery.event.move.js">defer</script>
+
+	<!-- They belong together: jquery.event.move.js and jquery.twentytwenty.js... -->
+	<!-- <script src="/dist/js/vendor/jquery.event.move.js" defer>defer</script> -->
 	<!-- <script src="/dist/js/vendor/jquery.twentytwenty.js"></script> -->
+
 	{ENDIF}
 </head>
-<body>
+<body id="top">
 	<!-- Inject SVG sprites -->
 	<div style="visibility: hidden; height:0; overflow: hidden">
 		<object 
@@ -145,7 +146,7 @@
 
 	{INCLUDE:PATHTOWEBROOT.'templates/partials/header.tpl'}
 
-	<div id="top" class="main-content">
+	<div class="main-content">
 
 		<section id="news" class="section section--1">
 			<div class="outer-bound">
@@ -214,7 +215,7 @@
 	</div>
 
 	{IF(!{LAYOUTMODE})}
-		<script src="/dist/js/main.min.js"></script>
+		<script src="/dist/js/main.min.js" defer></script>
 	{ENDIF}
 	{LAYOUTMODE_ENDSCRIPT}
 </body>

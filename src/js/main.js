@@ -41,7 +41,8 @@ function APP () {
 
 
 
-	this.animateWrinklesIcon = function () {
+	this.animateActiveIcon = function () {
+
 		var s = Snap ('#icon-wrinkles');
 		var path =  s.select ('#wrinkles-path');
 		var origPath = path.attr ('d');
@@ -142,7 +143,7 @@ function APP () {
 		// Cache selectors
 		var lastId,
 			topMenu = $(".main-nav"),
-			topMenuHeight = topMenu.outerHeight() + 15,
+			topMenuHeight = 70; //topMenu.outerHeight() + 15,
 			// All list items
 			menuItems = topMenu.find("a"),
 			// Anchors corresponding to menu items
@@ -217,7 +218,7 @@ function APP () {
 			{
 				iconUrl: '/dist/img/pin_heart.png',
 				latLng: [ 48.40091, 9.99367 ],
-				popup: "<b>HAUTLIEBE®</b><br>Hafenbad 31<br>89073 Ulm",
+				popup: "<b>HAUTLIEBE<sup>®</sup></b><br>Hafenbad&nbsp;31<br>89073 Ulm",
 				iconSize: 120
 			},
 			{
@@ -286,6 +287,8 @@ function APP () {
 				$el.find ('.tabs__panel').removeClass ('tabs__panel--is-active');
 				$el.find ($(this).attr('href')).addClass ('tabs__panel--is-active');
 				$(this).addClass ('tabs__trigger--is-active');
+
+				// animateActiveIcon
 				return false;
 			});
 			$el.find ('.tabs__trigger').first().addClass ('tabs__trigger--is-active');
@@ -398,7 +401,7 @@ function APP () {
 		this.setupTabs ();
 		this.setupHiddenSection ();
 
-		this.animateWrinklesIcon ();
+		this.animateActiveIcon ();
 	};
 };
 

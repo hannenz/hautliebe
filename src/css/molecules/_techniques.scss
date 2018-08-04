@@ -8,8 +8,7 @@ $line: 216px;
 	background-position: 100% 140px, calc(50% - 25vw) 100%, calc(50% + 25vw) 100%;
 	background-size: auto 150px, auto 50vw, auto 50vw;
 	background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
-	/* padding-top: calc(6 * #{$vertical-unit} + 150px); */
-	padding-bottom: calc(6 * #{$vertical-unit} + 50vw);
+	padding-bottom: calc(-2 * #{$vertical-unit} + 50vw);
 
 	@include for-size(tablet-portrait-up) {
 		background-image:
@@ -17,9 +16,13 @@ $line: 216px;
 			url('/dist/img/eTwoSublime.png'),
 			url('/dist/img/eTwoSublative.png'),
 			linear-gradient(to bottom, #fff 0, #fff calc(100% - #{$line}), $primary-color calc(100% - #{$line}), $primary-color 100%);
-		background-position: calc(50% - 25vw) 100%, 50% 100%, calc(50% + 25vw) 100%, 0 0;
+		background-position: calc(50% - 310px) 100%, calc(50% - 25px) 100%, calc(50% + 230px) 100%, 0 0;
 		background-size: auto $factor * 300px, auto $factor * 200px, auto $factor * 200px, 100% 100%;
 		padding-bottom: calc(6 * #{$vertical-unit} + 200px);
+	}
+
+	@include for-size(tablet-landscape-up) {
+		background-position: calc(50% - 410px) 100%, calc(50% - 25px) 100%, calc(50% + 330px) 100%, 0 0;
 	}
 
 }

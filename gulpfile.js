@@ -102,7 +102,7 @@ var settings = {
 			'./node_modules/jquery/dist/jquery.min.js',
 			'./node_modules/jquery/dist/jquery.slim.min.js',
 			// './node_modules/modernizr/modernizr.js',
-			'./node_modules/blazy/blazy.min.js',
+			// './node_modules/blazy/blazy.min.js',
 			'./node_modules/flickity/dist/flickity.pkgd.min.js',
 			'./node_modules/leaflet/dist/leaflet.js',
 			'./node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js',

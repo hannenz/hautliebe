@@ -26,9 +26,7 @@
 		padding-bottom: $vertical-unit;
 	}
 
-
-	&__item.active > .main-nav__link {
-
+	&__item > .main-nav__link {
 		&::after {
 			position: absolute;
 			content: '';
@@ -38,6 +36,15 @@
 			left: 0;
 			background-color: #fff;
 			border-radius: 10px;
+			transform: scaleX(0);
+			transition: 150ms ease-in;
+		}
+	}
+
+
+	&__item.active > .main-nav__link {
+		&::after {
+			transform: scaleX(1);
 		}
 	}
 
@@ -78,7 +85,7 @@
 		stroke-width: 8;
 		stroke-linecap: round;
 
-		margin-left: auto;
+		/* margin-left: auto; */
 
 		&:focus {
 			outline: none;

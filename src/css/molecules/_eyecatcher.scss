@@ -10,7 +10,7 @@
 	height: 45vw;
 	max-width: 200px;
 	max-height: 200px;
-	margin: 3 * $vertical-unit auto;
+	margin: 0 * $vertical-unit auto;
 	display: block;
 
 	@include for-size (tablet-landscape-up) {

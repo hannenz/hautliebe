@@ -40,6 +40,7 @@ body {
 p,
 .body-text {
 	@include type-setting (0, 1);
+	// hyphens: auto;
 }
 
 a {
@@ -64,6 +65,8 @@ a {
 	@include versal ();
 	line-height: 1;
 	font-weight: bold;
+	max-width: 100%;
+	overflow: hidden;
 }
 
 .headline {
@@ -72,6 +75,8 @@ a {
 	font-weight: bold;
 	line-height: 1;
 	margin-bottom: 2 * $vertical-unit;
+	max-width: 100%;
+	overflow: hidden;
 
 	&--large {
 		@include type-setting (3);
@@ -117,3 +122,4 @@ a {
 	@include type-setting(3, 1);
 	font-weight: bold;
 }
+

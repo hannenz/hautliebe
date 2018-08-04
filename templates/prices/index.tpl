@@ -54,7 +54,7 @@
 						<tr>
 							<th>&nbsp;</th>
 							<th>Einzel</th>
-							<th>Einzelpreis im Paket<br>({VAR:treatment_package_size} Sitzungen)</th>
+							<th>Einzelpreis im Paket<br>({VAR:treatment_package_size}&nbsp;Sitzungen)</th>
 						</tr>
 					</thead>
 					<tbody>
