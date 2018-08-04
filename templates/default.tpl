@@ -121,20 +121,16 @@
 
 	{LAYOUTMODE_STARTSCRIPT}
 	{IF (!{LAYOUTMODE})}
-	<!-- <script src="/dist/js/vendor/modernizr.js"></script> -->
 	<script src="/dist/js/vendor/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
-	<!-- <script src="/dist/js/vendor/umd/TimelineMax.js"></script> -->
-	<script src="/dist/js/vendor/ScrollMagic.min.js"></script>
-	<script src="/dist/js/vendor/animation.gsap.min.js"></script>
-	<script src="/dist/js/vendor/jquery-scrollspy.min.js"></script>
-	<script src="/dist/js/vendor/flickity.pkgd.min.js"></script>
-	<script src="/dist/js/vendor/leaflet.js"></script>
-	<script src="/dist/js/vendor/snap.svg-min.js"></script>
-	<script src="/dist/js/vendor/jquery.event.move.js"></script>
-	<script src="/dist/js/vendor/jquery.twentytwenty.js"></script>
-	<!-- <link rel="stylesheet" type="text/css" href="/dist/css/vendor/foundation.css"> -->
-	<link rel="stylesheet" type="text/css" href="/dist/css/vendor/twentytwenty-no-compass.css">
+	<script src="/dist/js/vendor/TweenMax.js" defer></script>
+	<script src="/dist/js/vendor/ScrollMagic.min.js"i defer></script>
+	<script src="/dist/js/vendor/animation.gsap.min.js" defer></script>
+	<script src="/dist/js/vendor/jquery-scrollspy.min.js" defer></script>
+	<script src="/dist/js/vendor/flickity.pkgd.min.js" defer></script>
+	<script src="/dist/js/vendor/leaflet.js" defer></script>
+	<script src="/dist/js/vendor/snap.svg-min.js" defer></script>
+	<script src="/dist/js/vendor/jquery.event.move.js">defer</script>
+	<!-- <script src="/dist/js/vendor/jquery.twentytwenty.js"></script> -->
 	{ENDIF}
 </head>
 <body>

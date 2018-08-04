@@ -60,11 +60,7 @@ a {
 }
 
 .title {
-	@include type-setting (3, 1);
-	@include for-size (tablet-portrait-up) {
-		@include type-setting (4, 1);
-		line-height: 1;
-	}
+	@include type-setting (4, 1);
 	@include versal ();
 	line-height: 1;
 	font-weight: bold;

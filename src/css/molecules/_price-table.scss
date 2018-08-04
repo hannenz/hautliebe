@@ -14,22 +14,23 @@
 			background-image: none;
 		}
 
-		td {
+		th {
 			vertical-align: top;
 			text-transform: uppercase;
 			font-weight: 600;
+			text-align: right;
 
 
-			writing-mode: vertical-rl;
-			transform: rotate(180deg) translate(50%, 0);
+			/* writing-mode: vertical-rl; */
+			/* transform: rotate(180deg) translate(50%, 0); */
 
 			padding: 0;
 			max-width: 5em;
 
-			@include for-size (tablet-portrait-up) {
-				writing-mode: horizontal-tb;
-				transform: none;
-			}
+			/* @include for-size (tablet-portrait-up) { */
+			/* 	writing-mode: horizontal-tb; */
+			/* 	transform: none; */
+			/* } */
 		}
 	}
 
@@ -51,13 +52,14 @@
 
 		&.price__price--single {
 			width: 27%;
-			text-align: left;
+			text-align: right;
 		}
 		&.price__price--bundle {
-			width: 27%;
-			text-align: left;
+			/* width: 27%; */
+				min-width: 27%;
+			text-align: right;
 			span {
-				width: 100%;
+				width: auto;
 				display: inline-block;
 			}
 		}

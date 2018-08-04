@@ -5,8 +5,8 @@ $line: 216px;
 		url('/dist/img/GentleLase.png'),
 		url('/dist/img/eTwoSublime.png'),
 		url('/dist/img/eTwoSublative.png');
-	background-position: 100% 75px, calc(50% - 25vw) 100%, calc(50% + 25vw) 100%;
-	background-size: auto 130px, auto 50vw, auto 50vw;
+	background-position: 100% 140px, calc(50% - 25vw) 100%, calc(50% + 25vw) 100%;
+	background-size: auto 150px, auto 50vw, auto 50vw;
 	background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
 	/* padding-top: calc(6 * #{$vertical-unit} + 150px); */
 	padding-bottom: calc(6 * #{$vertical-unit} + 50vw);
@@ -24,7 +24,7 @@ $line: 216px;
 
 }
 .techniques {
-	margin-top: 160px;
+	margin-top: 120px;
 	@include for-size (tablet-portrait-up) {
 		margin-top: 0;
 		columns: 2;
@@ -37,12 +37,16 @@ $line: 216px;
 	page-break-inside: avoid;
 
 	&__icon {
-		width: 5rem;
-		height: 5rem;
+		width: 4.5rem;
+		height: 4.5rem;
+		margin-bottom: $vertical-unit;
 	}
 
 	&__name, p {
 		margin-bottom: $vertical-unit;
 	}
 
+	&__description {
+		margin-bottom: 5 * $vertical-unit;
+	}
 }

@@ -60,11 +60,15 @@
 		bottom: 0;
 		left: 0.3rem;
 		width: 3.4rem;
-		height: 5px;
+		height: 4px;
 		border-radius: 5px;
 		transform: scaleX(0);
 		transition: transform 150ms ease-in;
 		background-color: #fff;
+
+		@include for-size (desktop-up) {
+			height: 5px;
+		}
 	}
 }
 

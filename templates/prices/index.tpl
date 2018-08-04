@@ -52,9 +52,9 @@
 				<table class="price-table">
 					<thead>
 						<tr>
-							<td>&nbsp;</td>
-							<td>Einzel</td>
-							<td>Einzelpreis im Paket<br>({VAR:treatment_package_size} Sitzungen)</td>
+							<th>&nbsp;</th>
+							<th>Einzel</th>
+							<th>Einzelpreis im Paket<br>({VAR:treatment_package_size} Sitzungen)</th>
 						</tr>
 					</thead>
 					<tbody>

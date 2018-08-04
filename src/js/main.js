@@ -334,10 +334,10 @@ function APP () {
 			.addTo (ctl);
 
 			// TwentyTwenty: Comparison slider
-			$('.compare').twentytwenty ({
-				before_label: 'Vorher',
-				after_label: 'Nach 1 Behandlung'
-			});
+			// $('.compare').twentytwenty ({
+			// 	before_label: 'Vorher',
+			// 	after_label: 'Nach 1 Behandlung'
+			// });
 		}
 
 
@@ -367,8 +367,8 @@ function APP () {
 		var pathLength = heartLinePath.getTotalLength ();
 		heartLinePath.style.strokeDasharray = pathLength + ' ' + pathLength;
 		heartLinePath.style.strokeDashoffset = pathLength;
-		var heartLineTween = new TimelineMax()
-			.add (TweenMax.to (heartLinePath, 1, { strokeDashoffset: 0, ease: Linear.easeNone }));
+		var heartLineTween = 
+			(TweenMax.to (heartLinePath, 1, { strokeDashoffset: 0, ease: Linear.easeNone }));
 
 		var heartLine = new ScrollMagic.Scene ({
 			triggerElement: '.about__timeline',

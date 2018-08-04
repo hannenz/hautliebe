@@ -6,12 +6,11 @@
  */
 
 #about {
-    $y: 210px;
-    background-image: linear-gradient(to bottom, #{$primary-color} #{$y}, #fff #{$y}, #fff 100%);
-    @include for-size (tablet-portrait-up) {
-      background-image: none;
-    }
-
+	$y: 210px;
+	background-image: linear-gradient(to bottom, #{$primary-color} #{$y}, #fff #{$y}, #fff 100%);
+	@include for-size (tablet-portrait-up) {
+		background-image: none;
+	}
 	padding-top: 8 * $vertical-unit;
 }
 
@@ -23,9 +22,11 @@
 
 
 	&__timeline {
-		/* margin-bottom: 2 * $vertical-unit; */
-		margin-top: 2 * $vertical-unit;
 		order: 2;
+		margin-top: 2 * $vertical-unit;
+		@include for-size (tablet-portrait-up) {
+			margin-top: 0;
+		}
 	}
 
 	&__text {
@@ -40,7 +41,6 @@
 		border: 4px solid #fff;
 		border-radius: 50%;
 		margin: 0 auto;
-		// transform: translateY(-70%);
 	}
 
 	@include for-size (tablet-portrait-up) {
