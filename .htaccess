@@ -3,19 +3,19 @@ RewriteBase /
 
 # Disable all PHP messages on production servers
 # (https://stackoverflow.com/a/8652987)
-php_flag display_startup_errors on
-php_flag display_errors on
-php_flag html_errors on
-php_value error_reporting -1
+# php_flag display_startup_errors on
+# php_flag display_errors on
+# php_flag html_errors on
+# php_value error_reporting -1
 
 #Force HTTPS
 RewriteCond %{HTTPS} off
-RewriteCond %{HTTP_HOST} hautliebe.de
+RewriteCond %{HTTP_HOST} hautliebe-ulm.de
 RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
 # Force WWW
-RewriteCond %{HTTP_HOST} ^hautliebe.de$
-RewriteRule (.*) https://www.${HTTP_HOST}%{REQUEST_URI} [R=301,L]
+RewriteCond %{HTTP_HOST} ^hautliebe-ulm.de$
+RewriteRule (.*) https://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
 #stop auto filename correction if enabled
 <IfModule mod_speling.c>

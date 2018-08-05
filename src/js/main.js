@@ -295,6 +295,7 @@ function APP () {
 			});
 			$el.find ('.tabs__trigger').first().addClass ('tabs__trigger--is-active');
 			$el.find ('.tabs__panel').first().addClass ('tabs__panel--is-active');
+			self.epilationIcon.animateInOut ();
 		});
 	};
 

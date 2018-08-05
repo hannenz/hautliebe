@@ -1,4 +1,4 @@
-<div class="tabs">
+<div class="tabs">h
 	<nav class="tabs__triggers">
 		<a class="tabs__trigger" href="#price-offers">
 			<span class="tabs__label" title="Angebote">
@@ -47,7 +47,7 @@
 			<div id="price-category-{VAR:id}" class="tabs__panel">
 
 				<h2 class="headline">{VAR:treatment_name}</h2>
-				<p>Sollte Ihr Bereich nicht aufgelistet sein, mache ich Ihnen gerne ein individuelles Angebot</p>
+				<p>Sollte Ihr Bereich nicht aufgelistet sein, mache ich Ihnen gerne ein individuelles Angebot.</p>
 
 				<table class="price-table">
 					<thead>

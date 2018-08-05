@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Hautliebe | Haarentfernung, Falten- und Narbenbehandlung</title>
+	<title>Hautliebe | Haarentfernung, Faltenbehandlung und Narbenbehandlung</title>
 	<meta name="description" content="{PAGEVAR:cmt_meta_description:recursive}">
 	<meta name="keywords" content="{PAGEVAR:cmt_meta_keywords:recursive}">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
