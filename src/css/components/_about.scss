@@ -24,7 +24,7 @@
 	&__timeline {
 		order: 2;
 		margin-top: 2 * $vertical-unit;
-		@include for-size (tablet-portrait-up) {
+		@include for-size (tablet-landscape-up) {
 			margin-top: 0;
 		}
 	}
@@ -43,7 +43,7 @@
 		margin: 0 auto;
 	}
 
-	@include for-size (tablet-portrait-up) {
+	@include for-size (tablet-landscape-up) {
 
 		justify-content: flex-start;
 
@@ -69,7 +69,7 @@
 		}
 
 		&__timeline {
-			flex: 0 1;
+			flex: 0 1 320px;
 			order: 2;
 			margin-bottom: 0;
 		}

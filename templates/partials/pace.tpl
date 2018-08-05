@@ -26,8 +26,14 @@
 		var iv, h, hp;
 		Pace.on('start', function () {
 			paceElement = document.querySelector ('.pace');
+			while (paceElement.hasChildNodes ()) {
+				paceElement.removeChild (paceElement.lastChild);
+			}
 			h = document.createElementNS ('http://www.w3.org/2000/svg', 'svg');
 			hp = document.createElementNS ('http://www.w3.org/2000/svg', 'path');
+			h.setAttribute ('width', 100);
+			h.setAttribute ('height', 100);
+			h.setAttribute ('viewBox', '0 0 100 100');
 			hp.setAttribute ('d', 'M 25.588103,14.41136 C 35.780661,12.754519 45.854552,19.56175 49.99964,30.148367 54.144728,19.562496 64.218618,12.754519 74.411175,14.41136 c 11.72924,1.906113 19.164128,14.29063 16.605726,27.663271 -2.111353,15.192193 -40.607528,43.766728 -40.607528,43.766728 0,0 -37.719254,-28.574535 -41.4262494,-43.766728 C 6.4247218,28.70199 13.858864,16.317473 25.588103,14.41136 Z');
 			h.appendChild (hp);
 			paceElement.appendChild (h);
