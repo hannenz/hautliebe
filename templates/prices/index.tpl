@@ -1,4 +1,4 @@
-<div class="tabs">h
+<div class="tabs">
 	<nav class="tabs__triggers">
 		<a class="tabs__trigger" href="#price-offers">
 			<span class="tabs__label" title="Angebote">
