@@ -78,7 +78,7 @@ body {
 
 .section--hidden {
 	transform: 350ms ease-in;
-	max-height: 5000px;
+	/* max-height: 5000px; */
 	overflow: hidden;
 
 	&.section--is-hidden {
