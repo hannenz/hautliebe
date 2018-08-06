@@ -23,11 +23,11 @@
 	</style>
 	<script src="/dist/js/vendor/pace.min.js"></script>
 	<script>
-		var iv, h, hp;
+		var iv, h, hp, p;
 		Pace.on('start', function () {
-			paceElement = document.querySelector ('.pace');
-			while (paceElement.hasChildNodes ()) {
-				paceElement.removeChild (paceElement.lastChild);
+			p = document.querySelector ('.pace');
+			while (p.hasChildNodes ()) {
+				p.removeChild (p.lastChild);
 			}
 			h = document.createElementNS ('http://www.w3.org/2000/svg', 'svg');
 			hp = document.createElementNS ('http://www.w3.org/2000/svg', 'path');
@@ -36,7 +36,7 @@
 			h.setAttribute ('viewBox', '0 0 100 100');
 			hp.setAttribute ('d', 'M 25.588103,14.41136 C 35.780661,12.754519 45.854552,19.56175 49.99964,30.148367 54.144728,19.562496 64.218618,12.754519 74.411175,14.41136 c 11.72924,1.906113 19.164128,14.29063 16.605726,27.663271 -2.111353,15.192193 -40.607528,43.766728 -40.607528,43.766728 0,0 -37.719254,-28.574535 -41.4262494,-43.766728 C 6.4247218,28.70199 13.858864,16.317473 25.588103,14.41136 Z');
 			h.appendChild (hp);
-			paceElement.appendChild (h);
+			p.appendChild (h);
 			hp.style.fill = 'none';
 			hp.style.stroke = '#fabfcd';
 			hp.style.strokeLinecap = 'round';
@@ -46,13 +46,16 @@
 			hp.style.strokeDashoffset = 256;
 			hp.style.transition = '150ms ease-out';
 			iv = window.setInterval (function () {
-				var perc = parseInt(paceElement.firstChild.getAttribute('data-progress')) / 100;
-				hp.style.strokeDashoffset = 256 - (256 * perc);
+				hp.style.strokeDashoffset = 256 - (parseInt (p.firstChild.getAttribute ('data-progress')) * 2.56);
 			}, 50);
 		});
 		Pace.on('hide', function () {
 			window.clearInterval (iv);
 			hp.style.strokeDashoffset = 0;
 		});
+		window.setTimeout (function () {
+			Pace.stop ();
+			p.parentNode.removeChild (p);
+		}, 6000);
 	</script>
 
