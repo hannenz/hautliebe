@@ -12,7 +12,7 @@
 			"@type": "LocalBusiness",
 			"name": "Hautliebe®",
 			"legalName": "Hautliebe®",
-			"description": "{PAGEVAR:cmt_meta_description",
+			"description": "{PAGEVAR:cmt_meta_description}",
 			"url": "https://www.hautliebe-ulm.de",
 			"email": "info@hautliebe-ulm.de",
 			"telephone": "+49 (0)152 318 307 42",
@@ -23,7 +23,7 @@
 				"streetAddress": "Hafenbad 31"
 			},
 			"openingHours": [
-				"Mo-Fr 10:00-18:00"
+				"Mo-Fr 10:00-19:00"
 			],
 			"geo": {
 				"@type": "GeoCoordinates",
@@ -31,7 +31,7 @@
 				"longitude": "9.99367"
 			},
 			"areaServed": "Ulm, Neu-Ulm",
-			"logo": "/dist/img/logo.svg"
+			"logo": "https://www.hautliebe-ulm.de/dist/img/logo.png"
 		}
 	</script>
 
