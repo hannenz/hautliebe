@@ -10,7 +10,7 @@
 		{
 			"@context": "http://schema.org/",
 			"@type": "LocalBusiness",
-			"name": "Hautliebe®",
+			"name": "hautliebe®",
 			"legalName": "Hautliebe®",
 			"description": "{PAGEVAR:cmt_meta_description}",
 			"url": "https://www.hautliebe-ulm.de",
@@ -30,6 +30,14 @@
 				"latitude": "48.40091",
 				"longitude": "9.99367"
 			},
+			"contactPoint": [
+				{
+					"@type": "ContactPoint",
+					"telephone": "+49 (0)152 318 307 42",
+					"ContactType": "customer service"
+				}
+
+			],
 			"areaServed": "Ulm, Neu-Ulm",
 			"logo": "https://www.hautliebe-ulm.de/dist/img/logo.png"
 		}
