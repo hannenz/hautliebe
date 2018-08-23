@@ -261,8 +261,10 @@ function APP () {
 			$el.find ('.tabs__panel').first().addClass ('tabs__panel--is-active');
 			
 		});
-			self.epilationIcons[0].animateInOut ();
-			self.offersIcons[0].animateInOut ();
+
+		// Initially start icon animations on page load
+		self.epilationIcons[0].animateInOut ();
+		self.offersIcons[0].animateInOut ();
 	};
 
 	this.setupHiddenSection = function () {
