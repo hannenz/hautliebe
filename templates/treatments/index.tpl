@@ -1,6 +1,7 @@
 <div class="tabs">
 	<nav class="tabs__triggers">
 		{LOOP VAR(treatments)}
+
 			<a class="tabs__trigger" href="#treatment-{VAR:id}">
 				<span class="tabs__label" title="{VAR:treatment_name}">
 				{SWITCH ({VAR:treatment_icon})}
@@ -15,6 +16,7 @@
 					{BREAK}
 				{ENDSWITCH}
 				</span>
+				<span class="tabs__the-label"> {VAR:treatment_shortname} </span>
 			</a>
 		{ENDLOOP VAR}
 	</nav>

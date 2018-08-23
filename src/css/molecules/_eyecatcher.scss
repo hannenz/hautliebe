@@ -15,7 +15,7 @@
 
 	@include for-size (tablet-landscape-up) {
 		position: absolute;
-		right: $gutter;
+		right: -$gutter;
 		margin: 0;
 	}
 }

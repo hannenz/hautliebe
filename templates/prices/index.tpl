@@ -4,6 +4,7 @@
 			<span class="tabs__label" title="Angebote">
 				{INCLUDE:PATHTOWEBROOT . "dist/img/icon_offers.svg"}
 			</span>
+			<span class="tabs__the-label"> Angebot</span>
 			<!-- Angebote -->
 		</a>
 		{LOOP VAR(categories)}
@@ -21,7 +22,7 @@
 					{BREAK}
 				{ENDSWITCH}
 				</span>
-				<!-- {VAR:treatment_shortname} -->
+				<span class="tabs__the-label">{VAR:treatment_shortname}</span>
 			</a>
 		{ENDLOOP VAR}
 	</nav>

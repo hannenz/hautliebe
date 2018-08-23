@@ -11,6 +11,14 @@
 
 .tabs__trigger {
 	outline: none;
+	display: inline-flex;
+	align-items: center;
+	margin-right: $gutter;
+	flex-direction: column;
+	@include for-size (tablet-landscape-up) {
+		margin-right: 3 * $gutter;
+		flex-direction: row;
+	}
 
 	&::-mox-focus-inner {
 		border: none;
@@ -37,10 +45,21 @@
 	}
 }
 
+.tabs__the-label {
+	text-transform: uppercase;
+	font-weight: bold;
+	order: 2;
+	text-align: center;
+	@include for-size (tablet-landscape-up) {
+		margin-left: 0.5 * $gutter;
+	}
+}
+
+
 .tabs__label {
 	cursor: pointer;
 	padding: 8px 0;
-	margin-right: $gutter;
+	/* margin-right: 0.5 * $gutter; */
 	position: relative;
 
 
@@ -57,14 +76,22 @@
 	&::after {
 		content: '';
 		position: absolute;
-		bottom: 0;
+		bottom: -2 * $vertical-unit;
 		left: 0.3rem;
 		width: 3.4rem;
+		width: 4rem;
+		left: 0;
 		height: 4px;
 		border-radius: 5px;
 		transform: scaleX(0);
 		transition: transform 150ms ease-in;
 		background-color: #fff;
+
+		@include for-size (tablet-landscape-up) {
+			bottom: 0;
+			left: 0.3rem;
+			width: 3.4rem;
+		}
 
 		@include for-size (desktop-up) {
 			height: 5px;
