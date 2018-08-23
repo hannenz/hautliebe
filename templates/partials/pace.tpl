@@ -21,11 +21,9 @@
 		.pace svg {
 			margin: auto; }
 	</style>
-	<script src="/dist/js/vendor/pace.min.js"></script>
 	<script>
-		var iv, h, hp, p;
+		var iv, h, hp, p = document.querySelector ('.pace');
 		Pace.on('start', function () {
-			p = document.querySelector ('.pace');
 			while (p.hasChildNodes ()) {
 				p.removeChild (p.lastChild);
 			}

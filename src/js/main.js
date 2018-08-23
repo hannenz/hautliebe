@@ -14,18 +14,34 @@ function APP () {
 	var self = this;
 	self.debug = false;
 	self.mapHasBeenCreated = false;
+	self.wrinklesIcons = [];
+	self.scarsIcons = [];
+	self.epilationIcons = [];
+	self.offersIcons = [];
 
-
-	self.wrinklesIcon = new WrinklesIcon ();
-	self.scarsIcon = new ScarsIcon ();
-	self.epilationIcon = new EpilationIcon ();
+	var icons = document.querySelectorAll ('.icon--wrinkles');
+	icons.forEach (function (icon) {
+		self.wrinklesIcons.push (new WrinklesIcon (icon));
+	});
+	icons = document.querySelectorAll ('.icon--scars');
+	icons.forEach (function (icon) {
+		self.scarsIcons.push (new ScarsIcon (icon));
+	});
+	icons = document.querySelectorAll ('.icon--epilation');
+	icons.forEach (function (icon) {
+		self.epilationIcons.push (new EpilationIcon (icon));
+	});
+	icons = document.querySelectorAll ('.icon--offers');
+	icons.forEach (function (icon) {
+		self.offersIcons.push (new OffersIcon (icon));
+	});
 
 	this.init = function() {
-		
+
 		if (this.debug) {
 			console.log('APP::init');
 		}
-		
+
 		this.pageInit();
 	};
 
@@ -43,82 +59,6 @@ function APP () {
 	};
 
 
-
-	this.animateActiveIcon = function () {
-		return;
-
-		var s = Snap ('#icon-wrinkles');
-		var path =  s.select ('#wrinkles-path');
-		var origPath = path.attr ('d');
-		var destPath = 'm 65.589186,17.110641 c 2.572515,1.219343 7.330574,4.472429 9.400383,6.427044 2.069809,1.954615 5.589732,6.518803 6.954228,9.017358 1.364496,2.498556 3.301731,7.927074 3.827348,10.724995 0.525616,2.797919 0.690531,8.559384 0.325818,11.382788 -0.364714,2.823405 -1.988261,8.353847 -3.207604,10.926361 -1.219343,2.572515 -4.472428,7.330572 -6.427043,9.400381 -1.954615,2.069809 -6.518805,5.589733 -9.01736,6.95423 -2.498556,1.364496 -7.927073,3.30173 -10.724992,3.827346 -2.797921,0.525617 -8.559387,0.690532 -11.382792,0.325819 C 42.513768,85.732249 36.983328,84.108702 34.410814,82.889359 31.838299,81.670016 27.08024,78.41693 25.010431,76.462315 22.940622,74.5077 19.420699,69.943512 18.056203,67.444957 16.691707,64.946401 14.754472,59.517883 14.228855,56.719962 13.703239,53.922043 13.538324,48.160578 13.903037,45.337174 c 0.364714,-2.823405 1.988261,-8.353847 3.207604,-10.926361 1.219343,-2.572515 4.472428,-7.330572 6.427043,-9.400381 1.954615,-2.069809 6.518805,-5.589733 9.01736,-6.95423 2.498556,-1.364496 7.927073,-3.30173 10.724992,-3.827346 2.797921,-0.525617 8.559387,-0.690532 11.382792,-0.325819 2.823404,0.364714 8.353844,1.988261 10.926358,3.207604 z';
-
-		function doAnimate () {
-			path.animate ({
-				d: destPath
-			}, 1000, mina.easein, swap);
-		}
-
-		function swap () {
-			var tmp = destPath;
-			destPath = origPath;
-			origPath = tmp;
-			doAnimate ();
-		}
-
-		doAnimate ();
-	};
-
-
-
-    // this.createScarIcon = function () {
-    //     var s = Snap ('#icon-scars');
-    //     var path = s.select ('#scars-path');
-	// 	var origPath = path.attr ('d');
-	// 	console.log (origPath);
-    //
-    //     s.node.addEventListener ('mouseenter', function (ev) {
-    //         path.animate ({
-    //             d: 'm 65.589186,17.110641 c 2.572515,1.219343 7.330574,4.472429 9.400383,6.427044 2.069809,1.954615 5.589732,6.518803 6.954228,9.017358 1.364496,2.498556 3.301731,7.927074 3.827348,10.724995 0.525616,2.797919 0.690531,8.559384 0.325818,11.382788 -0.364714,2.823405 -1.988261,8.353847 -3.207604,10.926361 -1.219343,2.572515 -4.472428,7.330572 -6.427043,9.400381 -1.954615,2.069809 -6.518805,5.589733 -9.01736,6.95423 -2.498556,1.364496 -7.927073,3.30173 -10.724992,3.827346 -2.797921,0.525617 -8.559387,0.690532 -11.382792,0.325819 C 42.513768,85.732249 36.983328,84.108702 34.410814,82.889359 31.838299,81.670016 27.08024,78.41693 25.010431,76.462315 22.940622,74.5077 19.420699,69.943512 18.056203,67.444957 16.691707,64.946401 14.754472,59.517883 14.228855,56.719962 13.703239,53.922043 13.538324,48.160578 13.903037,45.337174 c 0.364714,-2.823405 1.988261,-8.353847 3.207604,-10.926361 1.219343,-2.572515 4.472428,-7.330572 6.427043,-9.400381 1.954615,-2.069809 6.518805,-5.589733 9.01736,-6.95423 2.498556,-1.364496 7.927073,-3.30173 10.724992,-3.827346 2.797921,-0.525617 8.559387,-0.690532 11.382792,-0.325819 2.823404,0.364714 8.353844,1.988261 10.926358,3.207604 z'
-    //         }, 350, mina.easein);
-    //     });
-    //
-    //     s.node.addEventListener ('mouseleave', function (ev) {
-    //         path.animate ({
-    //             d: origPath
-    //         }, 350, mina.easein);
-    //     });
-    // };
-    //
-    // this.createEpilationIcon = function () {
-    //     var s = Snap ('#icon-epilation');
-    //     var hairPath = s.select ('#epilation-hair');
-    //     var circlePath = s.select ('#epilation-circle');
-	// 	var origCirclePath = circlePath.attr ('d');
-    //
-    //     var hairPathLength = hairPath.getTotalLength ();
-    //     hairPath.node.style.strokeDasharray = hairPathLength + 'px ' + hairPathLength + 'px';
-    //     hairPath.node.style.strokeDashoffset = 0; 
-    //     hairPath.node.style.transition = '350ms linear';
-    //
-    //     s.node.addEventListener ('mouseenter', function (ev) {
-    //         hairPath.node.style.strokeDashoffset = hairPathLength + 'px';
-    //         setTimeout (function () {
-    //             circlePath.animate ({
-    //                 d: 'M 63.057299,16.121032 C 79.279633,21.483413 86.592204,38.71521 86.362854,50 85.954781,70.078504 70.08265,86.362854 50,86.362854 29.91735,86.362854 13.70575,70.082533 13.637146,50 13.568852,30.008408 32.524564,6.3634295 62.696163,15.979296'
-    //             }, 350, mina.linear);
-    //         }, 75);
-    //     });
-    //
-    //     s.node.addEventListener ('mouseleave', function (ev) {
-    //         setTimeout (function () {
-    //             hairPath.node.style.strokeDashoffset = 0;
-    //         }, 75);
-    //         circlePath.animate ({
-    //             d: origCirclePath
-    //         }, 350, mina.linear); 
-    //     });
-    // };
-    //
 
 	/**
 	 * ScrollSpy
@@ -170,7 +110,7 @@ function APP () {
 				menuItems
 					.parent().removeClass("active")
 					.end().filter("[href='#"+id+"']").parent().addClass("active");
-			}                   
+			} 
 
 			// Close mobile menu
 			document.body.classList.remove ('menu-is-open');
@@ -273,29 +213,55 @@ function APP () {
 				$el.find ($(this).attr('href')).addClass ('tabs__panel--is-active');
 				$(this).addClass ('tabs__trigger--is-active');
 
-				self.wrinklesIcon.stopAnimation ();
-				self.scarsIcon.stopAnimation ();
-				self.epilationIcon.stopAnimation ();
+				self.wrinklesIcons.forEach (function (icon) {
+					icon.stopAnimation ();
+				});
+				self.scarsIcons.forEach (function (icon) {
+					icon.stopAnimation ();
+				});
+				self.epilationIcons.forEach (function (icon) {
+					icon.stopAnimation ();
+				});
+				self.offersIcons.forEach (function (icon) {
+					icon.stopAnimation ();
+				});
 
 				switch (this.getAttribute('href')) {
 					case '#treatment-1':
-						self.scarsIcon.animateInOut ();
+					case '#price-category-1':
+						self.scarsIcons.forEach (function (icon) {
+							icon.animateInOut ();
+						});
 						break;
 					case '#treatment-2':
-						self.wrinklesIcon.animateInOut ();
+					case '#price-category-2':
+						self.wrinklesIcons.forEach (function (icon) {
+							icon.animateInOut ();
+						});
 						break;
 					case '#treatment-3':
-						self.epilationIcon.animateOut ();
-						self.epilationIcon.animateInOut ();
+					case '#price-category-3':
+						self.epilationIcons.forEach (function (icon) {
+							icon.animateOut ();
+						});
+						self.epilationIcons.forEach (function (icon) {
+							icon.animateInOut ();
+						});
+						break;
+					case '#price-offers':
+						self.offersIcons.forEach (function (icon) {
+							icon.animateInOut ();
+						});
 						break;
 				}
-
-				// animateActiveIcon
 				return false;
 			});
+
 			$el.find ('.tabs__trigger').first().addClass ('tabs__trigger--is-active');
 			$el.find ('.tabs__panel').first().addClass ('tabs__panel--is-active');
-			self.epilationIcon.animateInOut ();
+			
+			self.epilationIcons[0].animateInOut ();
+			self.offersIcons[0].animateInOut ();
 		});
 	};
 

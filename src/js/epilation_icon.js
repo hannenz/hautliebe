@@ -4,10 +4,10 @@
  * @author Johannes Braun <johannes.braun@hannenz.de>
  * @package hautliebe
  */
-function EpilationIcon () {
+function EpilationIcon (el) {
 
 	var self = this;
-	var s, path;
+	var s, path, el = el;
 	var hairPath,
 		circlePath,
 		origPath,
@@ -19,7 +19,7 @@ function EpilationIcon () {
 	;
 
 	this.init = function () {
-		self.s = Snap ('#icon-epilation');
+		self.s = Snap (el);
 		self.hairPath = self.s.select ('#epilation-hair');
 		self.circlePath = self.s.select ('#epilation-circle');
 		self.origPath = 'M71.848 20.907c8.294 6.24 13.872 15.97 14.464 27.145 1.062 20.055-14.334 37.173-34.388 38.236C31.869 87.35 14.75 71.954 13.688 51.899c-1.062-20.054 14.334-37.173 34.388-38.235';
@@ -31,7 +31,7 @@ function EpilationIcon () {
 		self.s.node.addEventListener ('mouseleave', self.animateOut, false);
 		self.permanentAnimation = false;
 
-        self.hairPathLength = self.hairPath.getTotalLength ();
+		self.hairPathLength = self.hairPath.getTotalLength ();
 		self.hairPath.node.style.strokeDasharray = self.hairPathLength + 'px ' + self.hairPathLength + 'px';
 		self.hairPath.node.style.strokeDashoffset = 0;
 		self.hairPath.node.style.transition = '350ms linear';
