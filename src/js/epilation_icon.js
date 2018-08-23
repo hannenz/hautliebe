@@ -27,8 +27,8 @@ function EpilationIcon (el) {
 		self.startFrame = origPath;
 		self.endFrame = destPath;
 
-		self.s.node.addEventListener ('mouseenter', self.animateIn, false);
-		self.s.node.addEventListener ('mouseleave', self.animateOut, false);
+		self.s.node.parentNode.parentNode.addEventListener ('mouseenter', self.animateIn, false);
+		self.s.node.parentNode.parentNode.addEventListener ('mouseleave', self.animateOut, false);
 		self.permanentAnimation = false;
 
 		self.hairPathLength = self.hairPath.getTotalLength ();

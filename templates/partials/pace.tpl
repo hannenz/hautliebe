@@ -21,9 +21,11 @@
 		.pace svg {
 			margin: auto; }
 	</style>
+	<script src="/dist/js/vendor/pace.min.js"></script>
 	<script>
-		var iv, h, hp, p = document.querySelector ('.pace');
+		var iv, h, hp, p;
 		Pace.on('start', function () {
+			p = document.querySelector ('.pace');
 			while (p.hasChildNodes ()) {
 				p.removeChild (p.lastChild);
 			}
@@ -52,8 +54,8 @@
 			hp.style.strokeDashoffset = 0;
 		});
 		window.setTimeout (function () {
-			Pace.stop ();
-			p.parentNode.removeChild (p);
+			if (typeof Pace !== 'undefined') { Pace.stop (); }
+			if (p.parentNode) { p.parentNode.removeChild (p); }
 		}, 6000);
 	</script>
 

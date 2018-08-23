@@ -18,14 +18,14 @@ function OffersIcon (el) {
 	this.init = function () {
 		self.s = Snap (el);
 		self.path = self.s.select ('#plus-path');
-		self.origPath = 'M 8.6125838,50 H 91.38742 M 49.999999,8.6125815 V 91.387419';
-		self.destPath = 'M 21.140085,50 H 78.859919 M 50,21.140083 v 57.719835';
+		self.origPath = 'M 8.6125838,50 H 91.38742  M 49.999999,8.6125815 V 91.387419';
+		self.destPath = 'M 21.140085,50 H 78.859919 M 50,21.140083        v 57.719835';
 		self.startFrame = origPath;
 		self.endFrame = destPath;
-		self.s.node.addEventListener ('mouseenter', self.animateIn, false);
-		self.s.node.addEventListener ('mouseleave', self.animateOut, false);
+		self.s.node.parentNode.parentNode.addEventListener ('mouseenter', self.animateIn, false);
+		self.s.node.parentNode.parentNode.addEventListener ('mouseleave', self.animateOut, false);
 		self.permanentAnimation = false;
-	}
+	};
 
 
 
