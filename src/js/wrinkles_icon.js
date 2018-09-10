@@ -84,6 +84,7 @@ function WrinklesIcon (el) {
 
 	this.stopAnimation = function () {
 		this.permanentAnimation = false;
+		this.animateOut();
 	}
 
 	this.init ();

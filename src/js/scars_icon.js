@@ -83,6 +83,8 @@ function ScarsIcon (el) {
 
 	this.stopAnimation = function () {
 		this.permanentAnimation = false;
+		this.animateOut();
+		// Make sure to animate back into initial state
 	}
 
 	this.init ();
