@@ -75,3 +75,9 @@
 		}
 	}
 }
+
+/* Fix for Backend / Layoutmode */
+.cmt-layout .about__timeline {
+	width: 100%;
+	display: block;
+}
