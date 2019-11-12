@@ -10,14 +10,14 @@
 		{LOOP VAR(categories)}
 			<a class="tabs__trigger" href="#price-category-{VAR:id}">
 				<span class="tabs__label" title="{VAR:treatment_name}">
-				{SWITCH ({VAR:treatment_icon})}
-					{CASE (icon_wrinkles)}
+				{SWITCH ("{VAR:treatment_icon}")}
+					{CASE ("icon_wrinkles")}
 						{INCLUDE: PATHTOWEBROOT . "dist/img/icon_wrinkles.svg"}
 					{BREAK}
-					{CASE (icon_scars)}
+					{CASE ("icon_scars")}
 						{INCLUDE: PATHTOWEBROOT . "dist/img/icon_scars.svg"}
 					{BREAK}
-					{CASE (icon_epilation)}
+					{CASE ("icon_epilation")}
 						{INCLUDE: PATHTOWEBROOT . "dist/img/icon_epilation.svg"}
 					{BREAK}
 				{ENDSWITCH}

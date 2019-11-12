@@ -52,7 +52,7 @@
 			<div class="outer-bound">
 				{LOOP CONTENT(99)}{ENDLOOP CONTENT}
 
-				<img class="eyecatcher eyecatcher--discount" src="/dist/img/eyecatcher_discount.svg" title="-15 % Rabatt - nur für kurze Zeit" alt="Banner zur Neueröffnungsaktion mit der Aufschrift: 15 % Rabatt - nur für kurze Zeit" />
+				<!-- <img class="eyecatcher eyecatcher&#45;&#45;discount" src="/dist/img/eyecatcher_discount.svg" title="&#45;15 % Rabatt &#45; nur für kurze Zeit" alt="Banner zur Neueröffnungsaktion mit der Aufschrift: 15 % Rabatt &#45; nur für kurze Zeit" /> -->
 			</div>
 		</section>
 
